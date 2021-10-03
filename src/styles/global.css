@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+/* =====Colors===== */
+
+/* =====Fonts===== */
+
+@layer base {
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-5xl;
+    @apply font-black;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+@layer utilities {
+  .nav-link {
+    @apply text-base font-bold px-6 py-2 text-dark_light-300 transition duration-200 ease-in-out;
+  }
+  .nav-link:hover {
+    @apply text-white;
+  }
+}

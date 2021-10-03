@@ -8,6 +8,14 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/components/Layout"),
+      },
+    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
