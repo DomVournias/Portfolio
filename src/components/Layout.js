@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "./Footer/Footer";
 import { AnimatePresence, motion } from "framer-motion";
 
 const duration = 0.5;
@@ -33,11 +34,12 @@ export const Layout = ({ children, location }) => {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="max-w-6xl justify-center text-center m-auto items-center opacity-loader bg-black"
+          className="opacity-loader"
         >
           {children}
         </motion.main>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 };

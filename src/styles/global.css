@@ -2,41 +2,164 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&display=swap");
-
-/* =====Colors===== */
-
-/* =====Fonts===== */
-
 @layer base {
-  h1 {
-    @apply text-6xl;
+  @font-face {
+    font-family: Segoe UI Light;
+    src: local("Segoe UI Light"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2)
+        format("woff2"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff)
+        format("woff"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf)
+        format("truetype");
+    font-weight: 100;
   }
-  h2 {
-    @apply text-5xl;
-    @apply font-black;
+
+  @font-face {
+    font-family: Segoe UI Semilight;
+    src: local("Segoe UI Semilight"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2)
+        format("woff2"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff)
+        format("woff"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf)
+        format("truetype");
+    font-weight: 200;
   }
-  h3 {
-    @apply text-lg;
+
+  @font-face {
+    font-family: Segoe UI;
+    src: local("Segoe UI"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2)
+        format("woff2"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff)
+        format("woff"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf)
+        format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: Segoe UI Bold;
+    src: local("Segoe UI Bold"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2)
+        format("woff2"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff)
+        format("woff"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf)
+        format("truetype");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: Segoe UI Semibold;
+    src: local("Segoe UI Semibold"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2)
+        format("woff2"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff)
+        format("woff"),
+      url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf)
+        format("truetype");
+    font-weight: 700;
   }
 }
+
+h1 {
+  font-family: "Segoe UI Bold";
+}
+h2 {
+  font-family: "Segoe UI Semibold";
+}
+h4 {
+  font-family: "Segoe UI";
+}
+
 p {
-  font-family: "Nunito", sans-serif;
+  font-family: "Segoe UI";
 }
 
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Segoe UI Bold";
   color: white;
 }
 @layer utilities {
   .nav-link {
-    @apply text-base font-bold px-6 py-2 text-dark_light-300 transition duration-200 ease-in-out;
+    @apply text-lg font-bold px-6 py-2 text-gray transition duration-200 ease-in-out;
   }
   .nav-link:hover {
     @apply text-white;
   }
+  .slide-one-visible {
+    @apply opacity-100 space-y-4 bg-gray-900 px-6 py-20 rounded-xl justify-around sticky top-10;
+  }
+
+  .slide-one-hidden {
+    @apply opacity-0 space-y-4 bg-gray-900 px-6 py-8 rounded-xl justify-around;
+  }
+
+  .about-paragraphs {
+    @apply text-3xl max-w-lg leading-normal mb-12;
+  }
+  .footer-links {
+    @apply text-2xl block mb-2 text-right hover:opacity-70 transition duration-200 ease-in-out;
+  }
 }
+
+.section {
+  clear: both;
+}
+/* 
+.top-spacer {
+  height: 50vh;
+}
+
+.bottom-spacer {
+  height: 110vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header {
+  justify-content: center;
+  background-color: #fff;
+}
+
+.header_link {
+  padding: 20px;
+  color: #314d4a;
+  font-weight: bold;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.selected {
+  border-bottom: 3px solid #11bb9a;
+  color: #11bb9a;
+}
+
+.section {
+  height: 40vh;
+}
+
+#Leadership {
+  background-color: #a388e8;
+}
+
+#Providers {
+  background-color: #f4769e;
+}
+
+#Operations {
+  background-color: #8face0;
+} */
