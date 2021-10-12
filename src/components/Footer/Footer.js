@@ -27,7 +27,9 @@ export default function Footer() {
             <div className="w-2/5">
               <StaticImage
                 src="../../images/about.png"
-                alt="avatar"
+                alt="about"
+                quality="90"
+                placeholder="tracedSVG"
                 className="w-full"
               />
             </div>

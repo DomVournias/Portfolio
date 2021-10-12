@@ -24,7 +24,7 @@ const variants = {
 };
 export const Layout = ({ children, location }) => {
   return (
-    <div className="bg-black">
+    <main className="bg-black ">
       <Navbar />
 
       <AnimatePresence>
@@ -39,8 +39,9 @@ export const Layout = ({ children, location }) => {
           {children}
         </motion.main>
       </AnimatePresence>
+
       <Footer />
-    </div>
+    </main>
   );
 };
 

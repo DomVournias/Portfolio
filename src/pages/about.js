@@ -5,7 +5,7 @@ import ContactButton from "../components/Buttons/ContactButton";
 export default function about() {
   return (
     <main className="flex flex-row max-w-6xl justify-between m-auto items-center px-4 py-14">
-      <section className="w-1/2">
+      <section className="w-3/5">
         <h3 className="text-5xl font-bold pb-12">Hey 👋</h3>
         <p className="about-paragraphs">
           My name is Rick. I'm a designer and developer from The Netherlands.
@@ -32,7 +32,7 @@ export default function about() {
           You can view my previous personal website over here.
         </p>
       </section>
-      <section className="w-1/2 self-start">
+      <section className="w-2/5 self-start">
         <h3 className="text-5xl font-bold pb-12">Contact</h3>
         <p className="about-paragraphs">
           You can follow me on Twitter. I post some my work on Instagram and
@@ -41,12 +41,18 @@ export default function about() {
         <div>
           <StaticImage
             src="../../images/about.png"
-            alt="avatar"
-            className="w-full"
+            alt="about"
+            quality="90"
+            placeholder="tracedSVG"
+            className="w-full mb-12 rounded-xl"
           />
         </div>
 
-        <p className="contact"></p>
+        <p className="about-paragraphs">
+          If you want to work together you can also get in touch with me via
+          email below.
+        </p>
+
         <ContactButton />
       </section>
     </main>

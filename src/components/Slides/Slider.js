@@ -1,20 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 
 export default function Slider() {
-  // const cardVariants = {
-  //   hidden: { scale: 0 },
-  //   visible: {
-  //     scale: 1,
-  //     transition: {
-  //       duration: 0.5,
-  //     },
-  //   },
-  // };
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
@@ -88,10 +79,8 @@ export default function Slider() {
   // First Box Animation
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       animation.start({
-        x: 0,
         opacity: 1,
         transition: {
           type: "spring",
@@ -104,7 +93,6 @@ export default function Slider() {
     if (!inView) {
       animation.start({
         opacity: 0,
-        x: "-10vw",
       });
     }
   }, [animation, inView]);
@@ -112,11 +100,10 @@ export default function Slider() {
   // Second Box Animation
 
   useEffect(() => {
-    console.log(inView2);
     if (inView2) {
       animation2.start({
         opacity: 1,
-        x: 0,
+
         transition: {
           type: "spring",
           duration: 2,
@@ -127,7 +114,6 @@ export default function Slider() {
     }
     if (!inView2) {
       animation2.start({
-        x: "-10vw",
         opacity: 0,
       });
     }
@@ -136,11 +122,10 @@ export default function Slider() {
   // Third Box Animation
 
   useEffect(() => {
-    console.log(inView3);
     if (inView3) {
       animation3.start({
         opacity: 1,
-        x: 0,
+
         transition: {
           type: "spring",
           ease: "easeInOut",
@@ -151,19 +136,137 @@ export default function Slider() {
     }
     if (!inView3) {
       animation3.start({
-        x: "-10vw",
         opacity: 0,
       });
     }
   }, [animation3, inView3]);
 
+  // Pictures Animations
+
+  const animation4 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation4.start({
+        rotate: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+    if (!inView) {
+      animation4.start({
+        rotate: 10,
+        opacity: 0.7,
+      });
+    }
+  }, [animation4, inView]);
+
+  const animation5 = useAnimation();
+
+  useEffect(() => {
+    if (inView2) {
+      animation5.start({
+        rotate: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+    if (!inView2) {
+      animation5.start({
+        rotate: -10,
+        opacity: 0.7,
+      });
+    }
+  }, [animation5, inView2]);
+
+  const animation6 = useAnimation();
+
+  useEffect(() => {
+    if (inView3) {
+      animation6.start({
+        rotate: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+        },
+      });
+    }
+    if (!inView3) {
+      animation6.start({
+        rotate: -10,
+        opacity: 0.7,
+      });
+    }
+  }, [animation6, inView3]);
+
+  const animation7 = useAnimation();
+  const [ref7, inView7] = useInView({
+    threshold: 1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      animation7.start({
+        scale: 1,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          ease: "easeInOut",
+          bounce: 0.4,
+          duration: 1,
+        },
+      });
+    }
+    if (!inView) {
+      animation7.start({
+        scale: 0.1,
+        opacity: 0,
+        transition: {
+          duration: 1,
+        },
+      });
+    }
+  }, [animation7, inView]);
+
+  const Bouncing = {
+    initial: {
+      opacity: 1,
+      zoom: 0,
+      y: 0,
+    },
+    enter: {
+      y: 40,
+      transition: {
+        duration: 3,
+        delay: 0.1,
+        yoyo: Infinity,
+      },
+    },
+  };
+
   return (
     <section>
-      <section className="flex gap-20 items-right text-left m-auto relative max-w-6xl py-40 ">
+      <section className="flex gap-20 items-right text-left m-auto relative max-w-6xl pt-40 pb-96">
         <div className="sticky top-60 w-1/3 place-self-start space-y-2 px-6 py-8 rounded-xl space-around ">
-          {/* <HideOn height={1400}> */}
-          <motion.div animate={animation} className="absolute bg-black  p-5 ">
-            <h3 className="text-5xl">{title1}</h3>
+          <motion.div animate={animation} className="absolute bg-black p-5">
+            <motion.div animate={animation7}>
+              <motion.div
+                variants={Bouncing}
+                animate={["animation7", "initial", "enter", "exit"]}
+                className="absolute left-0 -top-16 w-1/3"
+              >
+                <StaticImage
+                  src="../../images/ballon.png"
+                  className="w-full -ml-32"
+                  alt="cube"
+                />
+              </motion.div>
+            </motion.div>
+            <h3 className="text-5xl pb-3">{title1}</h3>
             <h4 className="text-2xl pb-8">{desc1}</h4>
             <span className="px-2 pb-1 text-center bg-blue-600">{stack1}</span>
             <span className="px-2 pb-1 text-center bg-green-600">{stack2}</span>
@@ -171,11 +274,9 @@ export default function Slider() {
               {stack3}
             </span>
           </motion.div>
-          {/* </HideOn> */}
 
-          {/* <HideOn height={2300}> */}
           <motion.div animate={animation2} className="absolute bg-black  p-5">
-            <h3 className="text-5xl">{title2}</h3>
+            <h3 className="text-5xl pb-3">{title2}</h3>
             <h4 className="text-2xl pb-8">{desc2}</h4>
             <span className="px-2 pb-1 text-center bg-blue-600">{stack1B}</span>
             <span className="px-2 pb-1 text-center bg-green-600">
@@ -185,10 +286,9 @@ export default function Slider() {
               {stack3B}
             </span>
           </motion.div>
-          {/* </HideOn> */}
-          {/* <HideOn height={3300}> */}
+
           <motion.div animate={animation3} className="absolute bg-black p-5">
-            <h3 className="text-5xl">{title3}</h3>
+            <h3 className="text-5xl pb-3">{title3}</h3>
             <h4 className="text-2xl pb-8">{desc3}</h4>
             <span className="px-2 pb-1 text-center bg-blue-600">{stack1C}</span>
             <span className="px-2 pb-1 text-center bg-green-600">
@@ -201,29 +301,39 @@ export default function Slider() {
           {/* </HideOn> */}
         </div>
 
-        <div className="flex flex-col items-end w-2/3 overflow-auto ">
-          <div ref={ref} className="text-center">
-            <GatsbyImage
-              image={getImage(image1)}
-              alt="image 1"
-              className="w-4/5 mb-48 "
-            />
+        <div
+          className="flex flex-col items-end w-2/3 overflow-hidden"
+          ref={ref7}
+        >
+          <div ref={ref} className="text-right">
+            <motion.div animate={animation4}>
+              <GatsbyImage
+                image={getImage(image1)}
+                alt="image 1"
+                quality="90"
+                className="w-4/5 mb-48 "
+              />
+            </motion.div>
           </div>
-          <div ref={ref2} className="text-center">
-            <GatsbyImage
-              id="second"
-              image={getImage(image2)}
-              alt="image 3"
-              className="w-4/5 my-36 "
-            />
+          <div ref={ref2} className="text-right">
+            <motion.div animate={animation5}>
+              <GatsbyImage
+                image={getImage(image2)}
+                alt="image 2"
+                quality="90"
+                className="w-4/5 my-36 "
+              />
+            </motion.div>
           </div>
-          <div ref={ref3} className="text-center">
-            <GatsbyImage
-              id="third"
-              image={getImage(image3)}
-              alt="image 3"
-              className="w-4/5 my-36 "
-            />
+          <div ref={ref3} className="text-right">
+            <motion.div animate={animation6}>
+              <GatsbyImage
+                quality="90"
+                image={getImage(image3)}
+                alt="image 3"
+                className="w-4/5 mt-36 overflow-hidden "
+              />
+            </motion.div>
           </div>
         </div>
       </section>
