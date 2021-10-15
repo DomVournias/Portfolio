@@ -83,9 +83,10 @@ export default function Projects() {
     if (inView) {
       animation.start({
         opacity: 1,
+        translateY: 0,
         transition: {
           type: "spring",
-          duration: 2,
+          duration: 1.8,
           bounce: 0.3,
           ease: "easeInOut",
         },
@@ -93,6 +94,7 @@ export default function Projects() {
     }
     if (!inView) {
       animation.start({
+        translateY: 20,
         opacity: 0,
       });
     }
@@ -104,17 +106,18 @@ export default function Projects() {
     if (inView2) {
       animation2.start({
         opacity: 1,
-
+        translateY: 0,
         transition: {
           type: "spring",
-          duration: 2,
-          ease: "easeInOut",
+          duration: 1.8,
           bounce: 0.3,
+          ease: "easeInOut",
         },
       });
     }
     if (!inView2) {
       animation2.start({
+        translateY: 20,
         opacity: 0,
       });
     }
@@ -126,17 +129,18 @@ export default function Projects() {
     if (inView3) {
       animation3.start({
         opacity: 1,
-
+        translateY: 0,
         transition: {
           type: "spring",
-          ease: "easeInOut",
-          duration: 2,
+          duration: 1.8,
           bounce: 0.3,
+          ease: "easeInOut",
         },
       });
     }
     if (!inView3) {
       animation3.start({
+        translateY: 20,
         opacity: 0,
       });
     }
@@ -382,9 +386,9 @@ export default function Projects() {
       opacity: 1,
       color: "white",
       transition: {
-        duration: 0.3,
+        duration: 0.5,
         type: "tween",
-        ease: "easeOut",
+        ease: "easeInOut",
       },
     },
   };
@@ -392,15 +396,27 @@ export default function Projects() {
   const plusVariants = {
     rest: {
       strokeWidth: 3,
-      strokeOpacity: 0.2,
-    },
-    hover: {
-      strokeOpacity: 1,
+      stroke: "#333",
+      pathLength: 0.5,
       transition: {
-        duration: 0.2,
+        duration: 1,
         type: "tween",
-        ease: "easeIn",
+        ease: "easeInOut",
       },
+    },
+
+    hover: {
+      pathLength: [1, 0, 1],
+      pathOffset: 0,
+      stroke: "#fff",
+
+      transition: {
+        duration: 0.6,
+      },
+    },
+    exit: {
+      stroke: "#333",
+      pathLength: 1,
     },
   };
 
@@ -545,10 +561,11 @@ export default function Projects() {
             className="text-center flex flex-col items-center justify-center"
             initial="rest"
             whileHover="hover"
-            animate="rest"
+            exit="rest"
           >
             <motion.svg
               variants={plusVariants}
+              transition="hover"
               className="w-16 cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
@@ -558,12 +575,14 @@ export default function Projects() {
             >
               <g fill="none">
                 <motion.path
+                  variants={plusVariants}
+                  transition="hover"
                   d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
-                  stroke="white"
                   stroke-linecap="round"
                 />
               </g>
             </motion.svg>
+
             <motion.h3 variants={textVariants} className="text-gray-naive">
               All Projects
             </motion.h3>
