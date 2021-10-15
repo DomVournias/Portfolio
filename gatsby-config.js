@@ -12,9 +12,21 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        duration: 300,
+      },
+    },
+    {
       resolve: "gatsby-plugin-layout",
       options: {
         component: require.resolve("./src/components/Layout"),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
       },
     },
 

@@ -12,15 +12,20 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "tw:build": "tailwindcss build ./src/styles/global.css -o ./public/styles/global.css",
+    "tw:prod": "cross-env NODE_ENV=production postcss build ./src/styles/global.css -o ./public/styles/global.css",
+    "tw:watch": "onchange \"tailwind.config.js\" \"src/**/*.css\" -- npm run tw:build"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@types/react-router": "^5.1.17",
+    "cssnano": "^5.0.8",
     "framer-motion": "^4.1.17",
     "g": "^2.0.1",
     "gatsby": "^3.13.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-layout": "^2.14.0",
     "gatsby-plugin-mdx": "^2.14.0",
@@ -30,6 +35,8 @@
     "gatsby-transformer-sharp": "^3.14.0",
     "gsap": "^3.8.0",
     "intersection-observer": "^0.12.0",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -47,6 +54,6 @@
     "autoprefixer": "^10.3.6",
     "gatsby-plugin-postcss": "^4.14.0",
     "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.17"
   }
 }

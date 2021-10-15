@@ -1,6 +1,10 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  mode: "",
+  purge: {
+    mode: "layers",
+    content: ["./src/**/*.html"],
+  },
+  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -10,6 +14,8 @@ module.exports = {
           DEFAULT: "#777",
           light: "#e0e6ed",
           lightest: "#f9fafc",
+          naive: "#333333",
+          naiveHover: "#7F7F7F",
         },
       },
     },
