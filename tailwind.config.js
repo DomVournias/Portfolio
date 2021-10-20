@@ -2,7 +2,7 @@ module.exports = {
   mode: "",
   purge: {
     mode: "layers",
-    content: ["./src/**/*.html"],
+    content: ["*.js", "*.jsx"],
   },
   darkMode: false,
   theme: {
