@@ -438,38 +438,117 @@ export default function Slider() {
 
   return (
     <section className="text-center">
-      <div className="fixed z-50  m-auto w-full xs:left-0  md:left-40 md:top-1/3">
+      <div className="fixed z-50 m-0 w-full xs:left-0 xs:bottom-0 h-44 box-border md:top-3/3 md:bottom-0 ">
         <motion.div
           animate={animation}
-          className="absolute  p-5 text-left w-1/5 xs:bg-gray-600 xs:w-full xs:pb-10"
+          className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "
         >
-          <h3 className="xs:text-2xl md:text-5xl pb-3 ">{title1}</h3>
-          <h4 className="xs:text-xl md:text-2xl pb-8">{desc1}</h4>
-          <span className="px-2 pb-1 text-center bg-blue-600">{stack1}</span>
-          <span className="px-2 pb-1 text-center bg-green-600">{stack2}</span>
-          <span className="px-2 pb-1 text-center bg-purple-600">{stack3}</span>
-        </motion.div>
+          <div className="flex items-center py-4 px-6">
+            <div className="w-4/5">
+              <h3 className="xs:text-2xl md:text-5xl pb-3 xs:pb-2">{title1}</h3>
+              <h4 className="xs:text-xl md:text-2xl pb-8 xs:pb-4">{desc1}</h4>
+              <span className="px-2 pb-1 text-center bg-blue-600">
+                {stack1}
+              </span>
+              <span className="px-2 pb-1 text-center bg-green-600">
+                {stack2}
+              </span>
+              <span className="px-2 pb-1 text-center bg-purple-600">
+                {stack3}
+              </span>
+            </div>
 
+            <div className="w-1/5">
+              <svg
+                className="w-1/2 float-right fill-current text-white opacity-30 hover:opacity-60 duration-200"
+                aria-hidden="true"
+                role="img"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+              >
+                <rect fill="none" x="0" y="0" stroke="none" />
+                <g transform="rotate(-90 8 8)">
+                  <g>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </motion.div>
         <motion.div
           animate={animation2}
-          className="absolute p-5 text-left w-1/5 xs:bg-gray-600 xs:w-full"
+          className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "
         >
-          <h3 className="xs:text-2xl md:text-5xl pb-3 ">{title2}</h3>
-          <h4 className="xs:text-xl md:text-2xl pb-8">{desc2}</h4>
-          <span className="px-2 pb-1 text-center bg-blue-600">{stack1B}</span>
-          <span className="px-2 pb-1 text-center bg-green-600">{stack2B}</span>
-          <span className="px-2 pb-1 text-center bg-purple-600">{stack3B}</span>
-        </motion.div>
+          <div className="flex items-center py-4 px-6">
+            <div className="w-4/5">
+              <h3 className="xs:text-2xl md:text-5xl pb-3 xs:pb-2">{title2}</h3>
+              <h4 className="xs:text-xl md:text-2xl pb-8 xs:pb-4">{desc2}</h4>
+              <span className="px-2 pb-1 text-center bg-blue-600">
+                {stack1B}
+              </span>
+              <span className="px-2 pb-1 text-center bg-green-600">
+                {stack2B}
+              </span>
+              <span className="px-2 pb-1 text-center bg-purple-600">
+                {stack3B}
+              </span>
+            </div>
 
+            <div className="w-1/5">
+              <svg
+                className="w-1/2 float-right fill-current text-white opacity-30 hover:opacity-60 duration-200"
+                aria-hidden="true"
+                role="img"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+              >
+                <rect fill="none" x="0" y="0" stroke="none" />
+                <g transform="rotate(-90 8 8)">
+                  <g>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </motion.div>
         <motion.div
           animate={animation3}
-          className="absolute p-5 text-left w-1/5 xs:bg-gray-600 xs:w-full"
+          className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "
         >
-          <h3 className="xs:text-2xl md:text-5xl pb-3 ">{title3}</h3>
-          <h4 className="xs:text-xl md:text-2xl pb-8">{desc3}</h4>
-          <span className="px-2 pb-1 text-center bg-blue-600">{stack1C}</span>
-          <span className="px-2 pb-1 text-center bg-green-600">{stack2C}</span>
-          <span className="px-2 pb-1 text-center bg-purple-600">{stack3C}</span>
+          <div className="flex items-center py-4 px-6">
+            <div className="w-4/5">
+              <h3 className="xs:text-2xl md:text-5xl pb-3 xs:pb-2">{title3}</h3>
+              <h4 className="xs:text-xl md:text-2xl pb-8 xs:pb-4">{desc3}</h4>
+              <span className="px-2 pb-1 text-center bg-blue-600">
+                {stack1C}
+              </span>
+              <span className="px-2 pb-1 text-center bg-green-600">
+                {stack2C}
+              </span>
+              <span className="px-2 pb-1 text-center bg-purple-600">
+                {stack3C}
+              </span>
+            </div>
+
+            <div className="w-1/5">
+              <svg
+                className="w-1/2 float-right fill-current text-white opacity-30 hover:opacity-60 duration-200"
+                aria-hidden="true"
+                role="img"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 16 16"
+              >
+                <rect fill="none" x="0" y="0" stroke="none" />
+                <g transform="rotate(-90 8 8)">
+                  <g>
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
         </motion.div>
       </div>
 
@@ -484,7 +563,7 @@ export default function Slider() {
               image={getImage(image1)}
               alt="image 1"
               quality="100"
-              className="w-full mb-32"
+              className="md:w-2/3 lg:w-full mb-32"
             />
           </motion.div>
         </div>
@@ -518,7 +597,7 @@ export default function Slider() {
         </div>
       </div>
 
-      <div className="sidebar xs:hidden md:block">
+      <div className="sidebar xs:hidden md:block md:right-10 md:top-1/3">
         <ul
           className="flex flex-col justify-between gap-4 
         "
