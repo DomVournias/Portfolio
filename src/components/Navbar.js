@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
+import Menu from "./Buttons/MobileButton";
 
 const activeStyles = {
   color: "white",
@@ -60,7 +61,9 @@ export default function Navbar() {
             className="flex flex-row opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
           >
             <StaticImage src="../images/dovm.png" className="w-8" />
-            <div className="pl-3 text-lg font-bold text-gray">Dom Vournias</div>
+            <div className="pl-3 text-lg font-bold text-gray xs:hidden sm:block">
+              Dom Vournias
+            </div>
           </Link>
         </motion.div>
         <div>
@@ -70,13 +73,25 @@ export default function Navbar() {
             animate="enter"
             className="relative"
           >
-            <Link to="/" className="nav-link" activeStyle={activeStyles}>
+            <Link
+              to="/"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out"
+              activeStyle={activeStyles}
+            >
               Work
             </Link>
-            <Link to="/about/" className="nav-link" activeStyle={activeStyles}>
+            <Link
+              to="/about/"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out"
+              activeStyle={activeStyles}
+            >
               About
             </Link>
-            <Link to="/tests/" className="nav-link" activeStyle={activeStyles}>
+            <Link
+              to="/tests/"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out"
+              activeStyle={activeStyles}
+            >
               Tests
             </Link>
           </motion.nav>

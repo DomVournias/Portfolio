@@ -4,6 +4,8 @@ import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link } from "gatsby";
 
 export default function Slider() {
   const data = useStaticQuery(graphql`
@@ -326,123 +328,280 @@ export default function Slider() {
       });
     }
   }, [animation10, inViewTop, inViewBottom]);
+
+  // Sidebar Animations
+
+  const activeBtn = useAnimation();
+  const [refFirst, inViewFirst] = useInView({ threshold: 0.1 });
+
+  useEffect(() => {
+    if (inViewFirst) {
+      activeBtn.start({
+        backgroundColor: "white",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+    if (!inViewFirst) {
+      activeBtn.start({
+        backgroundColor: "#333333",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+  }, [activeBtn, inViewFirst]);
+
+  const activeBtn2 = useAnimation();
+  const [refSecond, inViewSecond] = useInView();
+
+  useEffect(() => {
+    if (inViewSecond) {
+      activeBtn2.start({
+        backgroundColor: "white",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+    if (!inViewSecond) {
+      activeBtn2.start({
+        backgroundColor: "#333333",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+  }, [activeBtn2, inViewSecond]);
+
+  const activeBtn3 = useAnimation();
+  const [refThird, inViewThird] = useInView();
+
+  useEffect(() => {
+    if (inViewThird) {
+      activeBtn3.start({
+        backgroundColor: "white",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+    if (!inViewThird) {
+      activeBtn3.start({
+        backgroundColor: "#333333",
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+  }, [activeBtn3, inViewThird]);
+
+  const textVariants = {
+    rest: {
+      y: 7,
+      opacity: 0,
+    },
+    hover: {
+      y: 0,
+      opacity: 1,
+      color: "white",
+      transition: {
+        duration: 0.5,
+        type: "tween",
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const plusVariants = {
+    rest: {
+      strokeWidth: 3,
+      stroke: "#333",
+      transition: {
+        duration: 0.6,
+        type: "tween",
+        ease: "easeInOut",
+      },
+    },
+    hover: {
+      stroke: "#fff",
+      transition: {
+        duration: 0.6,
+      },
+    },
+    exit: {
+      stroke: "#333",
+      pathLength: 0.6,
+    },
+  };
+
   return (
-    <section>
-      <div ref={refTop} classname="bg-white"></div>
-      <motion.div
-        animate={animation10}
-        className="w-1/6 h-1/4 align-text-top top-1/3 right-20 fixed bg-white"
-      ></motion.div>
-      <section className="flex gap-20 items-right text-left m-auto relative max-w-6xl pt-40 pb-96">
-        <div className="sticky top-60 w-1/3 place-self-start space-y-2 px-6 py-8 rounded-xl space-around ">
-          <motion.div animate={animation} className="absolute bg-black p-5">
-            <motion.div animate={animation7} className="items-left -ml-28">
-              <motion.div
-                variants={Bouncing}
-                animate={["initial", "enter", "exit"]}
-                className="absolute left-0 -top-10 w-1/3"
+    <section className="text-center">
+      <div className="fixed z-50  m-auto w-full xs:left-0  md:left-40 md:top-1/3">
+        <motion.div
+          animate={animation}
+          className="absolute  p-5 text-left w-1/5 xs:bg-gray-600 xs:w-full xs:pb-10"
+        >
+          <h3 className="xs:text-2xl md:text-5xl pb-3 ">{title1}</h3>
+          <h4 className="xs:text-xl md:text-2xl pb-8">{desc1}</h4>
+          <span className="px-2 pb-1 text-center bg-blue-600">{stack1}</span>
+          <span className="px-2 pb-1 text-center bg-green-600">{stack2}</span>
+          <span className="px-2 pb-1 text-center bg-purple-600">{stack3}</span>
+        </motion.div>
+
+        <motion.div
+          animate={animation2}
+          className="absolute p-5 text-left w-1/5 xs:bg-gray-600 xs:w-full"
+        >
+          <h3 className="xs:text-2xl md:text-5xl pb-3 ">{title2}</h3>
+          <h4 className="xs:text-xl md:text-2xl pb-8">{desc2}</h4>
+          <span className="px-2 pb-1 text-center bg-blue-600">{stack1B}</span>
+          <span className="px-2 pb-1 text-center bg-green-600">{stack2B}</span>
+          <span className="px-2 pb-1 text-center bg-purple-600">{stack3B}</span>
+        </motion.div>
+
+        <motion.div
+          animate={animation3}
+          className="absolute p-5 text-left w-1/5 xs:bg-gray-600 xs:w-full"
+        >
+          <h3 className="xs:text-2xl md:text-5xl pb-3 ">{title3}</h3>
+          <h4 className="xs:text-xl md:text-2xl pb-8">{desc3}</h4>
+          <span className="px-2 pb-1 text-center bg-blue-600">{stack1C}</span>
+          <span className="px-2 pb-1 text-center bg-green-600">{stack2C}</span>
+          <span className="px-2 pb-1 text-center bg-purple-600">{stack3C}</span>
+        </motion.div>
+      </div>
+
+      <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center">
+        <span id="first" ref={refFirst} />
+        <div
+          ref={ref}
+          className="text-center h-screen flex items-center justify-center "
+        >
+          <motion.div animate={animation4} className="">
+            <GatsbyImage
+              image={getImage(image1)}
+              alt="image 1"
+              quality="100"
+              className="w-full mb-32"
+            />
+          </motion.div>
+        </div>
+        <span id="second" ref={refSecond} />
+        <div
+          ref={ref2}
+          className="text-center h-screen flex items-center justify-center"
+        >
+          <motion.div animate={animation5} className="">
+            <GatsbyImage
+              image={getImage(image2)}
+              alt="image 2"
+              quality="100"
+              className="w-full mb-32"
+            />
+          </motion.div>
+        </div>
+        <span id="third" ref={refThird} />
+        <div
+          ref={ref3}
+          className="text-center h-screen flex items-center justify-center"
+        >
+          <motion.div animate={animation6}>
+            <GatsbyImage
+              quality="100"
+              image={getImage(image3)}
+              alt="image 3"
+              className="w-full mb-32"
+            />
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="sidebar xs:hidden md:block">
+        <ul
+          className="flex flex-col justify-between gap-4 
+        "
+        >
+          <li className="text-center">
+            <AnchorLink to="/#first" className="inline-block p-2">
+              <motion.span
+                animate={activeBtn}
+                whileHover={{
+                  scale: 1.2,
+                  opacity: 0.8,
+                  transition: {
+                    duration: 0.1,
+                  },
+                }}
+                className="sidebar-button"
+              />
+            </AnchorLink>
+          </li>
+          <li className="text-center">
+            <AnchorLink to="/#second" className="inline-block p-2">
+              <motion.span
+                animate={activeBtn2}
+                whileHover={{
+                  scale: 1.2,
+                  opacity: 0.8,
+                  transition: {
+                    duration: 0.1,
+                  },
+                }}
+                className="sidebar-button"
+              />
+            </AnchorLink>
+          </li>
+          <li className="text-center">
+            <AnchorLink to="/#third" className="inline-block p-2">
+              <motion.span
+                animate={activeBtn3}
+                whileHover={{
+                  scale: 1.2,
+                  opacity: 0.8,
+                  transition: {
+                    duration: 0.1,
+                  },
+                }}
+                className="sidebar-button"
+              />
+            </AnchorLink>
+          </li>
+          <Link to="/projects">
+            <motion.li
+              className="text-center flex flex-col items-center justify-center"
+              initial="rest"
+              whileHover="hover"
+              exit="rest"
+            >
+              <motion.svg
+                variants={plusVariants}
+                transition="hover"
+                className="w-16 cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                role="img"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
               >
-                <StaticImage
-                  src="../../images/ballon.png"
-                  className="w-2/3"
-                  alt="cube"
-                />
-              </motion.div>
-            </motion.div>
-            <h3 className="text-5xl pb-3 ">{title1}</h3>
-            <h4 className="text-2xl pb-8">{desc1}</h4>
-            <span className="px-2 pb-1 text-center bg-blue-600">{stack1}</span>
-            <span className="px-2 pb-1 text-center bg-green-600">{stack2}</span>
-            <span className="px-2 pb-1 text-center bg-purple-600">
-              {stack3}
-            </span>
-          </motion.div>
-          <motion.div animate={animation8} className="items-left -ml-20">
-            <motion.div
-              variants={Bouncing}
-              animate={["initial", "enter", "exit"]}
-              className="absolute left-0 -top-8 w-1/3"
-            >
-              <StaticImage
-                src="../../images/ballon2.png"
-                className="w-2/3"
-                alt="cube"
-              />
-            </motion.div>
-          </motion.div>
+                <g fill="none">
+                  <motion.path
+                    variants={plusVariants}
+                    transition="hover"
+                    d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </motion.svg>
 
-          <motion.div animate={animation2} className="absolute p-5">
-            <h3 className="text-5xl pb-3">{title2}</h3>
-            <h4 className="text-2xl pb-8">{desc2}</h4>
-            <span className="px-2 pb-1 text-center bg-blue-600">{stack1B}</span>
-            <span className="px-2 pb-1 text-center bg-green-600">
-              {stack2B}
-            </span>
-            <span className="px-2 pb-1 text-center bg-purple-600">
-              {stack3B}
-            </span>
-          </motion.div>
-          <motion.div animate={animation9} className="items-left -ml-20">
-            <motion.div
-              variants={Bouncing}
-              animate={["initial", "enter", "exit"]}
-              className="absolute left-0 -top-8 w-1/3"
-            >
-              <StaticImage
-                src="../../images/ballon3.png"
-                className="w-2/3"
-                alt="cube"
-              />
-            </motion.div>
-          </motion.div>
-          <motion.div animate={animation3} className="absolute  p-5">
-            <h3 className="text-5xl pb-3">{title3}</h3>
-            <h4 className="text-2xl pb-8">{desc3}</h4>
-            <span className="px-2 pb-1 text-center bg-blue-600">{stack1C}</span>
-            <span className="px-2 pb-1 text-center bg-green-600">
-              {stack2C}
-            </span>
-            <span className="px-2 pb-1 text-center bg-purple-600">
-              {stack3C}
-            </span>
-          </motion.div>
-          {/* </HideOn> */}
-        </div>
-
-        <div className="flex flex-col items-end w-2/3 overflow-hidden">
-          <div ref={ref} className="text-right">
-            <motion.div animate={animation4}>
-              <GatsbyImage
-                image={getImage(image1)}
-                alt="image 1"
-                quality="90"
-                className="w-4/5 mb-48 "
-              />
-            </motion.div>
-          </div>
-          <div ref={ref2} className="text-right">
-            <motion.div animate={animation5}>
-              <GatsbyImage
-                image={getImage(image2)}
-                alt="image 2"
-                quality="90"
-                className="w-4/5 my-36 "
-              />
-            </motion.div>
-          </div>
-          <div ref={ref3} className="text-right">
-            <motion.div animate={animation6}>
-              <GatsbyImage
-                quality="90"
-                image={getImage(image3)}
-                alt="image 3"
-                className="w-4/5 mt-36 overflow-hidden "
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      <div ref={refBottom} classname="bg-white"></div>
+              <motion.h3 variants={textVariants} className="text-gray-naive">
+                All Projects
+              </motion.h3>
+            </motion.li>
+          </Link>
+        </ul>
+      </div>
     </section>
   );
 }

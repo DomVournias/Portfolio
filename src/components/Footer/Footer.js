@@ -9,9 +9,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="block w-full pb-24">
+    <footer className="block w-full pb-24 xs:px-6">
       <div className="border-t-2 border-gray-300 border-opacity-20 max-w-6xl pb-10 m-auto"></div>
-      <div className="flex flex-row justify-between m-auto items-center max-w-6xl ">
+      <div className="flex xs:flex-col md:flex-row justify-between m-auto items-center max-w-6xl ">
         <div className="max-w-lg">
           <h2 className="flex flex-row text-white text-2xl mb-2 items-center">
             <StaticImage src="../images/dovm.png" className="w-6 h-6 mr-2" />
@@ -36,11 +36,11 @@ export default function Footer() {
           </div>
           <ContactButton />
         </div>
-        <ul className="p-0">
+        <ul className="p-0 xs:pt-12 md:pt-0">
           <Link
             exact
             to="/"
-            className="footer-links"
+            className="footer-links xs:text-center md:text-right"
             activeStyle={activeStyles}
           >
             WORK
@@ -48,7 +48,7 @@ export default function Footer() {
           <Link
             exact
             to="/about/"
-            className="footer-links"
+            className="footer-links xs:text-center md:text-right"
             activeStyle={activeStyles}
           >
             ABOUT
@@ -56,12 +56,12 @@ export default function Footer() {
           <Link
             exact
             to="/contact/"
-            className="footer-links"
+            className="footer-links xs:text-center md:text-right"
             activeStyle={activeStyles}
           >
             CONTACT
           </Link>
-          <li className="flex flex-row text-xl py-2 text-right justify-end gap-3">
+          <li className="flex flex-row text-xl py-2 text-right justify-end xs:justify-center xs:gap-10 xs:pt-10 md:justify-end md:gap-3 md:pt-2">
             <a
               href="https://www.facebook.com/dominicvournias/"
               target="_blank"
