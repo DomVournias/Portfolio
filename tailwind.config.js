@@ -1,9 +1,9 @@
 module.exports = {
-  mode: "",
-  purge: {
-    mode: "layers",
-    content: ["*.js", "*.jsx"],
-  },
+  mode: "jit",
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: false,
   theme: {
     screens: {
