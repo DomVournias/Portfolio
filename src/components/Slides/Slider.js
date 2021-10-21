@@ -438,7 +438,7 @@ export default function Slider() {
 
   return (
     <section className="text-center">
-      <div className="fixed z-50 m-0 w-full xs:left-0 xs:bottom-0 h-44 box-border md:top-3/3 md:bottom-0 ">
+      <div className="fixed z-50 m-0 w-full xs:left-0 xs:bottom-0 h-1/4 box-border md:top-3/3 md:bottom-0 ">
         <motion.div
           animate={animation}
           className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "

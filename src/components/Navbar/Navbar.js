@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
-import Menu from "./Buttons/MobileButton";
+import Menu from "../Buttons/MobileButton";
 
 const activeStyles = {
   color: "white",
@@ -60,7 +60,13 @@ export default function Navbar() {
             to="/"
             className="flex flex-row opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
           >
-            <StaticImage src="../images/dovm.png" className="w-8" />
+            <StaticImage
+              src="../../images/dovm.png"
+              alt="Dom Vournias Portfolio"
+              quality="90"
+              className="w-8"
+            />
+
             <div className="pl-3 text-lg font-bold text-gray xs:hidden sm:block">
               Dom Vournias
             </div>

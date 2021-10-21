@@ -11,6 +11,19 @@ description: An iPhone app that makes it really easy to track and share movies.
 
 thumbImg: "../images/thumbs/RankUp-Phone.png"
 featuredImg: "../images/featured/RankUp-Phone.png"
+bigDescription1: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+bigDescription2: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+mockup1: "../image/thumbs/CovidMockup.png"
+mockup2: "../image/thumbs/CovidMockup.png"
+mockup3: "../image/thumbs/CovidMockup.png"
+infoTitle1: Just a title
+infoDescription1: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+mockup4: "../image/thumbs/CovidMockup.png"
+mockup5: "../image/thumbs/CovidMockup.png"
+mockup6: "../image/thumbs/CovidMockup.png"
+mockup7: "../image/thumbs/CovidMockup.png"
+infoTitle2: Just a title
+infoDescription2: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 ---
 
 # RANKUP

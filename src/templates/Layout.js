@@ -1,7 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "./Footer/Footer";
 import { AnimatePresence, motion } from "framer-motion";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import FooterAbout from "../components/Footer/FooterAbout";
 
 const duration = 0.5;
 
@@ -22,11 +23,30 @@ const variants = {
     transition: { duration: duration },
   },
 };
-export const Layout = ({ children, location }) => {
+export const Layout = ({ children, location, pageContext }) => {
+  if (pageContext.layout === "special") {
+    return (
+      <main className="bg-black ">
+        <Navbar />
+        <AnimatePresence>
+          <motion.main
+            key={location.pathname}
+            variants={variants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            className="opacity-loader"
+          >
+            {children}
+          </motion.main>
+        </AnimatePresence>
+        <FooterAbout />
+      </main>
+    );
+  }
   return (
     <main className="bg-black ">
       <Navbar />
-
       <AnimatePresence>
         <motion.main
           key={location.pathname}
@@ -39,7 +59,6 @@ export const Layout = ({ children, location }) => {
           {children}
         </motion.main>
       </AnimatePresence>
-
       <Footer />
     </main>
   );

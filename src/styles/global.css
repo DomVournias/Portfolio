@@ -101,8 +101,16 @@ p {
     @apply opacity-0 space-y-4 bg-gray-900 px-6 py-8 rounded-xl justify-around;
   }
 
+  .about-container {
+    @apply flex xs:flex-col md:flex-row max-w-6xl justify-between m-auto items-center px-4 xs:py-6 md:py-14;
+  }
+
+  .about-headings {
+    @apply font-bold xs:text-4xl xs:pb-6 md:pb-12 md:text-5xl;
+  }
+
   .about-paragraphs {
-    @apply text-3xl max-w-xl leading-normal mb-12;
+    @apply max-w-xl leading-normal xs:text-xl xs:pb-6 md:text-3xl md:pb-12;
   }
   .footer-links {
     @apply text-2xl block mb-2 text-right hover:opacity-70 transition duration-200 ease-in-out;

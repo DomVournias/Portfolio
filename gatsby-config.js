@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-layout",
       options: {
-        component: require.resolve("./src/components/Layout"),
+        component: require.resolve("./src/templates/Layout.js"),
       },
     },
     {
@@ -37,6 +37,14 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mockups",
+        path: "./src/images/mockups/",
+      },
+      __key: "mockups",
     },
 
     {

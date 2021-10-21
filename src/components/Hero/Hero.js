@@ -12,9 +12,10 @@ export default function Hero() {
         <br /> who loves building web apps
       </h2>
       <StaticImage
-        src="../images/Screenshot_106.jpg"
+        src="../../images/Screenshot_106.jpg"
         alt="avatar"
-        className="mx-16"
+        quality="90"
+        className="mx-4"
       />
     </div>
   );
