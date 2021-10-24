@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="flex xs:flex-col md:flex-row justify-between m-auto items-center max-w-6xl ">
         <div className="xs:hidden md:block max-w-lg">
           <h2 className="flex flex-row text-white text-2xl mb-2 items-center">
-            <StaticImage src="../images/dovm.png" className="w-6 h-6 mr-2" />
+            <StaticImage src="../../images/dovm.png" className="w-6 h-6 mr-2" />
             Get in touch
           </h2>
           <div className="flex flex-row flex-wrap m-0 p-0 mb-5 flex-start justify-center">
@@ -26,10 +26,10 @@ export default function Footer() {
             </div>
             <div className="w-2/5">
               <StaticImage
-                src="../../images/about.png"
+                src="../../images/DomAvatarBigger.png"
                 alt="about"
                 quality="90"
-                className="w-full"
+                className="w-full rounded-xl"
               />
             </div>
           </div>

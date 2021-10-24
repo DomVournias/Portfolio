@@ -3,7 +3,7 @@ title: 360Roaming
 stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
-slug: 360roaming
+slug: 360Roaming
 date: 20-10-11
 company: Telecommunications
 place: Heraklion, GR

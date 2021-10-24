@@ -40,7 +40,7 @@ export default function about() {
         </p>
         <div>
           <StaticImage
-            src="../../images/about.png"
+            src="../images/domvAvatar.png"
             alt="about"
             quality="90"
             className="w-full mb-12 rounded-xl"

@@ -39,6 +39,14 @@ export default function Projects() {
   console.log(data);
   const projects = data.allMarkdownRemark.nodes;
 
+  const slug1 = projects[0].frontmatter.slug;
+  const slug2 = projects[1].frontmatter.slug;
+  const slug3 = projects[2].frontmatter.slug;
+  const slug4 = projects[3].frontmatter.slug;
+  const slug5 = projects[4].frontmatter.slug;
+  const slug6 = projects[5].frontmatter.slug;
+  const slug7 = projects[6].frontmatter.slug;
+
   const title1 = projects[0].frontmatter.title;
   const title2 = projects[1].frontmatter.title;
   const title3 = projects[2].frontmatter.title;
@@ -728,12 +736,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center "
         >
           <motion.div animate={animation1p} className="">
-            <GatsbyImage
-              image={getImage(image1)}
-              alt="image 1"
-              quality="100"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug1}>
+              <GatsbyImage
+                image={getImage(image1)}
+                alt="image 1"
+                quality="100"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
         <span id="second" ref={refSecond} />
@@ -742,12 +752,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation2p} className="">
-            <GatsbyImage
-              image={getImage(image2)}
-              alt="image 2"
-              quality="100"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug2}>
+              <GatsbyImage
+                image={getImage(image2)}
+                alt="image 2"
+                quality="100"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
         <span id="third" ref={refThird} />
@@ -756,12 +768,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation3p}>
-            <GatsbyImage
-              quality="100"
-              image={getImage(image3)}
-              alt="image 3"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug3}>
+              <GatsbyImage
+                quality="100"
+                image={getImage(image3)}
+                alt="image 3"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
         <span id="fourth" ref={refFourth} />
@@ -770,12 +784,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation4p}>
-            <GatsbyImage
-              quality="100"
-              image={getImage(image4)}
-              alt="image 3"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug4}>
+              <GatsbyImage
+                quality="100"
+                image={getImage(image4)}
+                alt="image 3"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
         <span id="fifth" ref={refFifth} />
@@ -784,12 +800,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation5p}>
-            <GatsbyImage
-              quality="100"
-              image={getImage(image5)}
-              alt="image 3"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug5}>
+              <GatsbyImage
+                quality="100"
+                image={getImage(image5)}
+                alt="image 3"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
         <span id="sixth" ref={refSixth} />
@@ -798,12 +816,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation6p}>
-            <GatsbyImage
-              quality="100"
-              image={getImage(image6)}
-              alt="image 3"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug6}>
+              <GatsbyImage
+                quality="100"
+                image={getImage(image6)}
+                alt="image 3"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
         <span id="seventh" ref={refSeventh} />
@@ -812,12 +832,14 @@ export default function Projects() {
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation7p}>
-            <GatsbyImage
-              quality="100"
-              image={getImage(image7)}
-              alt="image 3"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug7}>
+              <GatsbyImage
+                quality="100"
+                image={getImage(image7)}
+                alt="image 3"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
       </div>

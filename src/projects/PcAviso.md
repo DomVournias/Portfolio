@@ -3,7 +3,7 @@ title: PCAviso
 stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
-slug: pcaviso
+slug: PCAviso
 date: 19-11-09
 company: SEO Company
 place: Drama, GR

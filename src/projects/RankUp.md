@@ -3,7 +3,7 @@ title: RankUp
 stack1: ["react"]
 stack2: ["tailwind"]
 stack3: ["gatsby"]
-slug: rankup
+slug: RankUp
 date: 20-03-18
 company: SEO Company
 place: Drama, GR

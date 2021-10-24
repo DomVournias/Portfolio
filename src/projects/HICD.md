@@ -3,7 +3,7 @@ title: H.I.C.D.
 stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
-slug: covid19-tracker
+slug: Hellenic-Institute-of-Cultural-Diplomacy
 date: 21-07-01
 company: SEO Company
 place: Drama, GR

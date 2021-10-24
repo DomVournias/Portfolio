@@ -3,7 +3,7 @@ title: HICD - USA
 stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
-slug: hicd-usa
+slug: Hellenic-Institute-of-Cultural-Diplomacy-USA
 date: 21-06-01
 company: Hellenic Institute of Cultural Diplomacy
 place: Nashville, USA

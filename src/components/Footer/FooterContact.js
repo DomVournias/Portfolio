@@ -23,10 +23,10 @@ export default function FooterContact() {
         </div>
         <div className="w-2/5">
           <StaticImage
-            src="../../images/about.png"
+            src="../../images/DomAvatarBigger.png"
             alt="about"
             quality="90"
-            className="w-full"
+            className="w-full rounded-xl"
           />
         </div>
       </div>

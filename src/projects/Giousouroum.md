@@ -3,7 +3,7 @@ title: Giousouroum
 stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
-slug: giousouroum
+slug: Giousouroum
 date: 20-07-23
 company: Antiques e-shop
 place: Drama, GR

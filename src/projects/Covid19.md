@@ -3,7 +3,7 @@ title: Covid19 Tracker
 stack1: ["react"]
 stack2: ["sass"]
 stack3: ["gatsby"]
-slug: covid19-tracker
+slug: Covid-19-Tracker
 date: 21-09-20
 company: SEO Company
 place: Drama, GR

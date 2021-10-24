@@ -6,6 +6,8 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
+import ProjectsButton from "../Buttons/ProjectsButton";
+import TestButton from "../Buttons/TestButton";
 
 export default function Slider() {
   const data = useStaticQuery(graphql`
@@ -39,6 +41,10 @@ export default function Slider() {
 
   const projects = data.allMarkdownRemark.nodes;
 
+  const slug1 = projects[0].frontmatter.slug;
+  const slug2 = projects[1].frontmatter.slug;
+  const slug3 = projects[2].frontmatter.slug;
+
   const title1 = projects[0].frontmatter.title;
   const title2 = projects[1].frontmatter.title;
   const title3 = projects[2].frontmatter.title;
@@ -62,7 +68,6 @@ export default function Slider() {
   const image1 = projects[0].frontmatter.thumbImg.childImageSharp;
   const image2 = projects[1].frontmatter.thumbImg.childImageSharp;
   const image3 = projects[2].frontmatter.thumbImg.childImageSharp;
-
   // Animations
 
   const animation = useAnimation();
@@ -438,15 +443,19 @@ export default function Slider() {
 
   return (
     <section className="text-center">
-      <div className="fixed z-50 m-0 w-full xs:left-0 xs:bottom-0 h-1/4 box-border md:top-3/3 md:bottom-0 ">
+      <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 md:top-1/3 md:left-20 md:w-1/4">
         <motion.div
           animate={animation}
-          className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "
+          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md md:bg-opacity-0"
         >
-          <div className="flex items-center py-4 px-6">
-            <div className="w-4/5">
-              <h3 className="xs:text-2xl md:text-5xl pb-3 xs:pb-2">{title1}</h3>
-              <h4 className="xs:text-xl md:text-2xl pb-8 xs:pb-4">{desc1}</h4>
+          <div className="flex items-center py-4 px-6 ">
+            <div className="xs:w-4/5 ">
+              <h3 className="xs:text-2xl xs:pb-2 md:text-5xl md:pb-3 ">
+                {title1}
+              </h3>
+              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-8 ">
+                {desc1}
+              </h4>
               <span className="px-2 pb-1 text-center bg-blue-600">
                 {stack1}
               </span>
@@ -458,9 +467,9 @@ export default function Slider() {
               </span>
             </div>
 
-            <div className="w-1/5">
+            <div className="xs:w-1/5">
               <svg
-                className="w-1/2 float-right fill-current text-white opacity-30 hover:opacity-60 duration-200"
+                className="xs:float-right xs:w-1/2 fill-current text-white duration-200 xs:opacity-30 xs:hover:opacity-60 md:opacity-10 md:hover:opacity-30 "
                 aria-hidden="true"
                 role="img"
                 preserveAspectRatio="xMidYMid meet"
@@ -478,12 +487,16 @@ export default function Slider() {
         </motion.div>
         <motion.div
           animate={animation2}
-          className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "
+          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md md:bg-opacity-0"
         >
           <div className="flex items-center py-4 px-6">
             <div className="w-4/5">
-              <h3 className="xs:text-2xl md:text-5xl pb-3 xs:pb-2">{title2}</h3>
-              <h4 className="xs:text-xl md:text-2xl pb-8 xs:pb-4">{desc2}</h4>
+              <h3 className="xs:text-2xl xs:pb-2 md:text-5xl md:pb-3 ">
+                {title2}
+              </h3>
+              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-8 ">
+                {desc2}
+              </h4>
               <span className="px-2 pb-1 text-center bg-blue-600">
                 {stack1B}
               </span>
@@ -497,7 +510,7 @@ export default function Slider() {
 
             <div className="w-1/5">
               <svg
-                className="w-1/2 float-right fill-current text-white opacity-30 hover:opacity-60 duration-200"
+                className="xs:float-right xs:w-1/2 fill-current text-white duration-200 xs:opacity-30 xs:hover:opacity-60 md:opacity-10 md:hover:opacity-30 "
                 aria-hidden="true"
                 role="img"
                 preserveAspectRatio="xMidYMid meet"
@@ -515,12 +528,16 @@ export default function Slider() {
         </motion.div>
         <motion.div
           animate={animation3}
-          className="absolute w-full h-full  justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md  "
+          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md md:bg-opacity-0"
         >
           <div className="flex items-center py-4 px-6">
             <div className="w-4/5">
-              <h3 className="xs:text-2xl md:text-5xl pb-3 xs:pb-2">{title3}</h3>
-              <h4 className="xs:text-xl md:text-2xl pb-8 xs:pb-4">{desc3}</h4>
+              <h3 className="xs:text-2xl xs:pb-2 md:text-5xl md:pb-3 ">
+                {title3}
+              </h3>
+              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-8 ">
+                {desc3}
+              </h4>
               <span className="px-2 pb-1 text-center bg-blue-600">
                 {stack1C}
               </span>
@@ -534,7 +551,7 @@ export default function Slider() {
 
             <div className="w-1/5">
               <svg
-                className="w-1/2 float-right fill-current text-white opacity-30 hover:opacity-60 duration-200"
+                className="xs:float-right xs:w-1/2 fill-current text-white duration-200 xs:opacity-30 xs:hover:opacity-60 md:opacity-10 md:hover:opacity-30 "
                 aria-hidden="true"
                 role="img"
                 preserveAspectRatio="xMidYMid meet"
@@ -554,45 +571,54 @@ export default function Slider() {
 
       <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center">
         <span id="first" ref={refFirst} />
+
         <div
           ref={ref}
           className="text-center h-screen flex items-center justify-center "
         >
           <motion.div animate={animation4} className="">
-            <GatsbyImage
-              image={getImage(image1)}
-              alt="image 1"
-              quality="100"
-              className="md:w-2/3 lg:w-full mb-32"
-            />
+            <Link to={"/projects/" + slug1}>
+              <GatsbyImage
+                image={getImage(image1)}
+                alt="image 1"
+                quality="100"
+                className="md:w-2/3 lg:w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
+
         <span id="second" ref={refSecond} />
         <div
           ref={ref2}
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation5} className="">
-            <GatsbyImage
-              image={getImage(image2)}
-              alt="image 2"
-              quality="100"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug2}>
+              <GatsbyImage
+                image={getImage(image2)}
+                alt="image 2"
+                quality="100"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
+
         <span id="third" ref={refThird} />
         <div
           ref={ref3}
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation6}>
-            <GatsbyImage
-              quality="100"
-              image={getImage(image3)}
-              alt="image 3"
-              className="w-full mb-32"
-            />
+            <Link to={"/projects/" + slug3}>
+              <GatsbyImage
+                quality="100"
+                image={getImage(image3)}
+                alt="image 3"
+                className="w-full mb-32"
+              />
+            </Link>
           </motion.div>
         </div>
       </div>
