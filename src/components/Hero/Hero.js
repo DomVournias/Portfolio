@@ -13,6 +13,7 @@ export default function Hero() {
       </h2>
       <StaticImage
         src="../../images/DomAvatar (1).png"
+        draggable={false}
         alt="avatar"
         quality="100"
         className="mx-4 max-w-3xl"

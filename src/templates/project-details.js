@@ -14,6 +14,7 @@ export default function ProjectDetails({ data }) {
     stack1,
     stack2,
     stack3,
+    thumbImg,
     featuredImg,
     bigDescription1,
     bigDescription2,
@@ -24,12 +25,59 @@ export default function ProjectDetails({ data }) {
   } = data.markdownRemark.frontmatter;
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <h3>{stack1}</h3>
-      <div></div>
-      {/* <div dangerouslySetInnerHTML={} /> */}
-    </div>
+    <section className="max-w-6xl  justify-between m-auto items-center ">
+      <div className="flex flex-col h-screen text-center items-center">
+        <div>
+          <h1 className="xs:text-5xl md:text-7xl text-white pt-16 pb-4">
+            {title}
+          </h1>
+          <h2 className="xs:text-2xl md:text-4xl text-gray pb-10 max-w-lg">
+            {description}
+          </h2>
+        </div>
+        <div className="w-full pb-20">
+          <GatsbyImage
+            image={getImage(thumbImg)}
+            draggable={false}
+            alt={slug}
+            quality="100"
+            className="max-w-lg "
+          />
+        </div>
+      </div>
+      <div className="items-center">
+        <p className="text-3xl">{bigDescription1}</p>
+      </div>
+      <div className="flex flex-row">
+        <div>
+          <GatsbyImage
+            image={getImage(thumbImg)}
+            draggable={false}
+            alt={slug}
+            quality="100"
+            className="max-w-lg "
+          />
+        </div>
+        <div>
+          <GatsbyImage
+            image={getImage(thumbImg)}
+            draggable={false}
+            alt={slug}
+            quality="100"
+            className="max-w-lg "
+          />
+        </div>
+        <div>
+          <GatsbyImage
+            image={getImage(thumbImg)}
+            draggable={false}
+            alt={slug}
+            quality="100"
+            className="max-w-lg "
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -38,16 +86,27 @@ export const query = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
+        bigDescription1
+        bigDescription2
         company
         date
         description
+        infoDescription1
+        infoDescription2
+        infoTitle1
+        infoTitle2
         place
         slug
         stack1
         stack2
         stack3
+        title
         featuredImg {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        thumbImg {
           childImageSharp {
             gatsbyImageData
           }

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
-import Menu from "../Buttons/MobileButton";
 
 const activeStyles = {
   color: "white",

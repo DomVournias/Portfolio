@@ -121,6 +121,9 @@ p {
   .sidebar-button {
     @apply inline-block w-10 h-4 mt-2  bg-gray-naive rounded-br-md rounded-tl-md;
   }
+  .projects-paragraph {
+    @apply w-full leading-normal xs:text-xl xs:pb-6 md:text-3xl md:pb-12;
+  }
 }
 
 .section {

@@ -14,6 +14,9 @@ module.exports = {
       xl: "1280px",
     },
     extend: {
+      fontSize: {
+        projects: "2rem",
+      },
       colors: {
         gray: {
           darkest: "#1f2d3d",
