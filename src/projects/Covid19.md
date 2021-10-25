@@ -10,19 +10,18 @@ place: Drama, GR
 description: An iPhone app that makes it really easy to track and share movies.
 
 thumbImg: "../images/thumbs/CovidMockup.png"
-featuredImg: "../images/featured/RankUp-Phone.png"
-mockup1: "../images/mockups/Covid19Tracker2.png"
+featuredImg1: "../images/featured/Covid19Tracker2.png"
+featuredImg2: "../images/featured/Covid19Tracker4.png"
+featuredImg3: "../images/featured/Covid19Tracker6.png"
+featuredImg4: "../images/featured/Covid19Tracker5.png"
+featuredImg5:
+featuredImg6:
+featuredImg7:
+
 bigDescription1: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 bigDescription2: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-mockup2: "../images/mockups/Covid19Tracker2.png"
-mockup3: "../images/mockups/Covid19Tracker2.png"
 infoTitle1: Just a title
 infoDescription1: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-mockup4: "../image/thumbs/CovidMockup.png"
-mockup5: "../image/thumbs/CovidMockup.png"
-mockup6: "../image/thumbs/CovidMockup.png"
-mockup7: "../image/thumbs/CovidMockup.png"
 infoTitle2: Just a title
 infoDescription2: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 ---

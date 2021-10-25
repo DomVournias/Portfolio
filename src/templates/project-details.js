@@ -15,7 +15,10 @@ export default function ProjectDetails({ data }) {
     stack2,
     stack3,
     thumbImg,
-    featuredImg,
+    featuredImg1,
+    featuredImg2,
+    featuredImg3,
+    featuredImg4,
     bigDescription1,
     bigDescription2,
     infoTitle1,
@@ -51,7 +54,7 @@ export default function ProjectDetails({ data }) {
       <div className="flex flex-row">
         <div>
           <GatsbyImage
-            image={getImage(thumbImg)}
+            image={getImage(featuredImg2)}
             draggable={false}
             alt={slug}
             quality="100"
@@ -60,7 +63,7 @@ export default function ProjectDetails({ data }) {
         </div>
         <div>
           <GatsbyImage
-            image={getImage(thumbImg)}
+            image={getImage(featuredImg3)}
             draggable={false}
             alt={slug}
             quality="100"
@@ -69,7 +72,7 @@ export default function ProjectDetails({ data }) {
         </div>
         <div>
           <GatsbyImage
-            image={getImage(thumbImg)}
+            image={getImage(featuredImg4)}
             draggable={false}
             alt={slug}
             quality="100"
@@ -101,14 +104,29 @@ export const query = graphql`
         stack2
         stack3
         title
-        featuredImg {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
         thumbImg {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(quality: 100)
+          }
+        }
+        featuredImg1 {
+          childImageSharp {
+            gatsbyImageData(quality: 100)
+          }
+        }
+        featuredImg2 {
+          childImageSharp {
+            gatsbyImageData(quality: 100)
+          }
+        }
+        featuredImg3 {
+          childImageSharp {
+            gatsbyImageData(quality: 100)
+          }
+        }
+        featuredImg4 {
+          childImageSharp {
+            gatsbyImageData(quality: 100)
           }
         }
       }
