@@ -18,6 +18,8 @@ module.exports = {
         projects: "2rem",
       },
       colors: {
+        secondary: "#FF0000",
+        silver: "#F3F3F3",
         gray: {
           darkest: "#1f2d3d",
           dark: "#3c4858",

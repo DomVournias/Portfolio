@@ -8,6 +8,11 @@ exports.onCreatePage = ({ page, actions }) => {
     page.context.layout = "special";
     createPage(page);
   }
+
+  if (page.path.match(/projects/)) {
+    page.context.layout = "projectsPage";
+    createPage(page);
+  }
 };
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
