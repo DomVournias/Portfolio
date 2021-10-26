@@ -84,6 +84,7 @@ p {
   text-decoration: none;
   font-family: "Segoe UI Bold";
   color: white;
+  outline: none;
 }
 
 @layer utilities {

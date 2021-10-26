@@ -1,8 +1,9 @@
 ---
 title: Covid19 Tracker
-stack1: ["react"]
-stack2: ["sass"]
-stack3: ["gatsby"]
+stack1: ["REACT"]
+stackIcon1: ""
+stack2: ["SASS"]
+stack3: ["GATSBY"]
 slug: Covid-19-Tracker
 date: 21-09-20
 company: SEO Company
