@@ -18,18 +18,21 @@ const ContactForm = () => {
   };
 
   const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formState }),
+      body: encode({ "form-name": "contact", ...this.state }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
 
-    e.preventDefault();
-  };
-
-  const handleSubmit = (e) => {
     e.preventDefault();
   };
 
