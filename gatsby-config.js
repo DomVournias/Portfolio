@@ -17,6 +17,7 @@ module.exports = {
         duration: 300,
       },
     },
+
     {
       resolve: "gatsby-plugin-layout",
       options: {

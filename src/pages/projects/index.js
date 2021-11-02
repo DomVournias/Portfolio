@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useInView } from "react-intersection-observer";
 
+
 export default function Projects() {
   const data = useStaticQuery(graphql`
     {
@@ -956,6 +957,7 @@ export default function Projects() {
           </li>
         </ul>
       </div>
+      
     </main>
   );
 }

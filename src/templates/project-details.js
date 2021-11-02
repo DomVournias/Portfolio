@@ -30,7 +30,7 @@ export default function ProjectDetails({ data }) {
   return (
     <section className="justify-between -mt-20 w-full items-center ">
       <div className="flex flex-col h-screen  text-center items-center bg-secondary ">
-        <div className="max-w-6xl ">
+        <div className="max-w-6xl pt-20">
           <div className="">
             <h1 className="xs:text-5xl md:text-7xl text-white pt-16 pb-4">
               {title}
@@ -97,7 +97,9 @@ export default function ProjectDetails({ data }) {
             </div>
           </div>
 
-          <p className="text-3xl font-bold text-black">{bigDescription1}</p>
+          <p className="text-3xl leading-relaxed text-black">
+            {bigDescription1}
+          </p>
         </div>
       </div>
       {/* -----2nd Section----- */}
@@ -125,22 +127,26 @@ export default function ProjectDetails({ data }) {
                 {stack3}
               </span>
             </div>
-            <p className="text-3xl">{bigDescription2}</p>
+            <p className="text-xl leading-relaxed">{bigDescription2}</p>
           </div>
         </div>
       </div>
       {/* -----3rd Section----- */}
       <div className="flex flex-row items-center place-content-center bg-secondary">
-        <div className="max-w-4xl py-80">
-          <p className="text-3xl font-bold text-white">{bigDescription2}</p>
+        <div className="max-w-4xl py-60">
+          <p className="text-3xl tracking-wide text-white leading-relaxed">
+            {bigDescription2}
+          </p>
         </div>
       </div>
       {/* -----4th Section----- */}
 
-      <div className="flex flex-col relative place-content-center items-center h-screen bg-silver ">
-        <div className="max-w-4xl pt-40 pb-20">
-          <h3 className="text-3xl text-black">{infoTitle1}</h3>
-          <p className="text-xl font-bold text-black">{bigDescription2}</p>
+      <div className="flex flex-col relative place-content-center items-center h-full bg-silver pb-60">
+        <div className="max-w-4xl pt-40 pb-40">
+          <h3 className="text-3xl  text-black pb-4">{infoTitle1}</h3>
+          <p className="text-xl  text-black leading-relaxed">
+            {bigDescription2}
+          </p>
         </div>
         <div className="max-w-6xl flex flex-row gap-20 place-content-center  ">
           <div className="flex flex-col">
@@ -188,14 +194,9 @@ export default function ProjectDetails({ data }) {
           </div>
         </div>
       </div>
+
       {/* -----5th Section----- */}
-      <div className="flex flex-row items-center h-screen place-content-center">
-        <div className="max-w-6xl">
-          <p className="text-3xl">{bigDescription2}</p>
-        </div>
-      </div>
-      {/* -----6th Section----- */}
-      <div className="flex h-screen place-content-center">
+      <div className="flex h-screen place-content-center bg-white">
         <div className="max-w-6xl flex flex-row-reverse items-center">
           <div className="w-1/2 text-center">
             <GatsbyImage
@@ -208,21 +209,27 @@ export default function ProjectDetails({ data }) {
           </div>
           <div className="w-1/2">
             <div className="flex items-center gap-2 py-3">
-              <h3 className="text-xl">Complexity of </h3>
-              <span className="py-2 px-4 rounded-lg bg-white bg-opacity-10">
+              <h3 className="text-xl text-black">Complexity of </h3>
+              <span className="py-2 px-4 rounded-lg bg-black bg-opacity-10 text-black text-xl">
                 {title}
               </span>
             </div>
-            <p className="text-3xl">{bigDescription2}</p>
+            <p className="text-xl leading-relaxed text-black">
+              {bigDescription2}
+            </p>
           </div>
         </div>
       </div>
-      {/* -----7th Section----- */}
-      <div className="flex flex-row items-center h-1/2 place-content-center">
-        <div className="max-w-6xl">
-          <p className="text-3xl">{bigDescription2}</p>
+      {/* -----6th Section----- */}
+      <div className="flex flex-row items-center place-content-center bg-secondary">
+        <div className="max-w-4xl py-60">
+          <p className="text-3xl tracking-wide text-white leading-relaxed">
+            {bigDescription2}
+          </p>
         </div>
       </div>
+      {/* -----7th Section----- */}
+
       {/* -----8th Section----- */}
     </section>
   );

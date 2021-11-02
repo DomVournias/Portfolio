@@ -45,7 +45,7 @@ const variants2 = {
   },
 };
 
-export default function Navbar() {
+export default function ProjectsNavbar() {
   return (
     <header className="block w-full">
       <div className="flex flex-row h-20 max-w-6xl  justify-between m-auto items-center px-4">
@@ -65,10 +65,6 @@ export default function Navbar() {
               quality="90"
               className="w-8"
             />
-
-            <div className="pl-3 text-lg font-bold text-gray xs:hidden sm:block">
-              Dom Vournias
-            </div>
           </Link>
         </motion.div>
         <div>
@@ -80,14 +76,14 @@ export default function Navbar() {
           >
             <Link
               to="/projects/"
-              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out hover:text-gray-400"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
               activeStyle={activeStyles}
             >
               Work
             </Link>
             <Link
               to="/about/"
-              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out hover:text-gray-400"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
               activeStyle={activeStyles}
             >
               About

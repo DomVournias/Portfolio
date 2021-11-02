@@ -7,7 +7,7 @@ import { useAnimation } from "framer-motion";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
 import ProjectsButton from "../Buttons/ProjectsButton";
-import TestButton from "../Buttons/TestButton";
+import ContactForm from "../Forms/ContactForm";
 
 export default function Slider() {
   const data = useStaticQuery(graphql`
@@ -707,6 +707,8 @@ export default function Slider() {
           </Link>
         </ul>
       </div>
+      <ProjectsButton />
+      <ContactForm />
     </section>
   );
 }

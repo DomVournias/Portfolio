@@ -9,7 +9,7 @@ exports.onCreatePage = ({ page, actions }) => {
     createPage(page);
   }
 
-  if (page.path.match(/projects/)) {
+  if (page.path.match(/projects\/([^\/]+$)/)) {
     page.context.layout = "projectsPage";
     createPage(page);
   }
@@ -45,7 +45,7 @@ exports.createPages = async function ({ graphql, actions }) {
     actions.createPage({
       path: "/projects/" + slug,
       component: path.resolve("./src/templates/project-details.js"),
-      context: { slug: slug },
+      context: { slug: slug, layout: "projectsPage" },
     });
   });
 };

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import FooterAbout from "../components/Footer/FooterAbout";
+import ProjectsNavbar from "../components/Navbar/ProjectsNavbar";
 
 const duration = 0.5;
 
@@ -28,6 +29,7 @@ export const Layout = ({ children, location, pageContext }) => {
   if (pageContext.layout === "projectsPage") {
     return (
       <main className="bg-black ">
+        <ProjectsNavbar />
         <AnimatePresence>
           <motion.main
             key={location.pathname}

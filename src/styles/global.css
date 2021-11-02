@@ -158,3 +158,19 @@ p {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 }
+
+#all-projects-button-overlay {
+  background: linear-gradient(#fff, #fff) left no-repeat, #333333;
+  background-size: 0% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s;
+  font-size: 50px;
+  delay: 0;
+  margin: 0;
+}
+
+#all-projects-button-overlay:hover {
+  background-size: 100% 100%;
+}

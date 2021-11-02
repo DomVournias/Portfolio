@@ -6,6 +6,14 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
+    boxShadow: {
+      "3xl": "0 0 40px rgba(8, 7, 16, 0.6)",
+    },
+    backgroundSize: {
+      hide: "0 100%",
+      halfed: "50%",
+      filled: "100% 100%",
+    },
     screens: {
       xs: "320px",
       sm: "640px",
@@ -19,6 +27,10 @@ module.exports = {
       },
       colors: {
         secondary: "#FF0000",
+        third: "#f64d28",
+        fourth: "#1B998B",
+        fifth: "#390099",
+        sixth: "#FFBD00",
         silver: "#F3F3F3",
         gray: {
           darkest: "#1f2d3d",
@@ -33,6 +45,7 @@ module.exports = {
     },
   },
   variants: {
+    backgroundSize: ["responsive", "hover", "focus"],
     extend: {},
   },
   plugins: [],
