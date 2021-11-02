@@ -1,9 +1,7 @@
 module.exports = {
   mode: "",
-  purge: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
+
   darkMode: false,
   theme: {
     boxShadow: {
