@@ -75,13 +75,13 @@ export default function Slider() {
   const animation2 = useAnimation();
   const animation3 = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.8,
+    threshold: 0.7,
   });
   const [ref2, inView2] = useInView({
-    threshold: 0.8,
+    threshold: 0.7,
   });
   const [ref3, inView3] = useInView({
-    threshold: 0.8,
+    threshold: 0.7,
   });
 
   // First Box Animation
@@ -89,7 +89,9 @@ export default function Slider() {
   useEffect(() => {
     if (inView) {
       animation.start({
+        display: "block",
         opacity: 1,
+        x: 0,
         transition: {
           type: "spring",
           duration: 2,
@@ -100,7 +102,9 @@ export default function Slider() {
     }
     if (!inView) {
       animation.start({
+        display: "none",
         opacity: 0,
+        x: -30,
       });
     }
   }, [animation, inView]);
@@ -110,8 +114,9 @@ export default function Slider() {
   useEffect(() => {
     if (inView2) {
       animation2.start({
+        display: "block",
         opacity: 1,
-
+        x: 0,
         transition: {
           type: "spring",
           duration: 2,
@@ -122,7 +127,9 @@ export default function Slider() {
     }
     if (!inView2) {
       animation2.start({
+        display: "none",
         opacity: 0,
+        x: -30,
       });
     }
   }, [animation2, inView2]);
@@ -132,8 +139,9 @@ export default function Slider() {
   useEffect(() => {
     if (inView3) {
       animation3.start({
+        display: "block",
         opacity: 1,
-
+        x: 0,
         transition: {
           type: "spring",
           ease: "easeInOut",
@@ -144,7 +152,9 @@ export default function Slider() {
     }
     if (!inView3) {
       animation3.start({
+        display: "none",
         opacity: 0,
+        x: -30,
       });
     }
   }, [animation3, inView3]);
@@ -338,7 +348,7 @@ export default function Slider() {
   // Sidebar Animations
 
   const activeBtn = useAnimation();
-  const [refFirst, inViewFirst] = useInView({ threshold: 0.1 });
+  const [refFirst, inViewFirst] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inViewFirst) {
@@ -360,7 +370,7 @@ export default function Slider() {
   }, [activeBtn, inViewFirst]);
 
   const activeBtn2 = useAnimation();
-  const [refSecond, inViewSecond] = useInView();
+  const [refSecond, inViewSecond] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inViewSecond) {
@@ -382,7 +392,7 @@ export default function Slider() {
   }, [activeBtn2, inViewSecond]);
 
   const activeBtn3 = useAnimation();
-  const [refThird, inViewThird] = useInView();
+  const [refThird, inViewThird] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inViewThird) {
@@ -541,60 +551,64 @@ export default function Slider() {
       </div>
 
       <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center lg:pl-40 xl:pl-20">
-        <span id="first" ref={refFirst} />
-
         <div
           ref={ref}
           className="text-center h-screen flex items-center justify-center "
         >
           <motion.div animate={animation4} className="">
-            <Link to={"/projects/" + slug1}>
-              <GatsbyImage
-                image={getImage(image1)}
-                alt="image 1"
-                quality="100"
-                className="md:w-2/3 lg:w-full mb-32"
-              />
-            </Link>
+            <span id="first" ref={refFirst}>
+              <Link to={"/projects/" + slug1}>
+                <GatsbyImage
+                  image={getImage(image1)}
+                  alt="image 1"
+                  quality="100"
+                  className="md:w-2/3 lg:w-full mb-32"
+                />
+              </Link>
+            </span>
           </motion.div>
         </div>
 
-        <span id="second" ref={refSecond} />
         <div
           ref={ref2}
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation5} className="">
-            <Link to={"/projects/" + slug2}>
-              <GatsbyImage
-                image={getImage(image2)}
-                alt="image 2"
-                quality="100"
-                className="w-full mb-32"
-              />
-            </Link>
+            <span id="second" ref={refSecond}>
+              <Link to={"/projects/" + slug2}>
+                <GatsbyImage
+                  image={getImage(image2)}
+                  alt="image 2"
+                  quality="100"
+                  className="w-full mb-32"
+                />
+              </Link>
+            </span>
           </motion.div>
         </div>
-
-        <span id="third" ref={refThird} />
         <div
           ref={ref3}
           className="text-center h-screen flex items-center justify-center"
         >
           <motion.div animate={animation6}>
-            <Link to={"/projects/" + slug3}>
-              <GatsbyImage
-                quality="100"
-                image={getImage(image3)}
-                alt="image 3"
-                className="w-full mb-32"
-              />
-            </Link>
+            <span id="third" ref={refThird}>
+              <Link to={"/projects/" + slug3}>
+                <GatsbyImage
+                  quality="100"
+                  image={getImage(image3)}
+                  alt="image 3"
+                  className="w-full mb-32"
+                />
+              </Link>
+            </span>
           </motion.div>
         </div>
       </div>
 
-      <div className="sidebar xs:hidden lg:block lg:right-10 lg:top-1/3 desk:right-32 ">
+      <motion.div
+        animate={animation10}
+        className="sidebar xs:hidden lg:block lg:right-10 lg:top-1/3 desk:right-32 "
+      >
         <ul
           className="flex flex-col justify-between gap-4 
         "
@@ -677,9 +691,9 @@ export default function Slider() {
             </motion.li>
           </Link>
         </ul>
-      </div>
+      </motion.div>
       <ProjectsButton />
-      <ContactForm />
+      <span ref={refBottom} />
     </section>
   );
 }
