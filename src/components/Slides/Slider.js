@@ -8,6 +8,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
 import ProjectsButton from "../Buttons/ProjectsButton";
 import ContactForm from "../Forms/ContactForm";
+import CaseStudyBtn from "../Buttons/CaseStudyBtn";
 
 export default function Slider() {
   const data = useStaticQuery(graphql`
@@ -402,23 +403,6 @@ export default function Slider() {
     }
   }, [activeBtn3, inViewThird]);
 
-  const textVariants = {
-    rest: {
-      y: 7,
-      opacity: 0,
-    },
-    hover: {
-      y: 0,
-      opacity: 1,
-      color: "white",
-      transition: {
-        duration: 0.5,
-        type: "tween",
-        ease: "easeInOut",
-      },
-    },
-  };
-
   const plusVariants = {
     rest: {
       strokeWidth: 3,
@@ -441,19 +425,36 @@ export default function Slider() {
     },
   };
 
+  const textVariants = {
+    rest: {
+      x: 0,
+      opacity: 0,
+    },
+    hover: {
+      x: 3,
+      opacity: 1,
+      color: "white",
+      transition: {
+        duration: 0.3,
+        type: "tween",
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <section className="text-center">
-      <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 md:top-1/3 md:left-20 md:w-1/4">
+      <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 lg:top-1/3 lg:left-10 lg:w-1/3 xxl:left-20 desk:left-32 desk:w-1/4">
         <motion.div
           animate={animation}
-          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md md:bg-opacity-0"
+          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md lg:bg-opacity-0"
         >
-          <div className="flex items-center py-4 px-6 ">
-            <div className="xs:w-4/5 ">
-              <h3 className="xs:text-2xl xs:pb-2 md:text-5xl md:pb-3 ">
+          <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
+            <div className="xs:w-4/5 lg:w-full">
+              <h3 className="xs:text-4xl xs:pb-2 lg:text-5xl lg:pb-3 ">
                 {title1}
               </h3>
-              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-8 ">
+              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-6 ">
                 {desc1}
               </h4>
               <span className="px-2 pb-1 text-center bg-blue-600">
@@ -467,34 +468,24 @@ export default function Slider() {
               </span>
             </div>
 
-            <div className="xs:w-1/5">
-              <svg
-                className="xs:float-right xs:w-1/2 fill-current text-white duration-200 xs:opacity-30 xs:hover:opacity-60 md:opacity-10 md:hover:opacity-30 "
-                aria-hidden="true"
-                role="img"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-              >
-                <rect fill="none" x="0" y="0" stroke="none" />
-                <g transform="rotate(-90 8 8)">
-                  <g>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                  </g>
-                </g>
-              </svg>
-            </div>
+            <Link
+              to={"/projects/" + slug1}
+              className="flex flex-col xs:self-center lg:self-start"
+            >
+              <CaseStudyBtn />
+            </Link>
           </div>
         </motion.div>
         <motion.div
           animate={animation2}
-          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md md:bg-opacity-0"
+          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md lg:bg-opacity-0"
         >
-          <div className="flex items-center py-4 px-6">
-            <div className="w-4/5">
-              <h3 className="xs:text-2xl xs:pb-2 md:text-5xl md:pb-3 ">
+          <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
+            <div className="xs:w-4/5 lg:w-full">
+              <h3 className="xs:text-4xl xs:pb-2 lg:text-5xl lg:pb-3 ">
                 {title2}
               </h3>
-              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-8 ">
+              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-6 ">
                 {desc2}
               </h4>
               <span className="px-2 pb-1 text-center bg-blue-600">
@@ -508,34 +499,24 @@ export default function Slider() {
               </span>
             </div>
 
-            <div className="w-1/5">
-              <svg
-                className="xs:float-right xs:w-1/2 fill-current text-white duration-200 xs:opacity-30 xs:hover:opacity-60 md:opacity-10 md:hover:opacity-30 "
-                aria-hidden="true"
-                role="img"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-              >
-                <rect fill="none" x="0" y="0" stroke="none" />
-                <g transform="rotate(-90 8 8)">
-                  <g>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                  </g>
-                </g>
-              </svg>
-            </div>
+            <Link
+              to={"/projects/" + slug2}
+              className="flex flex-col xs:self-center lg:self-start"
+            >
+              <CaseStudyBtn />
+            </Link>
           </div>
         </motion.div>
         <motion.div
           animate={animation3}
-          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md md:bg-opacity-0"
+          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md lg:bg-opacity-0"
         >
-          <div className="flex items-center py-4 px-6">
-            <div className="w-4/5">
-              <h3 className="xs:text-2xl xs:pb-2 md:text-5xl md:pb-3 ">
+          <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
+            <div className="xs:w-4/5 lg:w-full">
+              <h3 className="xs:text-4xl xs:pb-2 lg:text-5xl lg:pb-3 ">
                 {title3}
               </h3>
-              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-8 ">
+              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-6 ">
                 {desc3}
               </h4>
               <span className="px-2 pb-1 text-center bg-blue-600">
@@ -549,27 +530,17 @@ export default function Slider() {
               </span>
             </div>
 
-            <div className="w-1/5">
-              <svg
-                className="xs:float-right xs:w-1/2 fill-current text-white duration-200 xs:opacity-30 xs:hover:opacity-60 md:opacity-10 md:hover:opacity-30 "
-                aria-hidden="true"
-                role="img"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-              >
-                <rect fill="none" x="0" y="0" stroke="none" />
-                <g transform="rotate(-90 8 8)">
-                  <g>
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                  </g>
-                </g>
-              </svg>
-            </div>
+            <Link
+              to={"/projects/" + slug3}
+              className="flex flex-col xs:self-center lg:self-start"
+            >
+              <CaseStudyBtn />
+            </Link>
           </div>
         </motion.div>
       </div>
 
-      <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center">
+      <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center lg:pl-40 xl:pl-20">
         <span id="first" ref={refFirst} />
 
         <div
@@ -623,7 +594,7 @@ export default function Slider() {
         </div>
       </div>
 
-      <div className="sidebar xs:hidden md:block md:right-10 md:top-1/3">
+      <div className="sidebar xs:hidden lg:block lg:right-10 lg:top-1/3 desk:right-32 ">
         <ul
           className="flex flex-col justify-between gap-4 
         "

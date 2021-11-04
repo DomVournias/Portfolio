@@ -29,8 +29,8 @@ export default function ProjectDetails({ data }) {
 
   return (
     <section className="justify-between -mt-20 w-full items-center ">
-      <div className="flex flex-col h-screen  text-center items-center bg-secondary ">
-        <div className="max-w-6xl pt-20">
+      <div className="flex flex-col h-full  text-center items-center bg-secondary ">
+        <div className="max-w-6xl pt-20 h-full">
           <div className="">
             <h1 className="xs:text-5xl md:text-7xl text-white pt-16 pb-4">
               {title}
@@ -51,7 +51,7 @@ export default function ProjectDetails({ data }) {
         </div>
       </div>
       {/* -----1st Section----- */}
-      <div className="flex flex-row items-center h-screen place-content-center bg-white ">
+      <div className="flex flex-col items-center h-screen place-content-center bg-white">
         <div className="max-w-4xl">
           <div className="flex  place-content-between items-center py-3">
             <span className="self-center">
