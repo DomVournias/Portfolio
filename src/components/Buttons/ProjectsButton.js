@@ -3,18 +3,18 @@ import { Link } from "gatsby";
 
 export default function ProjectsButton() {
   return (
-    <div className="max-w-3xl m-auto items-center rounded-xl bg-gradient-to-l from-black to-fifth py-20 px-20 mb-40  flex gap-10 shadow-glow">
-      <div className="w-3/4 text-left">
+    <div className="flex xs:flex-col md:flex-row items-center rounded-xl xs:bg-gradient-to-t md:bg-gradient-to-l from-black to-fifth xs:py-10 md:py-20 xs:mx-6 xs:my-32 md:px-20 md:mb-40 md:gap-20 gap-10 xs:shadow-glowUp md:shadow-glow ">
+      <div className="w-3/4 xs:text-center md:text-left">
         <h3 className="text-5xl pb-4">All Projects</h3>
         <h4 className="text-2xl">
           Have a look at the full list of the projects I've worked.
         </h4>
       </div>
 
-      <div className="w-1/4 transform hover:scale-95 transition-all duration-500 ease-in-out">
-        <Link to="/projects/" className="">
+      <div className="xs:w-14 xs:text-center md:w-14 transform hover:scale-95 transition-all duration-500 ease-in-out">
+        <Link to="/projects/" className="w-full h-full block">
           <svg
-            className="xs:float-center xs:w-2/5 "
+            className="xs:w-full "
             aria-hidden="true"
             role="img"
             preserveAspectRatio="xMidYMid meet"

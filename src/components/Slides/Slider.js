@@ -692,7 +692,9 @@ export default function Slider() {
           </Link>
         </ul>
       </motion.div>
-      <ProjectsButton />
+      <div className="flex self-center max-w-3xl m-auto">
+        <ProjectsButton />
+      </div>
       <span ref={refBottom} />
     </section>
   );
