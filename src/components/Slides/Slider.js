@@ -328,16 +328,16 @@ export default function Slider() {
   const [refBottom, inViewBottom] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    if (inViewTop + inViewBottom) {
+    if (inView + inView2 + inView3) {
       animation10.start({
-        scale: 0,
+        scale: 1,
         transition: {
           duration: 0.3,
         },
       });
     } else {
       animation10.start({
-        scale: 1,
+        scale: 0,
         transition: {
           duration: 0.3,
         },
@@ -692,7 +692,7 @@ export default function Slider() {
           </Link>
         </ul>
       </motion.div>
-      <div className="flex self-center max-w-3xl m-auto">
+      <div className="flex self-center max-w-3xl m-auto justify-center">
         <ProjectsButton />
       </div>
       <span ref={refBottom} />

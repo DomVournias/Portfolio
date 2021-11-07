@@ -4,6 +4,12 @@ module.exports = {
 
   darkMode: false,
   theme: {
+    extend: {
+      animation: {
+        spin: "spin 3s linear infinite",
+      },
+    },
+
     boxShadow: {
       "3xl": "0 0 40px rgba(8, 7, 16, 0.6)",
       glowUp: "-7px ​-50px 75px -30px   rgba(57, 0, 153, 0.5);",
@@ -48,6 +54,7 @@ module.exports = {
     },
   },
   variants: {
+    animation: ["responsive", "motion-safe", "motion-reduce"],
     backgroundSize: ["responsive", "hover", "focus"],
     extend: {},
   },

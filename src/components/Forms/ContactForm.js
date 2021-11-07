@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formState, setFormState] = useState({
@@ -37,25 +38,25 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col place-content-center items-center h-screen mb-36 ">
-      <div className="relative w-full max-w-3xl h-full top-1/4 -translate-y-1/2 ">
+    <div className="flex flex-col items-center place-content-center h-full xs:px-6 overflow-hidden">
+      <div className="relative w-full h-screen max-w-3xl mt-40 xs:mb-20 md:mb-20 lg:mb-20 ">
         <form
           onSubmit={handleSubmit}
           name="contact"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          className="absolute flex-col pb-10 px-8 z-10 w-full bg-gray-naive bg-opacity-30 rounded-xl backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 shadow-3xl"
+          className="absolute flex-col pb-10 xs:px-3 md:px-8 z-10 w-full bg-gray-naive bg-opacity-30 rounded-xl backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 shadow-3xl "
         >
           <input type="hidden" name="form-name" value="contact" />
-          <div className="py-20 w-full">
+          <div className="xs:py-10 md:py-20 w-full">
             <h3 className="text-white text-3xl">
               🚀 Ready to build your website?
             </h3>
           </div>
           <div className="px-6">
-            <div className="w-full flex flex-row gap-6 mb-6">
-              <div className="w-1/2">
+            <div className="w-full flex xs:flex-col md:flex-row gap-6 mb-6">
+              <div className="xs:w-full md:w-1/2">
                 <label
                   htmlFor="name"
                   className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ml-2 text-left"
@@ -72,7 +73,7 @@ const ContactForm = () => {
                   placeholder="John Doe"
                 />
               </div>
-              <div className="w-1/2">
+              <div className="xs:w-full md:w-1/2">
                 <label
                   htmlFor="company"
                   className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ml-2 text-left "
@@ -90,8 +91,8 @@ const ContactForm = () => {
                 />
               </div>
             </div>
-            <div className="w-full flex flex-row gap-6 mb-6">
-              <div className="w-1/2">
+            <div className="w-full flex xs:flex-col md:flex-row gap-6 mb-6">
+              <div className="xs:w-full md:w-1/2">
                 <label
                   htmlFor="email"
                   className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ml-2 text-left "
@@ -108,7 +109,7 @@ const ContactForm = () => {
                   placeholder="john@doe.com"
                 />
               </div>
-              <div className="w-1/2">
+              <div className="xs:w-full md:w-1/2">
                 <label
                   htmlFor="phone"
                   className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ml-2 text-left "
@@ -155,8 +156,32 @@ const ContactForm = () => {
             </div>
           </div>
         </form>
-        <div className="absolute h-52 w-52 rounded-full -top-24 -left-24 bg-third" />
-        <div className="absolute h-52 w-52 rounded-full bottom-44 -right-24 bg-fourth" />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            repeatDelay: 0,
+            duration: 8,
+            ease: "linear",
+          }}
+          className="relative w-1/4 h-1/3 "
+        >
+          <span className="absolute h-52 w-52 -top-24 -left-24 bg-third rounded-full" />
+        </motion.div>
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            repeatDelay: 0,
+            duration: 8,
+            ease: "linear",
+          }}
+          className="absolute xs:bottom-10 md:bottom-32 desk:bottom-72 -right-0 w-1/4 h-1/3 "
+        >
+          <span className="absolute h-52 w-52 rounded-full  bg-fourth -bottom-24 -right-24" />
+        </motion.div>
       </div>
     </div>
   );
