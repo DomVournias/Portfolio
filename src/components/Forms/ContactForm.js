@@ -41,7 +41,7 @@ const ContactForm = () => {
     <section className="flex m-0 h-1/2 py-32 justify-center overflow-hidden z-10 px-8">
       <div className="relative">
         <form
-          action="/thank-you/"
+          action="/thankyou"
           // onSubmit={handleSubmit}
           name="contact"
           method="post"
