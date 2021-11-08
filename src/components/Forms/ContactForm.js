@@ -2,47 +2,47 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  // const [formState, setFormState] = useState({
+  //   name: "",
+  //   company: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //     )
+  //     .join("&");
+  // };
 
-  const handleChange = (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   setFormState({
+  //     ...formState,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formState }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+  // const handleSubmit = (e) => {
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": "contact", ...formState }),
+  //   })
+  //     .then(() => redirect("/thankyou/"))
+  //     .catch((error) => alert(error));
 
-    e.preventDefault();
-  };
+  //   e.preventDefault();
+  // };
 
   return (
     <section className="flex m-0 h-1/2 py-32 justify-center overflow-hidden z-10 px-8">
       <div className="relative">
         <form
           action="/thank-you/"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           name="contact"
           method="post"
           data-netlify="true"
@@ -66,8 +66,8 @@ const ContactForm = () => {
                 </label>
                 <input
                   name="name"
-                  onChange={handleChange}
-                  value={formState.name}
+                  // onChange={handleChange}
+                  // value={formState.name}
                   id="name"
                   type="text"
                   className="w-full px-6 py-3  bg-black border-2 border-solid border-gray-naive rounded-lg outline-none placeholder-gray-naive focus:border-third text-white transition-all duration-200"
@@ -83,8 +83,8 @@ const ContactForm = () => {
                 </label>
                 <input
                   name="company"
-                  onChange={handleChange}
-                  value={formState.company}
+                  // onChange={handleChange}
+                  // value={formState.company}
                   id="company"
                   type="text"
                   className="w-full px-6 py-3 bg-black border-2 border-solid border-gray-naive rounded-lg outline-none placeholder-gray-naive focus:border-third text-white transition-all duration-200"
@@ -102,8 +102,8 @@ const ContactForm = () => {
                 </label>
                 <input
                   name="email"
-                  onChange={handleChange}
-                  value={formState.email}
+                  // onChange={handleChange}
+                  // value={formState.email}
                   id="email"
                   type="email"
                   className="w-full px-6 py-3 bg-black border-2 border-solid border-gray-naive rounded-lg outline-none placeholder-gray-naive focus:border-third text-white transition-all duration-200"
@@ -119,8 +119,8 @@ const ContactForm = () => {
                 </label>
                 <input
                   name="phone"
-                  onChange={handleChange}
-                  value={formState.phone}
+                  // onChange={handleChange}
+                  // value={formState.phone}
                   id="phone"
                   type="tel"
                   className="w-full px-6 py-3 bg-black border-2 border-solid border-gray-naive rounded-lg outline-none placeholder-gray-naive focus:border-third text-white transition-all duration-200"
@@ -138,8 +138,8 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   name="message"
-                  onChange={handleChange}
-                  value={formState.message}
+                  // onChange={handleChange}
+                  // value={formState.message}
                   id="message"
                   type="text"
                   className="w-full h-40 px-6 py-3  bg-black border-2 border-solid border-gray-naive rounded-lg outline-none placeholder-gray-naive focus:border-third text-white transition-all duration-200"
