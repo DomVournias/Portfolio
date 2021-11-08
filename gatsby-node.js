@@ -13,6 +13,11 @@ exports.onCreatePage = ({ page, actions }) => {
     page.context.layout = "projectsPage";
     createPage(page);
   }
+
+  if (page.path.match(/thankyou/)) {
+    page.context.layout = "thankyouPage";
+    createPage(page);
+  }
 };
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

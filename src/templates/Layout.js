@@ -26,6 +26,24 @@ const variants = {
 };
 
 export const Layout = ({ children, location, pageContext }) => {
+  if (pageContext.layout === "thankyouPage") {
+    return (
+      <main className="bg-black ">
+        <AnimatePresence>
+          <motion.main
+            key={location.pathname}
+            variants={variants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            className="opacity-loader"
+          >
+            {children}
+          </motion.main>
+        </AnimatePresence>
+      </main>
+    );
+  }
   if (pageContext.layout === "projectsPage") {
     return (
       <main className="bg-black ">

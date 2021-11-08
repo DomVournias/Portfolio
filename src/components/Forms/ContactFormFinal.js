@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const ContactForm = () => {
+const ContactFormFinal = () => {
   const [formState, setFormState] = useState({
     name: "",
     company: "",
@@ -188,4 +188,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFormFinal;
