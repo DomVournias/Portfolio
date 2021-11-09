@@ -325,25 +325,25 @@ export default function Slider() {
 
   const animation10 = useAnimation();
   const [refTop, inViewTop] = useInView({ threshold: 0.5 });
-  const [refBottom, inViewBottom] = useInView({ threshold: 0.5 });
+  const [refSlider, inViewSlider] = useInView({ threshold: 0.5 });
 
-  useEffect(() => {
-    if (inView + inView2 + inView3) {
-      animation10.start({
-        scale: 1,
-        transition: {
-          duration: 0.3,
-        },
-      });
-    } else {
-      animation10.start({
-        scale: 0,
-        transition: {
-          duration: 0.3,
-        },
-      });
-    }
-  }, [animation10, inViewTop, inViewBottom]);
+  // useEffect(() => {
+  //   if (inViewFirst + inViewSecond + inViewThird) {
+  //     animation10.start({
+  //       scale: 1,
+  //       transition: {
+  //         duration: 0.3,
+  //       },
+  //     });
+  //   } else {
+  //     animation10.start({
+  //       scale: 0,
+  //       transition: {
+  //         duration: 0.3,
+  //       },
+  //     });
+  //   }
+  // }, [animation10, inViewFirst]);
 
   // Sidebar Animations
 
@@ -353,7 +353,7 @@ export default function Slider() {
   useEffect(() => {
     if (inViewFirst) {
       activeBtn.start({
-        backgroundColor: "white",
+        backgroundColor: "#f64d28",
         transition: {
           duration: 0.3,
         },
@@ -361,7 +361,7 @@ export default function Slider() {
     }
     if (!inViewFirst) {
       activeBtn.start({
-        backgroundColor: "#333333",
+        backgroundColor: "#333",
         transition: {
           duration: 0.3,
         },
@@ -375,7 +375,7 @@ export default function Slider() {
   useEffect(() => {
     if (inViewSecond) {
       activeBtn2.start({
-        backgroundColor: "white",
+        backgroundColor: "#f64d28",
         transition: {
           duration: 0.3,
         },
@@ -383,7 +383,7 @@ export default function Slider() {
     }
     if (!inViewSecond) {
       activeBtn2.start({
-        backgroundColor: "#333333",
+        backgroundColor: "#333",
         transition: {
           duration: 0.3,
         },
@@ -397,7 +397,7 @@ export default function Slider() {
   useEffect(() => {
     if (inViewThird) {
       activeBtn3.start({
-        backgroundColor: "white",
+        backgroundColor: "#f64d28",
         transition: {
           duration: 0.3,
         },
@@ -405,7 +405,7 @@ export default function Slider() {
     }
     if (!inViewThird) {
       activeBtn3.start({
-        backgroundColor: "#333333",
+        backgroundColor: "#333",
         transition: {
           duration: 0.3,
         },
@@ -424,7 +424,7 @@ export default function Slider() {
       },
     },
     hover: {
-      stroke: "#fff",
+      stroke: "#ffff",
       transition: {
         duration: 0.6,
       },
@@ -453,11 +453,11 @@ export default function Slider() {
   };
 
   return (
-    <section className="text-center">
+    <section className="text-center " ref={refSlider}>
       <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 lg:top-1/3 lg:left-10 lg:w-1/3 xxl:left-20 desk:left-32 desk:w-1/4">
         <motion.div
           animate={animation}
-          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md lg:bg-opacity-0"
+          className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none "
         >
           <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
             <div className="xs:w-4/5 lg:w-full">
@@ -488,7 +488,7 @@ export default function Slider() {
         </motion.div>
         <motion.div
           animate={animation2}
-          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md lg:bg-opacity-0"
+          className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none"
         >
           <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
             <div className="xs:w-4/5 lg:w-full">
@@ -519,7 +519,7 @@ export default function Slider() {
         </motion.div>
         <motion.div
           animate={animation3}
-          className="absolute w-full h-full justify-between text-left  xs:bg-white xs:bg-opacity-10 backdrop-blur-md lg:bg-opacity-0"
+          className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none"
         >
           <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
             <div className="xs:w-4/5 lg:w-full">
@@ -609,11 +609,29 @@ export default function Slider() {
         animate={animation10}
         className="sidebar xs:hidden lg:block lg:right-10 lg:top-1/3 desk:right-32 "
       >
-        <ul
+        <motion.ul
           className="flex flex-col justify-between gap-4 
         "
+          initial={{ opacity: 0, translateY: -50 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{
+            duration: 0.4,
+            delay: 1,
+            type: "spring",
+            stiffness: 120,
+          }}
         >
-          <li className="text-center">
+          <motion.li
+            className="text-center"
+            initial={{ opacity: 0, translateX: -50 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 1,
+              type: "spring",
+              stiffness: 120,
+            }}
+          >
             <AnchorLink to="/#first" className="inline-block p-2">
               <motion.span
                 animate={activeBtn}
@@ -627,8 +645,18 @@ export default function Slider() {
                 className="sidebar-button"
               />
             </AnchorLink>
-          </li>
-          <li className="text-center">
+          </motion.li>
+          <motion.li
+            className="text-center"
+            initial={{ opacity: 0, translateX: -50 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 1.3,
+              type: "spring",
+              stiffness: 120,
+            }}
+          >
             <AnchorLink to="/#second" className="inline-block p-2">
               <motion.span
                 animate={activeBtn2}
@@ -642,8 +670,18 @@ export default function Slider() {
                 className="sidebar-button"
               />
             </AnchorLink>
-          </li>
-          <li className="text-center">
+          </motion.li>
+          <motion.li
+            className="text-center"
+            initial={{ opacity: 0, translateX: -50 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: 1.6,
+              type: "spring",
+              stiffness: 120,
+            }}
+          >
             <AnchorLink to="/#third" className="inline-block p-2">
               <motion.span
                 animate={activeBtn3}
@@ -657,45 +695,56 @@ export default function Slider() {
                 className="sidebar-button"
               />
             </AnchorLink>
-          </li>
-          <Link to="/projects">
-            <motion.li
-              className="text-center flex flex-col items-center justify-center"
-              initial="rest"
-              whileHover="hover"
-              exit="rest"
-            >
-              <motion.svg
-                variants={plusVariants}
-                transition="hover"
-                className="w-16 cursor-pointer"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
+          </motion.li>
+          <motion.li
+            className="text-center"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+              duration: 0.3,
+              delay: 1.9,
+              type: "spring",
+              stiffness: 120,
+            }}
+          >
+            <Link to="/projects">
+              <motion.div
+                className="text-center flex flex-col items-center justify-center"
+                initial="rest"
+                whileHover="hover"
+                exit="rest"
               >
-                <g fill="none">
-                  <motion.path
-                    variants={plusVariants}
-                    transition="hover"
-                    d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
-                    stroke-linecap="round"
-                  />
-                </g>
-              </motion.svg>
+                <motion.svg
+                  variants={plusVariants}
+                  transition="hover"
+                  className="w-16 cursor-pointer"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none">
+                    <motion.path
+                      variants={plusVariants}
+                      transition="hover"
+                      d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
+                      stroke-linecap="round"
+                    />
+                  </g>
+                </motion.svg>
 
-              <motion.h3 variants={textVariants} className="text-gray-naive">
-                All Projects
-              </motion.h3>
-            </motion.li>
-          </Link>
-        </ul>
+                <motion.h3 variants={textVariants} className="text-gray-naive">
+                  All Projects
+                </motion.h3>
+              </motion.div>
+            </Link>
+          </motion.li>
+        </motion.ul>
       </motion.div>
       <div className="flex self-center max-w-3xl m-auto justify-center">
         <ProjectsButton />
       </div>
-      <span ref={refBottom} />
     </section>
   );
 }

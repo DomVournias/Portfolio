@@ -5,13 +5,18 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-avatar": "url('/src/images/DomAvatar (1).png')",
+      },
+    },
+    extend: {
       zIndex: {
-        'auto': 'auto',
-        'n2': -2,
-        'n1': -1,
-        '0': 0,
-        '1': 1,
-        '2': 2
+        auto: "auto",
+        n2: -2,
+        n1: -1,
+        0: 0,
+        1: 1,
+        2: 2,
       },
       animation: {
         spin: "spin 3s linear infinite",

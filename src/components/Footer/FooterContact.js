@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import ContactButton from "../Buttons/ContactButton";
+import Signature from "../Buttons/Signature";
 
 export default function FooterContact() {
   return (
@@ -30,7 +30,7 @@ export default function FooterContact() {
           />
         </div>
       </div>
-      <ContactButton />
+      <Signature />
     </div>
   );
 }

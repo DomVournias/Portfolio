@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import ContactButton from "../Buttons/ContactButton";
+import Signature from "../Buttons/Signature";
 
 export default function Footer() {
   const activeStyles = {
@@ -11,55 +11,45 @@ export default function Footer() {
   return (
     <footer className="block w-full pb-24 xs:px-6">
       <div className="border-t-2 border-gray-300 border-opacity-20 max-w-6xl pb-10 m-auto"></div>
-      <div className="flex xs:flex-col md:flex-row justify-between m-auto items-center max-w-6xl ">
-        <div className="xs:hidden md:block max-w-lg">
-          <h2 className="flex flex-row text-white text-2xl mb-2 items-center">
-            <StaticImage src="../../images/dovm.png" className="w-6 h-6 mr-2" />
-            Get in touch
-          </h2>
-          <div className="flex flex-row flex-wrap m-0 p-0 mb-5 flex-start justify-center">
-            <div className="w-3/5 ">
-              <p className="text-xl leading-snug mr-5">
-                If you want to work together on a project or just have a chat,
-                please don't hesitate to contact me via email below.
-              </p>
-            </div>
-            <div className="w-2/5">
-              <StaticImage
-                src="../../images/DomAvatarBigger.png"
-                alt="about"
-                quality="90"
-                className="w-full rounded-xl"
-              />
-            </div>
-          </div>
-          <ContactButton />
+      <div className="flex xs:flex-col justify-between m-auto items-center max-w-6xl ">
+        <div>
+          <ul className="flex flex-row gap-4 gap-4p-0 xs:pt-12 md:pt-0">
+            <Link
+              to="/"
+              className="opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
+            >
+              <StaticImage src="../../images/dovm.png" className="w-10 mb-2" />
+            </Link>
+            <Link
+              exact
+              to="/"
+              className="footer-links xs:text-center md:text-right"
+              activeStyle={activeStyles}
+            >
+              WORK
+            </Link>
+            <Link
+              exact
+              to="/about/"
+              className="footer-links xs:text-center md:text-right"
+              activeStyle={activeStyles}
+            >
+              ABOUT
+            </Link>
+            <Link
+              exact
+              to="/contact/"
+              className="footer-links xs:text-center md:text-right"
+              activeStyle={activeStyles}
+            >
+              CONTACT
+            </Link>
+          </ul>
         </div>
-        <ul className="p-0 xs:pt-12 md:pt-0">
-          <Link
-            exact
-            to="/"
-            className="footer-links xs:text-center md:text-right"
-            activeStyle={activeStyles}
-          >
-            WORK
-          </Link>
-          <Link
-            exact
-            to="/about/"
-            className="footer-links xs:text-center md:text-right"
-            activeStyle={activeStyles}
-          >
-            ABOUT
-          </Link>
-          <Link
-            exact
-            to="/contact/"
-            className="footer-links xs:text-center md:text-right"
-            activeStyle={activeStyles}
-          >
-            CONTACT
-          </Link>
+        <div className="max-w-lg">
+          <Signature />
+        </div>
+        <div>
           <li className="flex flex-row text-xl py-2 text-right justify-end xs:justify-center xs:gap-10 xs:pt-10 md:justify-end md:gap-3 md:pt-2">
             <a
               href="https://www.facebook.com/dominicvournias/"
@@ -129,7 +119,7 @@ export default function Footer() {
               </svg>
             </a>
           </li>
-        </ul>
+        </div>
       </div>
     </footer>
   );

@@ -78,6 +78,11 @@ p {
   font-family: "Segoe UI";
 }
 
+html {
+  text-decoration: none;
+  outline: none;
+}
+
 * {
   margin: 0;
   padding: 0;

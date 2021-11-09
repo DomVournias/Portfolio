@@ -19,7 +19,7 @@ const variants = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 0.5,
+      delay: 1,
       bounce: 0.5,
       ease: "easeInOut",
     },
@@ -38,7 +38,7 @@ const variants2 = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 0.8,
+      delay: 1,
       bounce: 0.5,
       ease: "easeInOut",
     },

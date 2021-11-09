@@ -1,11 +1,11 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import ContactButton from "../components/Buttons/ContactButton";
+import AboutContactForm from "../components/Forms/AboutContactForm";
 
 export default function about() {
   return (
     <main className="about-container">
-      <section className="xs:w-5/5 md:w-3/5">
+      <section className="xs:w-5/5 md:w-3/5 self-start">
         <h3 className="about-headings">Hey 👋</h3>
         <p className="about-paragraphs">
           My name is Rick. I'm a designer and developer from The Netherlands.
@@ -52,7 +52,7 @@ export default function about() {
           email below.
         </p>
 
-        <ContactButton />
+        <AboutContactForm />
       </section>
     </main>
   );
