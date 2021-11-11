@@ -4,8 +4,9 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import FooterAbout from "../components/Footer/FooterAbout";
 import ProjectsNavbar from "../components/Navbar/ProjectsNavbar";
+import { Helmet } from "react-helmet";
 
-const duration = 0.5;
+const duration = 0.2;
 
 const variants = {
   initial: {

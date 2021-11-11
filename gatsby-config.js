@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Portfolio",
+    siteUrl: "https://domvournias.com",
+    title: "Dom Vournias",
+    description: "Dom's Portfolio",
+    image: "/src/images/DomFav-512x512.png",
+    author: "Dom Vournias",
+    url: "https://domvournias.com",
   },
 
   plugins: [
@@ -11,6 +15,13 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/DomFav-192x192.png`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {

@@ -7,7 +7,7 @@ export default function FooterContact() {
     <div className="max-w-lg">
       <h2 className="flex flex-row text-white text-2xl mb-2 items-center">
         <StaticImage
-          src="../../images/dovm.png"
+          src="../../images/DomFav-512x512.png"
           alt="Dom Vournias Portfolio"
           quality="90"
           className="w-6 h-6 mr-2"

@@ -454,7 +454,7 @@ export default function Slider() {
 
   return (
     <section className="text-center " ref={refSlider}>
-      <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 lg:top-1/3 lg:left-10 lg:w-1/3 xxl:left-20 desk:left-32 desk:w-1/4">
+      <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 lg:top-1/3 lg:left-10 lg:w-1/4 xxl:left-20 xxl:w-1/4 desk:left-32 desk:w-1/4">
         <motion.div
           animate={animation}
           className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none "

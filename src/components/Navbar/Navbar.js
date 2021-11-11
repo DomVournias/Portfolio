@@ -60,7 +60,7 @@ export default function Navbar() {
             className="flex flex-row opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
           >
             <StaticImage
-              src="../../images/dovm.png"
+              src="../../images/DomFav-512x512.png"
               alt="Dom Vournias Portfolio"
               quality="90"
               className="w-8"
