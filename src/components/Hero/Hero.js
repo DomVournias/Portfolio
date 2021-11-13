@@ -90,17 +90,18 @@ const Hero = () => {
               />
             </motion.div>
           </motion.div>
-
-          <StaticImage
-            src="../../images/DVAVATAR.png"
-            draggable={false}
-            alt="avatar"
-            quality="100"
-            className="absolute translate-x-1/2 mx-4 max-w-xl"
-            initial="hidden"
-            animate="visible"
-            variants={avatarVariants}
-          />
+          <div>
+            <StaticImage
+              src="../../images/DVAVATAR.png"
+              draggable={false}
+              alt="avatar"
+              quality="100"
+              className=" mx-4 max-w-xl"
+              initial="hidden"
+              animate="visible"
+              variants={avatarVariants}
+            />
+          </div>
           <div className="absolute top-0 right-0">
             <TypeWriter />
           </div>

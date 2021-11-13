@@ -6,7 +6,7 @@ export default function Signature() {
     <>
       <div className="text-center xs:pt-6 md:py-1 ">
         <StaticImage
-          src="../images/domvournias-signaturew.png"
+          src="../../images/domvournias-signaturew.png"
           alt="Dom Vournias signature"
           quality="90"
           className="w-40"
