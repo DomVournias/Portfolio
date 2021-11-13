@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
-import TypeWriter from "../TypeWritter/TypeWriter";
 
 const avatarVariants = {
   hidden: {
@@ -101,9 +100,6 @@ const Hero = () => {
               animate="visible"
               variants={avatarVariants}
             />
-          </div>
-          <div className="absolute top-0 right-0">
-            <TypeWriter />
           </div>
         </div>
       </div>
