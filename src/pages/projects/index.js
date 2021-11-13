@@ -6,13 +6,12 @@ import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useInView } from "react-intersection-observer";
 
-
 export default function Projects() {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: frontmatter___date }
-        limit: 10
+        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
       ) {
         nodes {
           frontmatter {
@@ -957,7 +956,6 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      
     </main>
   );
 }

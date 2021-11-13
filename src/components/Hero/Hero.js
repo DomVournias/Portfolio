@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
+import TypeWriter from "../TypeWritter/TypeWriter";
 
 const avatarVariants = {
   hidden: {
@@ -17,7 +18,7 @@ const avatarVariants = {
   },
 };
 
-export default function Hero() {
+const Hero = () => {
   return (
     <div className="pb-20 h-screen m-0 overflow-hidden">
       <motion.h1
@@ -53,7 +54,7 @@ export default function Hero() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.5, duration: 0.2 }}
-            className="absolute top-20 xs:left-4 sm:left-6 md:left-4 "
+            className="absolute top-10 xs:left-4 sm:left-6 md:left-0 "
           >
             <motion.div
               initial={{ y: 0 }}
@@ -63,7 +64,7 @@ export default function Hero() {
               <StaticImage
                 src="../../images/keyboard.png"
                 draggable={false}
-                alt="avatar"
+                alt="keyboard-icon"
                 quality="100"
                 className="xs:w-24 sm:w-32 md:w-40"
               />
@@ -73,7 +74,7 @@ export default function Hero() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.8, duration: 0.2 }}
-            className="absolute top-20 xs:right-4 sm:right-6 md:right-6 "
+            className="absolute top-10 xs:right-4 sm:right-6 md:right-0 "
           >
             <motion.div
               initial={{ y: 0 }}
@@ -83,24 +84,30 @@ export default function Hero() {
               <StaticImage
                 src="../../images/camera.png"
                 draggable={false}
-                alt="avatar"
+                alt="camera-icon"
                 quality="100"
                 className="xs:w-24 sm:w-32 md:w-40"
               />
             </motion.div>
           </motion.div>
+
           <StaticImage
-            src="../../images/DomAvatar (1).png"
+            src="../../images/DVAVATAR.png"
             draggable={false}
             alt="avatar"
             quality="100"
-            className="absolute translate-x-1/2 mx-4 max-w-3xl"
+            className="absolute translate-x-1/2 mx-4 max-w-xl"
             initial="hidden"
             animate="visible"
             variants={avatarVariants}
           />
+          <div className="absolute top-0 right-0">
+            <TypeWriter />
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

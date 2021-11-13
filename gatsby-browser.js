@@ -1,3 +1,4 @@
+require("prismjs/themes/prism-twilight.css");
 // // in gastby-browser.js
 // exports.shouldUpdateScroll = ({
 //   routerProps: { location },

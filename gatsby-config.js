@@ -13,9 +13,26 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-postcss",
-    "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -82,6 +99,14 @@ module.exports = {
         path: "./src/projects/",
       },
       __key: "projects",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./src/blog/",
+      },
+      __key: "blog",
     },
   ],
 };

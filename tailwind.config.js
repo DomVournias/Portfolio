@@ -4,6 +4,9 @@ module.exports = {
 
   darkMode: false,
   theme: {
+    fontFamily: {
+      code: ["Source Code Pro", "monospace"],
+    },
     extend: {
       backgroundImage: {
         "hero-avatar": "url('/src/images/DomAvatar (1).png')",

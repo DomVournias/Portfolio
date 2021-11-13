@@ -18,7 +18,10 @@ export default function Footer() {
               to="/"
               className="opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
             >
-              <StaticImage src="../../images/dovm.png" className="w-10 mb-2" />
+              <StaticImage
+                src="../../images/DomFav-512x512.png"
+                className="w-10 mb-2"
+              />
             </Link>
             <Link
               exact
