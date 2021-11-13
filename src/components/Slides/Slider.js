@@ -9,6 +9,9 @@ import { Link } from "gatsby";
 import ProjectsButton from "../Buttons/ProjectsButton";
 import ContactForm from "../Forms/ContactForm";
 import CaseStudyBtn from "../Buttons/CaseStudyBtn";
+import SlideCard from "./SlideCard";
+import SlideImage from "./SlideImage";
+import SmallSidebar from "./SmallSidebar";
 
 export default function Slider() {
   const data = useStaticQuery(graphql`
@@ -72,12 +75,9 @@ export default function Slider() {
   const image3 = projects[2].frontmatter.thumbImg.childImageSharp;
   // Animations
 
-  const animation = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.7,
-  });
+
   const [ref2, inView2] = useInView({
     threshold: 0.7,
   });
@@ -85,8 +85,12 @@ export default function Slider() {
     threshold: 0.7,
   });
 
+  console.log(projects);
   // First Box Animation
-
+  const animation = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.7,
+  });
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -109,7 +113,6 @@ export default function Slider() {
       });
     }
   }, [animation, inView]);
-
   // Second Box Animation
 
   useEffect(() => {
@@ -456,293 +459,72 @@ export default function Slider() {
   return (
     <section className="text-center " ref={refSlider}>
       <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 lg:top-1/3 lg:left-10 lg:w-1/4 xxl:left-20 xxl:w-1/4 desk:left-32 desk:w-1/4">
-        <motion.div
+        <SlideCard
           animate={animation}
-          className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none "
-        >
-          <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
-            <div className="xs:w-4/5 lg:w-full">
-              <h3 className="xs:text-4xl xs:pb-2 lg:text-5xl lg:pb-3 ">
-                {title1}
-              </h3>
-              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-6 ">
-                {desc1}
-              </h4>
-              <span className="px-2 pb-1 text-center bg-blue-600">
-                {stack1}
-              </span>
-              <span className="px-2 pb-1 text-center bg-green-600">
-                {stack2}
-              </span>
-              <span className="px-2 pb-1 text-center bg-purple-600">
-                {stack3}
-              </span>
-            </div>
-
-            <Link
-              to={"/projects/" + slug1}
-              className="flex flex-col xs:self-center lg:self-start"
-            >
-              <CaseStudyBtn />
-            </Link>
-          </div>
-        </motion.div>
-        <motion.div
+          title={title1}
+          description={desc1}
+          stackA={stack1}
+          stackB={stack2}
+          stackC={stack3}
+          slug={slug1}
+        />
+        <SlideCard
           animate={animation2}
-          className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none"
-        >
-          <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
-            <div className="xs:w-4/5 lg:w-full">
-              <h3 className="xs:text-4xl xs:pb-2 lg:text-5xl lg:pb-3 ">
-                {title2}
-              </h3>
-              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-6 ">
-                {desc2}
-              </h4>
-              <span className="px-2 pb-1 text-center bg-blue-600">
-                {stack1B}
-              </span>
-              <span className="px-2 pb-1 text-center bg-green-600">
-                {stack2B}
-              </span>
-              <span className="px-2 pb-1 text-center bg-purple-600">
-                {stack3B}
-              </span>
-            </div>
-
-            <Link
-              to={"/projects/" + slug2}
-              className="flex flex-col xs:self-center lg:self-start"
-            >
-              <CaseStudyBtn />
-            </Link>
-          </div>
-        </motion.div>
-        <motion.div
+          title={title2}
+          description={desc2}
+          stackA={stack1B}
+          stackB={stack2B}
+          stackC={stack3B}
+          slug={slug2}
+        />
+        <SlideCard
           animate={animation3}
-          className="absolute w-full h-full justify-between text-left  bg-gray-naive bg-opacity-30 lg:bg-opacity-0 backdrop-filter backdrop-blur-md border-solid border-2 border-white border-opacity-10 lg:border-none"
-        >
-          <div className="flex xs:flex-row lg:flex-col items-center py-4 pl-6 pr-10 md:pr-20 place-content-between">
-            <div className="xs:w-4/5 lg:w-full">
-              <h3 className="xs:text-4xl xs:pb-2 lg:text-5xl lg:pb-3 ">
-                {title3}
-              </h3>
-              <h4 className="xs:text-xl md:text-2xl xs:pb-4 md:pb-6 ">
-                {desc3}
-              </h4>
-              <span className="px-2 pb-1 text-center bg-blue-600">
-                {stack1C}
-              </span>
-              <span className="px-2 pb-1 text-center bg-green-600">
-                {stack2C}
-              </span>
-              <span className="px-2 pb-1 text-center bg-purple-600">
-                {stack3C}
-              </span>
-            </div>
-
-            <Link
-              to={"/projects/" + slug3}
-              className="flex flex-col xs:self-center lg:self-start"
-            >
-              <CaseStudyBtn />
-            </Link>
-          </div>
-        </motion.div>
+          title={title3}
+          description={desc3}
+          stackA={stack1C}
+          stackB={stack2C}
+          stackC={stack3C}
+          slug={slug3}
+        />
       </div>
 
       <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center lg:pl-40 xl:pl-20">
-        <div
-          ref={ref}
-          className="text-center h-screen flex items-center justify-center "
-        >
-          <motion.div animate={animation4} className="">
-            <span id="first" ref={refFirst}>
-              <Link to={"/projects/" + slug1}>
-                <GatsbyImage
-                  image={getImage(image1)}
-                  alt="image 1"
-                  quality="100"
-                  className="md:w-2/3 lg:w-full mb-32"
-                />
-              </Link>
-            </span>
-          </motion.div>
-        </div>
-
-        <div
-          ref={ref2}
-          className="text-center h-screen flex items-center justify-center"
-        >
-          <motion.div animate={animation5} className="">
-            <span id="second" ref={refSecond}>
-              <Link to={"/projects/" + slug2}>
-                <GatsbyImage
-                  image={getImage(image2)}
-                  alt="image 2"
-                  quality="100"
-                  className="w-full mb-32"
-                />
-              </Link>
-            </span>
-          </motion.div>
-        </div>
-        <div
-          ref={ref3}
-          className="text-center h-screen flex items-center justify-center"
-        >
-          <motion.div animate={animation6}>
-            <span id="third" ref={refThird}>
-              <Link to={"/projects/" + slug3}>
-                <GatsbyImage
-                  quality="100"
-                  image={getImage(image3)}
-                  alt="image 3"
-                  className="w-full mb-32"
-                />
-              </Link>
-            </span>
-          </motion.div>
-        </div>
+        <SlideImage
+          animate={animation4}
+          ref1={ref}
+          ref2={refFirst}
+          id="first"
+          slug={slug1}
+          pic={image1}
+        />
+        <SlideImage
+          animate={animation5}
+          ref1={ref2}
+          ref2={refSecond}
+          id="second"
+          slug={slug2}
+          pic={image2}
+        />
+        <SlideImage
+          animate={animation6}
+          ref1={ref3}
+          ref2={refThird}
+          id="third"
+          slug={slug3}
+          pic={image3}
+        />
       </div>
 
-      <motion.div
+      <SmallSidebar
         animate={animation10}
-        className="sidebar xs:hidden lg:block lg:right-10 lg:top-1/3 desk:right-32 "
-      >
-        <motion.ul
-          className="flex flex-col justify-between gap-4 
-        "
-          initial={{ opacity: 0, translateY: -50 }}
-          animate={{ opacity: 1, translateY: 0 }}
-          transition={{
-            duration: 0.4,
-            delay: 1,
-            type: "spring",
-            stiffness: 120,
-          }}
-        >
-          <motion.li
-            className="text-center"
-            initial={{ opacity: 0, translateX: -50 }}
-            animate={{ opacity: 1, translateX: 0 }}
-            transition={{
-              duration: 0.4,
-              delay: 1,
-              type: "spring",
-              stiffness: 120,
-            }}
-          >
-            <AnchorLink to="/#first" className="inline-block p-2">
-              <motion.span
-                animate={activeBtn}
-                whileHover={{
-                  scale: 1.2,
-                  opacity: 0.8,
-                  transition: {
-                    duration: 0.1,
-                  },
-                }}
-                className="sidebar-button"
-              />
-            </AnchorLink>
-          </motion.li>
-          <motion.li
-            className="text-center"
-            initial={{ opacity: 0, translateX: -50 }}
-            animate={{ opacity: 1, translateX: 0 }}
-            transition={{
-              duration: 0.4,
-              delay: 1.3,
-              type: "spring",
-              stiffness: 120,
-            }}
-          >
-            <AnchorLink to="/#second" className="inline-block p-2">
-              <motion.span
-                animate={activeBtn2}
-                whileHover={{
-                  scale: 1.2,
-                  opacity: 0.8,
-                  transition: {
-                    duration: 0.1,
-                  },
-                }}
-                className="sidebar-button"
-              />
-            </AnchorLink>
-          </motion.li>
-          <motion.li
-            className="text-center"
-            initial={{ opacity: 0, translateX: -50 }}
-            animate={{ opacity: 1, translateX: 0 }}
-            transition={{
-              duration: 0.4,
-              delay: 1.6,
-              type: "spring",
-              stiffness: 120,
-            }}
-          >
-            <AnchorLink to="/#third" className="inline-block p-2">
-              <motion.span
-                animate={activeBtn3}
-                whileHover={{
-                  scale: 1.2,
-                  opacity: 0.8,
-                  transition: {
-                    duration: 0.1,
-                  },
-                }}
-                className="sidebar-button"
-              />
-            </AnchorLink>
-          </motion.li>
-          <motion.li
-            className="text-center"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{
-              duration: 0.3,
-              delay: 1.9,
-              type: "spring",
-              stiffness: 120,
-            }}
-          >
-            <Link to="/projects">
-              <motion.div
-                className="text-center flex flex-col items-center justify-center"
-                initial="rest"
-                whileHover="hover"
-                exit="rest"
-              >
-                <motion.svg
-                  variants={plusVariants}
-                  transition="hover"
-                  className="w-16 cursor-pointer"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  role="img"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                >
-                  <g fill="none">
-                    <motion.path
-                      variants={plusVariants}
-                      transition="hover"
-                      d="M12 20v-8m0 0V4m0 8h8m-8 0H4"
-                      stroke-linecap="round"
-                    />
-                  </g>
-                </motion.svg>
+        animate2={activeBtn}
+        animate3={activeBtn2}
+        animate4={activeBtn3}
+        variants={plusVariants}
+        variants2={plusVariants}
+        variants3={textVariants}
+      />
 
-                <motion.h3 variants={textVariants} className="text-gray-naive">
-                  All Projects
-                </motion.h3>
-              </motion.div>
-            </Link>
-          </motion.li>
-        </motion.ul>
-      </motion.div>
       <div className="flex self-center max-w-3xl m-auto justify-center">
         <ProjectsButton />
       </div>

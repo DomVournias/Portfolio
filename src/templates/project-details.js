@@ -10,9 +10,6 @@ import ProjectInfo from "../components/SingleProjectAssets/ProjectInfo";
 import ProjectHero from "../components/SingleProjectAssets/ProjectHero";
 
 export default function ProjectDetails({ data }) {
-  // const seoImage = data.mdx.frontmatter.featureImage.publicURL;
-
-  const { html } = data.markdownRemark;
   const {
     title,
     company,
