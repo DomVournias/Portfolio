@@ -47,7 +47,7 @@ const variants2 = {
 
 export default function ProjectsNavbar() {
   return (
-    <header className="block w-full">
+    <header className="block w-full z-10">
       <div className="flex flex-row h-20 max-w-6xl  justify-between m-auto items-center px-4">
         <motion.div
           variants={variants}

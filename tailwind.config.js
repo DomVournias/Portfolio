@@ -1,5 +1,5 @@
 module.exports = {
-  mode: "",
+  mode: "jit",
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
 
   darkMode: false,
@@ -43,6 +43,7 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       xxl: "1440px",
+      lap: "1600px",
       desk: "1920px",
     },
     extend: {
@@ -56,6 +57,7 @@ module.exports = {
         fifth: "#390099",
         sixth: "#FFBD00",
         silver: "#F3F3F3",
+        graph: "#161517",
 
         gray: {
           darkest: "#1f2d3d",

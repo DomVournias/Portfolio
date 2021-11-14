@@ -2,16 +2,16 @@ import React from "react";
 
 const ProjectInfo = (props) => {
   return (
-    <div className="flex flex-col items-center h-screen place-content-center bg-white">
-      <div className="max-w-4xl">
-        <div className="flex  place-content-between items-center py-3">
+    <div className="flex flex-col items-center place-content-center bg-white xs:py-[30vw] xs:px-[6vw] md:py-[14vw] sm:px-[10vw] md:px-[8vw] lg:px-[15vw] lap:px-[22vw] desk:px-[24vw] ">
+      <div className="">
+        <div className="flex flex-row place-content-between items-center py-3 pb-8">
           <span className="self-center">
             <h3 className="text-xl text-secondary">{props.company}</h3>
           </span>
-          <div className="flex self-end gap-3">
-            <span className="flex gap-2 py-2 px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black">
+          <div className="flex self-end xs:gap-1 md:gap-3">
+            <span className="flex xs:gap-1 sm:gap-2 py-2 xs:px-2 sm:px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black xs:text-sm sm:text-base md:text-lg">
               <svg
-                className="w-6"
+                className="xs:w-4 md:w-6 "
                 aria-hidden="true"
                 role="img"
                 preserveAspectRatio="xMidYMid meet"
@@ -28,9 +28,9 @@ const ProjectInfo = (props) => {
               </svg>
               {props.place}
             </span>
-            <span className="flex gap-2 py-2 px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black">
+            <span className="flex xs:gap-1 sm:gap-2 py-2 xs:px-2 sm:px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black xs:text-sm sm:text-base md:text-lg">
               <svg
-                className="w-6 "
+                className="xs:w-4 md:w-6 "
                 aria-hidden="true"
                 role="img"
                 preserveAspectRatio="xMidYMid meet"
@@ -48,7 +48,7 @@ const ProjectInfo = (props) => {
           </div>
         </div>
 
-        <p className="text-3xl leading-relaxed text-black">
+        <p className="xs:text-[22px]  md:text-[27px] xxl:text-[27px]  lap:text-[32px] xs:leading-[44px] sm:leading-[50px] lap:leading-[55px] text-graph ">
           {props.description}
         </p>
       </div>

@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const ProjectStacks = (props) => {
   return (
     <div className="flex flex-row items-center h-screen place-content-center my-4">
-      <div className="max-w-6xl flex flex-row items-center">
+      <div className="max-w-6xl flex xs:flex-col md:flex-row items-center">
         <div className="w-1/2 text-center">
           <GatsbyImage
             image={getImage(props.pic)}
