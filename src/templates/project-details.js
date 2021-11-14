@@ -83,7 +83,7 @@ export default function ProjectDetails({ data }) {
 }
 
 export const query = graphql`
-  query ProjectDetails($slug: String!) {
+  query ProjectDetails($slug: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         bigDescription1
