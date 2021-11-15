@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectInfo = (props) => {
   return (
-    <div className="flex flex-col items-center place-content-center bg-white xs:py-[30vw] xs:px-[6vw] md:py-[14vw] sm:px-[10vw] md:px-[8vw] lg:px-[15vw] lap:px-[22vw] desk:px-[24vw] ">
+    <div className="flex flex-col items-center place-content-center bg-white xs:py-[30vw] xs:px-[8vw] md:py-[14vw] sm:px-[10vw] md:px-[8vw] lg:px-[15vw] lap:px-[22vw] desk:px-[24vw] ">
       <div className="">
         <div className="flex flex-row place-content-between items-center py-3 pb-8">
           <span className="self-center">
