@@ -6,6 +6,9 @@ module.exports = {
   theme: {
     fontFamily: {
       code: ["Source Code Pro", "monospace"],
+      nova: ["Proxima Nova Regural"],
+      semiNova: ["Proxima Nova Semibold"],
+      boldNova: ["Proxima Nova Bold"],
     },
     extend: {
       backgroundImage: {

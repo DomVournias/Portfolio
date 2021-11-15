@@ -6,10 +6,12 @@ const ProjectInfo = (props) => {
       <div className="">
         <div className="flex flex-row place-content-between items-center py-3 pb-8">
           <span className="self-center">
-            <h3 className="text-xl text-secondary">{props.company}</h3>
+            <h3 className="font-boldNova text-xl text-secondary">
+              {props.company}
+            </h3>
           </span>
           <div className="flex self-end xs:gap-1 md:gap-3">
-            <span className="flex xs:gap-1 sm:gap-2 py-2 xs:px-2 sm:px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black xs:text-sm sm:text-base md:text-lg">
+            <span className="flex xs:gap-1 sm:gap-2 py-2 xs:px-2 sm:px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black xs:text-sm sm:text-base md:text-lg font-boldNova">
               <svg
                 className="xs:w-4 md:w-6 "
                 aria-hidden="true"
@@ -28,7 +30,7 @@ const ProjectInfo = (props) => {
               </svg>
               {props.place}
             </span>
-            <span className="flex xs:gap-1 sm:gap-2 py-2 xs:px-2 sm:px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black xs:text-sm sm:text-base md:text-lg">
+            <span className="flex xs:gap-1 sm:gap-2 py-2 xs:px-2 sm:px-4 rounded-lg border-r-2 border-b-2 border-black border-opacity-20 text-black xs:text-sm sm:text-base md:text-lg font-boldNova">
               <svg
                 className="xs:w-4 md:w-6 "
                 aria-hidden="true"
@@ -48,7 +50,7 @@ const ProjectInfo = (props) => {
           </div>
         </div>
 
-        <p className="xs:text-[22px]  md:text-[27px] xxl:text-[27px]  lap:text-[32px] xs:leading-[44px] sm:leading-[50px] lap:leading-[55px] text-graph ">
+        <p className="xs:text-[22px]  md:text-[27px] xxl:text-[27px]  lap:text-[32px] xs:leading-[44px] sm:leading-[50px] lap:leading-[55px] text-graph font-semiNova">
           {props.description}
         </p>
       </div>

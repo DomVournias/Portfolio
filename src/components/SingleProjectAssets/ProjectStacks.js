@@ -31,7 +31,7 @@ const ProjectStacks = (props) => {
               </span>
             </div>
           </div>
-          <p className="text-xl xs:leading-[44px] sm:leading-[50px] lap:leading-[40px]">
+          <p className="font-nova text-xl xs:leading-[44px] sm:leading-[50px] lap:leading-[40px]">
             {props.description}
           </p>
         </div>
