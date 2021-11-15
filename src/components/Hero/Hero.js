@@ -53,7 +53,7 @@ const Hero = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.5, duration: 0.2 }}
-            className="absolute top-10 xs:left-4 sm:left-6 md:left-0 "
+            className="absolute top-10 xs:left-4 sm:left-6 md:-left-10 "
           >
             <motion.div
               initial={{ y: 0 }}
@@ -65,7 +65,7 @@ const Hero = () => {
                 draggable={false}
                 alt="keyboard-icon"
                 quality="100"
-                className="xs:w-24 sm:w-32 md:w-40"
+                className="xs:w-28 sm:w-32 md:w-36"
               />
             </motion.div>
           </motion.div>
@@ -73,7 +73,7 @@ const Hero = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.8, duration: 0.2 }}
-            className="absolute top-10 xs:right-4 sm:right-6 md:right-0 "
+            className="absolute top-10 xs:right-4 sm:right-6 md:-right-10 "
           >
             <motion.div
               initial={{ y: 0 }}
@@ -85,11 +85,15 @@ const Hero = () => {
                 draggable={false}
                 alt="camera-icon"
                 quality="100"
-                className="xs:w-24 sm:w-32 md:w-40"
+                className="xs:w-28 sm:w-32 md:w-36"
               />
             </motion.div>
           </motion.div>
-          <div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: 10 }}
+            transition={{ yoyo: Infinity, duration: 4 }}
+          >
             <StaticImage
               src="../../images/DVAVATAR.png"
               draggable={false}
@@ -100,7 +104,7 @@ const Hero = () => {
               animate="visible"
               variants={avatarVariants}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
