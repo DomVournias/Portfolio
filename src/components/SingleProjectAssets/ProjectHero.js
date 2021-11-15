@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ProjectHero = (props) => {
   return (
-    <div className="flex flex-col  min-h-screen justify-center items-center bg-secondary p-[8vh] z-[2]">
+    <div className="flex flex-col  min-h-screen justify-center items-center bg-secondary py-[8vh]">
       {/* <div className="text-center">
         <h1 className="xs:text-5xl md:text-7xl text-white pt-16 pb-4">
           {props.title}
@@ -12,7 +12,7 @@ const ProjectHero = (props) => {
           {props.description}
         </h2>
       </div> */}
-      <div className="flex justify-center w-[36vw] h-[fit-content] max-w-5xl max-h-5xl ">
+      <div className="flex justify-center xs:w-full desk:w-[36vw] h-[fit-content] ">
         <GatsbyImage
           image={getImage(props.pic)}
           draggable={false}
