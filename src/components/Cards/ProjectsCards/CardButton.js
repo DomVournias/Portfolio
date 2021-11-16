@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const CardButton = (props) => {
   return (
     <div className="flex justify-center -mb-6">
-      <div className="flex w-1/5 transition-all duration-500 ease-in-out">
+      <div className="flex w-1/5 transition-all duration-500 ease-in-out bg-black rounded-full p-1">
         <Link to={props.slug} className="w-full h-full block">
           <svg
             className="xs:w-full "

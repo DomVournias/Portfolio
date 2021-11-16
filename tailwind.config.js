@@ -9,6 +9,9 @@ module.exports = {
       nova: ["Proxima Nova Regural"],
       semiNova: ["Proxima Nova Semibold"],
       boldNova: ["Proxima Nova Bold"],
+      segueLight: ["Segoe UI Light"],
+      segueSemiLight: ["Segoe UI Semilight"],
+      segue: ["Segoe UI"],
     },
     extend: {
       backgroundImage: {

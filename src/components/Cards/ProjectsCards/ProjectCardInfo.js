@@ -2,11 +2,11 @@ import React from "react";
 
 const ProjectCardInfo = (props) => {
   return (
-    <div className="flex flex-row place-content-between items-center justify-center py-4">
-      <div className="flex self-end xs:gap-1 md:gap-3">
-        <span className="flex xs:gap-1 sm:gap-2 text-base text-white text-opacity-60 items-center">
+    <div className="flex flex-row place-content-between items-center justify-center py-2">
+      <div className="flex self-end xs:gap-3 ">
+        <span className="flex xs:gap-1 text-base text-white text-opacity-30 items-center">
           <svg
-            className="xs:w-4 md:w-6 "
+            className="xs:w-4 md:w-5 "
             aria-hidden="true"
             role="img"
             preserveAspectRatio="xMidYMid meet"
@@ -23,9 +23,9 @@ const ProjectCardInfo = (props) => {
           </svg>
           {props.place}
         </span>
-        <span className="flex xs:gap-1 sm:gap-2 text-base text-white text-opacity-60 items-center">
+        <span className="flex xs:gap-1 font-base text-white text-opacity-30 items-center">
           <svg
-            className="xs:w-4 md:w-6 "
+            className="xs:w-4 md:w-5 "
             aria-hidden="true"
             role="img"
             preserveAspectRatio="xMidYMid meet"
