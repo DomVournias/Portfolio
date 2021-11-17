@@ -16,11 +16,11 @@ const ProjectStacks = (props) => {
           />
         </div>
         <div className="xs:w-full md:w-1/2 xs:pt-20 md:pt-0">
-          <div className="flex xs:flex-row md:flex-col lg:flex-row items-center gap-4 pb-8 ">
-            <h3 className="text-xl text-left md:w-full lg:w-[fit-content]">
+          <div className="flex xs:flex-col  lg:flex-row items-center gap-4 pb-8 ">
+            <h3 className="text-xl text-left md:w-full lg:w-[fit-content]  xs:self-start">
               Made with
             </h3>
-            <div className="flex flex-row gap-2 md:w-full lg:w-2/3">
+            <div className="flex flex-row gap-2 md:w-full lg:w-2/3 xs:self-start lg:flex-end">
               <span className="py-2 px-4 rounded-lg bg-white bg-opacity-10">
                 {props.stackA}
               </span>

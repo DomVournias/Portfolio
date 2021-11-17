@@ -90,7 +90,7 @@ export const query = graphql`
         bigDescription2
         bigDescription3
         company
-        date
+        date(formatString: "DD MMM YYYY")
         description
         infoDescription1
         infoDescription2
