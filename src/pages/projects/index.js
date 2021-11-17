@@ -31,7 +31,10 @@ export default function Projects() {
             title
             thumbImg {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
                 id
               }
             }

@@ -14,6 +14,8 @@ const SlideImage = (props) => {
           <Link to={"/projects/" + props.slug}>
             <GatsbyImage
               image={getImage(props.pic)}
+              draggable={false}
+              placeholder="blurred"
               alt="image 1"
               quality="100"
               className="md:w-2/3 lg:w-full mb-32"

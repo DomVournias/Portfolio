@@ -34,7 +34,10 @@ export default function Slider() {
             title
             thumbImg {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
                 id
               }
             }

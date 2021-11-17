@@ -106,32 +106,56 @@ export const query = graphql`
         bestFeature
         thumbImg {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         featuredImg1 {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         featuredImg2 {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         featuredImg3 {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         featuredImg4 {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         featuredImg5 {
           childImageSharp {
-            gatsbyImageData(quality: 100)
+            gatsbyImageData(
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }
