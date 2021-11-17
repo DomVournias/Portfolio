@@ -39,14 +39,6 @@ export default function Footer() {
             >
               ABOUT
             </Link>
-            <Link
-              exact
-              to="/contact/"
-              className="footer-links xs:text-center md:text-right"
-              activeStyle={activeStyles}
-            >
-              CONTACT
-            </Link>
           </ul>
         </div>
         <div className="max-w-lg">

@@ -461,7 +461,7 @@ export default function Slider() {
 
   return (
     <section className="text-center " ref={refSlider}>
-      <div className="fixed flex items-center mb-0 xs:z-50 xs:m-0 xs:w-full xs:bottom-0 lg:top-0 lg:left-0 lg:w-1/3 xl:left-20 xl:w-1/4 desk:left-32 desk:w-1/4 ">
+      <div className="fixed h-[fit-content] flex items-center mb-0 xs:z-50 xs:m-0 xs:w-full xs:bottom-0 lg:top-[35%] lg:left-0 lg:w-1/3 xl:left-20 xl:w-1/4 desk:left-32 desk:w-1/4 ">
         <SlideCard
           animate={animation}
           title={title1}
