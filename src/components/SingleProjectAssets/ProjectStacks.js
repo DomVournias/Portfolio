@@ -8,6 +8,7 @@ const ProjectStacks = (props) => {
         <div className="xs:w-full md:w-1/2 xs:text-center md:text-left lg:text-center">
           <GatsbyImage
             image={getImage(props.pic)}
+            placeholder="blurred"
             draggable={false}
             alt={props.slug}
             quality="100"

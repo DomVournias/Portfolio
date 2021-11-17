@@ -6,8 +6,6 @@ import FooterAbout from "../components/Footer/FooterAbout";
 import ProjectsNavbar from "../components/Navbar/ProjectsNavbar";
 import { Helmet } from "react-helmet";
 
-const duration = 0.2;
-
 const variants = {
   initial: {
     opacity: 0,
@@ -15,14 +13,14 @@ const variants = {
   enter: {
     opacity: 1,
     transition: {
-      duration: duration,
-      delay: duration,
-      when: "beforeChildren",
+      duration: 0.2,
+      delay: 0,
+      // when: "beforeChildren",
     },
   },
   exit: {
     opacity: 0,
-    transition: { duration: duration },
+    transition: { duration: 0.2 },
   },
 };
 
@@ -30,14 +28,21 @@ export const Layout = ({ children, location, pageContext }) => {
   if (pageContext.layout === "thankyouPage") {
     return (
       <main className="bg-black ">
-        <AnimatePresence>
+        <AnimatePresence
+          exitBeforeEnter
+          initial={false}
+          onExitComplete={() => {
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 0 });
+            }
+          }}
+        >
           <motion.main
             key={location.pathname}
             variants={variants}
             initial="initial"
             animate="enter"
             exit="exit"
-            className="opacity-loader"
           >
             {children}
           </motion.main>
@@ -49,14 +54,21 @@ export const Layout = ({ children, location, pageContext }) => {
     return (
       <main className="bg-black ">
         <ProjectsNavbar />
-        <AnimatePresence>
+        <AnimatePresence
+          exitBeforeEnter
+          initial={false}
+          onExitComplete={() => {
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 0 });
+            }
+          }}
+        >
           <motion.main
             key={location.pathname}
             variants={variants}
             initial="initial"
             animate="enter"
             exit="exit"
-            className="opacity-loader"
           >
             {children}
           </motion.main>
@@ -68,14 +80,21 @@ export const Layout = ({ children, location, pageContext }) => {
     return (
       <main className="bg-black ">
         <Navbar />
-        <AnimatePresence>
+        <AnimatePresence
+          exitBeforeEnter
+          initial={false}
+          onExitComplete={() => {
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 0 });
+            }
+          }}
+        >
           <motion.main
             key={location.pathname}
             variants={variants}
             initial="initial"
             animate="enter"
             exit="exit"
-            className="opacity-loader"
           >
             {children}
           </motion.main>
@@ -87,14 +106,21 @@ export const Layout = ({ children, location, pageContext }) => {
   return (
     <main className="bg-black ">
       <Navbar />
-      <AnimatePresence>
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => {
+          if (typeof window !== "undefined") {
+            window.scrollTo({ top: 0 });
+          }
+        }}
+      >
         <motion.main
           key={location.pathname}
           variants={variants}
           initial="initial"
           animate="enter"
           exit="exit"
-          className="opacity-loader"
         >
           {children}
         </motion.main>

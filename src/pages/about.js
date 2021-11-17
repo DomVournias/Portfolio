@@ -1,6 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import AboutContactForm from "../components/Forms/AboutContactForm";
+import SimpleLink from "../components/Buttons/SimpleLink";
+import { motion } from "framer-motion";
 
 export default function about() {
   return (
@@ -8,35 +10,47 @@ export default function about() {
       <section className="xs:w-5/5 md:w-3/5 self-start">
         <h3 className="about-headings">Hey 👋</h3>
         <p className="about-paragraphs">
-          My name is Rick. I'm a designer and developer from The Netherlands.
-          I'm a father of 2. I love being in the outdoors; fishing, hiking and
-          mountainbiking are some of the things I do to clear my mind and relax.
+          My name is Dom. I'm a front end developer from Greece. Film making,
+          photography, juggling and traveling are the things that settle my
+          equilibrium with my work life.
         </p>
         <p className="about-paragraphs ">
-          I've been a designer and developer for over 20 years now. In the past,
-          I’ve coded in a lot of different languages like ObjC, Swift, PHP,
-          Java, C#. I’m currently focusing on designing 3D graphics using Cinema
-          4D and building applications using Javascript/React.
+          I've been building websites for over 3 years now. In the past, I used
+          page builders like Elementor and Oxygen with Wordpress. I’m currently
+          focusing on building applications from scratch by using React.
         </p>
         <p className="about-paragraphs ">
-          The project I'm the most proud of is Flitsmeister, which started as an
-          app I built with Sjoerd and Jorn to prevent us from getting speeding
-          tickets. It's now a profitable business and has over 1.800.000 active
-          users in The EU.
+          I got involved in several big projects in the past, but the one that I
+          am most proud of is H.I.C.D. It's a non-profit institute which I was
+          fortunate enough to be the lead developer of two of its departments,
+          in{" "}
+          <SimpleLink
+            url={"https://heniculturaldiplomacy.com/"}
+            text={"Greece"}
+          />{" "}
+          and <SimpleLink url={"https://www.hicd-usa.com/"} text={"USA"} />.
         </p>
         <p className="about-paragraphs ">
-          Being able to both design and develop is a lot of fun. When you have
-          an idea, there’s nothing holding you back from building it.
+          I've studied Fine Arts and later on I moved to England to study Film
+          Production. From a very young age I was very passionate about painting
+          and arts in general.
         </p>
         <p className="about-paragraphs ">
-          You can view my previous personal website over here.
+          Having an artistic background helps me everyday in my work. It boosts
+          and speeds up my designs, because I trained and developed an artistic
+          perspective over the years.
         </p>
       </section>
       <section className="xs:w-5/5 md:w-2/5 self-start">
         <h3 className="about-headings">Contact</h3>
         <p className="about-paragraphs ">
-          You can follow me on Twitter. I post some my work on Instagram and
-          Dribbble.
+          You can follow me on Facebook or{" "}
+          <SimpleLink
+            url={"https://twitter.com/Dom_Vournias"}
+            text={"Twitter"}
+          />
+          . You can also check my repositories in{" "}
+          <SimpleLink url={"https://github.com/DomVournias"} text={"Github"} />.
         </p>
         <div>
           <StaticImage
@@ -48,8 +62,8 @@ export default function about() {
         </div>
 
         <p className="about-paragraphs ">
-          If you want to work together you can also get in touch with me via
-          email below.
+          If you want to work together you can also get in touch with me by
+          filling the form bellow.
         </p>
 
         <AboutContactForm />

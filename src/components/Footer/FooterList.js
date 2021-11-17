@@ -24,14 +24,7 @@ export default function FooterList() {
         >
           ABOUT
         </Link>
-        <Link
-          exact
-          to="/contact/"
-          className="footer-links xs:text-center md:text-right"
-          activeStyle={activeStyles}
-        >
-          CONTACT
-        </Link>
+
         <li className="flex flex-row text-xl py-2 text-right justify-end xs:justify-center xs:gap-10 xs:pt-10 md:justify-end md:gap-3 md:pt-2">
           <a
             href="https://www.facebook.com/dominicvournias/"

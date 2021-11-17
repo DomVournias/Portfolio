@@ -3,35 +3,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const BestFeature = (props) => {
   return (
-    // <div className="flex flex-row-reverse items-center h-[fit-content] place-content-center xs:py-[20vw] lg:py-[16vw] lap:py-[12vw] xs:px-[8vw] sm:px-[10vw] md:px-[8vw] lg:px-[8vw] bg-white">
-    //   <div className="max-w-6xl flex xs:flex-col md:flex-row  items-center ">
-    //     <div className="w-1/2 text-center">
-    //       <GatsbyImage
-    //         image={getImage(props.pic)}
-    //         draggable={false}
-    //         alt={props.slug}
-    //         quality="100"
-    //         className="xs:w-[18em] w-full "
-    //       />
-    //     </div>
-    //     <div className="w-1/2">
-    //       <div className="flex items-center gap-2 py-3">
-    //         <h3 className="text-xl text-black">Complexity of </h3>
-    //         <span className="py-2 px-4 rounded-lg bg-black bg-opacity-10 text-black text-xl">
-    //           {props.feature}
-    //         </span>
-    //       </div>
-    //       <p className="text-xl leading-relaxed text-black">
-    //         {props.description}
-    //       </p>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="flex flex-row items-center h-[fit-content] place-content-center xs:py-[20vw] lg:py-[16vw] lap:py-[12vw] xs:px-[8vw] sm:px-[10vw] md:px-[8vw] lg:px-[8vw] bg-white ">
       <div className="max-w-6xl flex xs:flex-col-reverse md:flex-row-reverse items-center gap-28 py-20">
         <div className="xs:w-full md:w-1/2 xs:text-center md:text-left lg:text-center">
           <GatsbyImage
             image={getImage(props.pic)}
+            placeholder="blurred"
             draggable={false}
             alt={props.slug}
             quality="100"

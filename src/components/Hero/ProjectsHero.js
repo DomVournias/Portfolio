@@ -9,11 +9,11 @@ const ProjectsHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: 0.3,
-          delay: 0.5,
+          delay: 0.1,
           type: "spring",
           stiffness: 100,
         }}
-        className="xs:text-5xl md:text-7xl text-white "
+        className="xs:text-5xl md:text-7xl text-white pb-4"
       >
         Hi, I'm Dom
       </motion.h1>
@@ -22,7 +22,7 @@ const ProjectsHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: 0.3,
-          delay: 0.6,
+          delay: 0.2,
           type: "spring",
           stiffness: 100,
         }}

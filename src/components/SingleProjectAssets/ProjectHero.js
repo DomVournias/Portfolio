@@ -15,6 +15,7 @@ const ProjectHero = (props) => {
       <div className="flex justify-center xs:w-full desk:w-[36vw] h-[fit-content] ">
         <GatsbyImage
           image={getImage(props.pic)}
+          placeholder="blurred"
           draggable={false}
           alt={props.slug}
           quality="100"

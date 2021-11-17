@@ -44,7 +44,7 @@ export default function Projects() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 1.5 + i * 0.3,
+        delay: 0.6 + i * 0.3,
       },
     }),
     hidden: { opacity: 0, y: -50 },
@@ -75,6 +75,7 @@ export default function Projects() {
                       image={getImage(
                         project.frontmatter.thumbImg.childImageSharp
                       )}
+                      placeholder="blurred"
                       draggable={false}
                       alt="no"
                       quality="100"

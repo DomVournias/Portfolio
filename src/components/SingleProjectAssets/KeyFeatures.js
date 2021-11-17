@@ -17,6 +17,7 @@ const KeyFeatures = (props) => {
           </span>
           <GatsbyImage
             image={getImage(props.phoneA)}
+            placeholder="blurred"
             draggable={false}
             alt={props.slug}
             quality="100"
@@ -30,6 +31,7 @@ const KeyFeatures = (props) => {
           </span>
           <GatsbyImage
             image={getImage(props.phoneB)}
+            placeholder="blurred"
             draggable={false}
             alt={props.slug}
             quality="100"
@@ -44,6 +46,7 @@ const KeyFeatures = (props) => {
 
           <GatsbyImage
             image={getImage(props.phoneC)}
+            placeholder="blurred"
             draggable={false}
             alt={props.slug}
             quality="100"

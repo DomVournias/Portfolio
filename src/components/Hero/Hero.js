@@ -62,6 +62,7 @@ const Hero = () => {
             >
               <StaticImage
                 src="../../images/keyboard.png"
+                placeholder="blurred"
                 draggable={false}
                 alt="keyboard-icon"
                 quality="100"
@@ -82,6 +83,7 @@ const Hero = () => {
             >
               <StaticImage
                 src="../../images/camera.png"
+                placeholder="blurred"
                 draggable={false}
                 alt="camera-icon"
                 quality="100"
@@ -96,6 +98,7 @@ const Hero = () => {
           >
             <StaticImage
               src="../../images/DVAVATAR.png"
+              placeholder="blurred"
               draggable={false}
               alt="avatar"
               quality="100"
