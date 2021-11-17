@@ -7,9 +7,9 @@ const SlideImage = (props) => {
   return (
     <div
       ref={props.ref1}
-      className="text-center h-screen flex items-center justify-center "
+      className="text-center h-[fit-content] flex items-center justify-center "
     >
-      <motion.div animate={props.animate} className="">
+      <motion.div animate={props.animate} className="py-24">
         <span id={props.id} ref={props.ref2}>
           <Link to={"/projects/" + props.slug}>
             <GatsbyImage

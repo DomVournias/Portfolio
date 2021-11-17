@@ -4,7 +4,7 @@ stack1: ["react"]
 stack2: ["tailwind"]
 stack3: ["gatsby"]
 slug: RankUp
-date: 20-03-18
+date: 2020-10-01T03:13:00+02:00
 company: SEO Company
 place: Drama, GR
 description: An iPhone app that makes it really easy to track and share movies.

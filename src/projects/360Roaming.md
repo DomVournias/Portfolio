@@ -4,7 +4,7 @@ stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
 slug: 360Roaming
-date: 20-10-11
+date: 2019-11-10T03:13:00+02:00
 company: Telecommunications
 place: Heraklion, GR
 description: An iPhone app that makes it really easy to track and share movies.

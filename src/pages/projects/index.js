@@ -13,8 +13,10 @@ export default function Projects() {
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: frontmatter___date }
-
-        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/(projects)/" }
+          frontmatter: { date: { ne: "null" } }
+        }
       ) {
         nodes {
           frontmatter {
@@ -24,7 +26,7 @@ export default function Projects() {
             slug
             place
             description
-            date
+            date(formatString: "DD MMM YYYY")
             company
             title
             thumbImg {

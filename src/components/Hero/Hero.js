@@ -19,7 +19,7 @@ const avatarVariants = {
 
 const Hero = () => {
   return (
-    <div className="pb-20 h-screen m-0 overflow-hidden">
+    <div className="pb-20 h-[fit-content] m-0 overflow-hidden">
       <motion.h1
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

@@ -4,7 +4,7 @@ stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
 slug: PCAviso
-date: 19-11-09
+date: 2019-03-08T03:13:00+02:00
 company: SEO Company
 place: Drama, GR
 description: An iPhone app that makes it really easy to track and share movies.

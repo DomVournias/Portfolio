@@ -51,7 +51,7 @@ const CaseStudyBtn = () => {
         <motion.svg
           variants={arrowVariants}
           transition="hover"
-          className="w-16 md:hidden lg:block mt-10 mb-2 overflow-visible"
+          className="w-16 md:hidden lg:block mt-6 mb-2 overflow-visible"
           viewBox="0 0 61 41"
           fill="none"
         >

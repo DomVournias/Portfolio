@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 export default function ProjectsButton() {
   return (
-    <div className="flex xs:flex-col md:flex-row items-center rounded-xl xs:bg-gradient-to-t md:bg-gradient-to-l from-black to-fifth xs:py-10 md:py-20 xs:mx-6 xs:my-32 md:px-20 md:mb-40 md:gap-20 gap-10 xs:shadow-glowUp md:shadow-glow ">
+    <div className="flex xs:flex-col md:flex-row items-center rounded-xl xs:bg-gradient-to-t md:bg-gradient-to-l from-black to-fifth xs:py-10 md:py-20 xs:mx-6 xs:mb-32 md:px-20 md:mb-40 md:gap-20 gap-10 xs:shadow-glowUp md:shadow-glow ">
       <div className="w-3/4 xs:text-center md:text-left">
         <h3 className="text-5xl pb-4">All Projects</h3>
         <h4 className="text-2xl">

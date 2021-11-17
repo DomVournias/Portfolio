@@ -4,7 +4,7 @@ stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
 slug: Hellenic-Institute-of-Cultural-Diplomacy-USA
-date: 21-06-01
+date: 2021-06-21T03:13:00+02:00
 company: Hellenic Institute of Cultural Diplomacy
 place: Nashville, USA
 description: An iPhone app that makes it really easy to track and share movies.

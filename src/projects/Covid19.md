@@ -5,7 +5,7 @@ stackIcon1: ""
 stack2: ["SASS"]
 stack3: ["GATSBY"]
 slug: Covid-19-Tracker
-date: 20-09-21
+date: 2021-09-20T03:13:00+02:00
 company: Covid-19 Tracker
 place: Drama, GR
 description: A web application that tracks the Covid-19 cases of Greece.

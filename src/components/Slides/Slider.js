@@ -458,7 +458,7 @@ export default function Slider() {
 
   return (
     <section className="text-center " ref={refSlider}>
-      <div className="fixed box-border xs:z-50 xs:h-1/4 xs:m-0 xs:w-full xs:left-0 xs:bottom-0 lg:top-1/3 lg:left-10 lg:w-1/4 xxl:left-20 xxl:w-1/4 desk:left-32 desk:w-1/4">
+      <div className="fixed flex items-center mb-0 xs:z-50 xs:m-0 xs:w-full xs:bottom-0 lg:top-0 lg:left-0 lg:w-1/3 xl:left-20 xl:w-1/4 desk:left-32 desk:w-1/4 ">
         <SlideCard
           animate={animation}
           title={title1}
@@ -488,7 +488,7 @@ export default function Slider() {
         />
       </div>
 
-      <div className="flex flex-col overflow-hidden max-w-2xl m-auto items-center lg:pl-40 xl:pl-20">
+      <div className="flex flex-col overflow-hidden xs:max-w-lg md:max-w-3xl lg:max-w-lg xl:max-w-[34rem] m-auto items-center lg:pl-20 xxl:pl-0">
         <SlideImage
           animate={animation4}
           ref1={ref}

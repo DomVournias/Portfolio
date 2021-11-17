@@ -4,7 +4,7 @@ stack1: ["html"]
 stack2: ["css"]
 stack3: ["javascript"]
 slug: Hellenic-Institute-of-Cultural-Diplomacy
-date: 21-07-01
+date: 2021-07-21T03:13:00+02:00
 company: SEO Company
 place: Drama, GR
 description: An iPhone app that makes it really easy to track and share movies.

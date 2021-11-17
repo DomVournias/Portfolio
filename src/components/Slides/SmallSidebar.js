@@ -7,7 +7,7 @@ const SmallSidebar = (props) => {
   return (
     <motion.div
       animate={props.animate}
-      className="sidebar xs:hidden lg:block lg:right-10 lg:top-1/3 desk:right-32 "
+      className="sidebar xs:hidden lg:block lg:right-0 xxl:right-10 lg:top-1/3 desk:right-32 "
     >
       <motion.ul
         className="flex flex-col justify-between gap-4 
