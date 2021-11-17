@@ -30,7 +30,6 @@ export const Layout = ({ children, location, pageContext }) => {
       <main className="bg-black ">
         <AnimatePresence
           exitBeforeEnter
-          initial={false}
           onExitComplete={() => {
             if (typeof window !== "undefined") {
               window.scrollTo({ top: 0 });
@@ -56,7 +55,6 @@ export const Layout = ({ children, location, pageContext }) => {
         <ProjectsNavbar />
         <AnimatePresence
           exitBeforeEnter
-          initial={false}
           onExitComplete={() => {
             if (typeof window !== "undefined") {
               window.scrollTo({ top: 0 });
@@ -82,7 +80,6 @@ export const Layout = ({ children, location, pageContext }) => {
         <Navbar />
         <AnimatePresence
           exitBeforeEnter
-          initial={false}
           onExitComplete={() => {
             if (typeof window !== "undefined") {
               window.scrollTo({ top: 0 });
@@ -108,7 +105,6 @@ export const Layout = ({ children, location, pageContext }) => {
       <Navbar />
       <AnimatePresence
         exitBeforeEnter
-        initial={false}
         onExitComplete={() => {
           if (typeof window !== "undefined") {
             window.scrollTo({ top: 0 });
