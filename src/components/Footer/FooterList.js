@@ -14,7 +14,7 @@ export default function FooterList() {
           className="footer-links xs:text-center md:text-right"
           activeStyle={activeStyles}
         >
-          WORK
+          PROJECTS
         </Link>
         <Link
           exact

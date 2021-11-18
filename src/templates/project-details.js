@@ -32,7 +32,6 @@ export default function ProjectDetails({ data }) {
     bigDescription3,
     infoTitle1,
     infoDescription1,
-    infoTitle2,
     infoDescription2,
     infoDescription3,
   } = data.markdownRemark.frontmatter;
@@ -96,7 +95,7 @@ export const query = graphql`
         infoDescription2
         infoDescription3
         infoTitle1
-        infoTitle2
+
         place
         slug
         stack1

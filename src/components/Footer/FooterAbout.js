@@ -29,7 +29,7 @@ export default function Footer() {
               className="footer-links xs:text-center md:text-right"
               activeStyle={activeStyles}
             >
-              WORK
+              PROJECTS
             </Link>
             <Link
               exact

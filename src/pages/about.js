@@ -2,11 +2,12 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import AboutContactForm from "../components/Forms/AboutContactForm";
 import SimpleLink from "../components/Buttons/SimpleLink";
-import { motion } from "framer-motion";
+import { Seo } from "../components/Seo";
 
 export default function about() {
   return (
     <main className="about-container">
+      <Seo title="About" />
       <section className="xs:w-5/5 md:w-3/5 self-start">
         <h3 className="about-headings">Hey 👋</h3>
         <p className="about-paragraphs">

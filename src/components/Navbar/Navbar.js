@@ -83,7 +83,7 @@ export default function Navbar() {
               className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out hover:text-gray-400"
               activeStyle={activeStyles}
             >
-              Work
+              Projects
             </Link>
             <Link
               to="/about/"

@@ -7,6 +7,7 @@ import CardStacks from "../../components/Cards/ProjectsCards/CardStacks";
 import CardButton from "../../components/Cards/ProjectsCards/CardButton";
 import { motion } from "framer-motion";
 import ProjectsHero from "../../components/Hero/ProjectsHero";
+import { Seo } from "../../components/Seo";
 
 export default function Projects() {
   const data = useStaticQuery(graphql`
@@ -62,6 +63,7 @@ export default function Projects() {
 
   return (
     <section className="h-[fit-content] xs:max-w-xs md:max-w-2xl lg:max-w-[60rem] xl:max-w-[68rem] m-auto pt-14 pb-32">
+      <Seo title="All Projects" />
       <ProjectsHero />
       <div className="grid xs:grid-col md:grid-cols-2 lg:grid-cols-3  max-w-6xl md:gap-x-10 xl:gap-x-14 gap-y-52 pt-40 justify-center ">
         {projects.map((project, i) => (
