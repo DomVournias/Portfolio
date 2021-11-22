@@ -71,6 +71,7 @@ export const Layout = ({ children, location, pageContext }) => {
             {children}
           </motion.main>
         </AnimatePresence>
+        <Footer />
       </main>
     );
   }

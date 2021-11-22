@@ -17,8 +17,8 @@ export default function FooterContact() {
       <div className="flex flex-row flex-wrap m-0 p-0 mb-5 flex-start justify-center">
         <div className="w-3/5 ">
           <p className="text-xl leading-snug mr-5">
-            If you want to work together on a project or just have a chat,
-            please don't hesitate to contact me via email below.
+            If you want to work together on a project or to just have a chat,
+            please don't hesitate to contact me.
           </p>
         </div>
         <div className="w-2/5">

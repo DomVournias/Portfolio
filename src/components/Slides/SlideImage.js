@@ -16,7 +16,7 @@ const SlideImage = (props) => {
               image={getImage(props.pic)}
               draggable={false}
               placeholder="blurred"
-              alt="image 1"
+              alt={props.alt}
               quality="100"
               className="md:w-2/3 lg:w-full mb-32"
             />

@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-anchor-links",
 
     {
       resolve: "gatsby-transformer-remark",
@@ -39,23 +40,11 @@ module.exports = {
         icon: `src/images/DomFav-192x192.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        duration: 300,
-      },
-    },
 
     {
       resolve: "gatsby-plugin-layout",
       options: {
         component: require.resolve("./src/templates/Layout.js"),
-      },
-    },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100,
       },
     },
 

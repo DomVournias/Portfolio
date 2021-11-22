@@ -25,12 +25,13 @@ export default function Footer() {
             </Link>
             <Link
               exact
-              to="/"
+              to="/projects/"
               className="footer-links xs:text-center md:text-right"
               activeStyle={activeStyles}
             >
               PROJECTS
             </Link>
+
             <Link
               exact
               to="/about/"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
@@ -6,6 +6,7 @@ const ContactForm = () => {
     <section className="flex m-0 h-1/2 py-32 justify-center overflow-hidden z-10 px-8">
       <div className="relative">
         <form
+          id="contact"
           action="/thankyou"
           name="contact"
           method="post"

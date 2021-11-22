@@ -15,7 +15,7 @@ const ProjectsHero = () => {
         }}
         className="xs:text-5xl md:text-7xl text-white pb-4"
       >
-        Hi, I'm Dom
+        All Projects
       </motion.h1>
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
@@ -28,8 +28,8 @@ const ProjectsHero = () => {
         }}
         className="xs:text-2xl md:text-4xl text-gray pb-10"
       >
-        A front-end developer,
-        <br /> who loves building web apps
+        Take a look at the case
+        <br /> study of each project
       </motion.h2>
     </div>
   );

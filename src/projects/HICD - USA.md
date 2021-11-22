@@ -1,13 +1,13 @@
 ---
 title: HICD - USA
-stack1: ["html"]
+stack1: ["oxygen"]
 stack2: ["css"]
 stack3: ["javascript"]
 slug: Hellenic-Institute-of-Cultural-Diplomacy-USA
 date: 2021-06-21T03:13:00+02:00
 company: Hellenic Institute of Cultural Diplomacy
 place: Nashville, USA
-description: An iPhone app that makes it really easy to track and share movies.
+description: Website for the nonprofit branch of the hellenic institute of cultural diplomacy.
 bestFeature: The Map
 
 thumbImg: "../images/featured/HICD-USA1.png"
@@ -19,11 +19,11 @@ featuredImg5: "../images/featured/HICD-USA6.png"
 featuredImg6:
 featuredImg7:
 
-bigDescription1: The Covid-19 tracker is a personal project I built to track cases in real time using the Covid-19 Greece response API. I took the decision to create the tracker because of the current situation. At the same time, I thought it would be a great exercise of my API implementation skills. The project took around two weeks to be completed.
-bigDescription2: Covid-19 Tracker is the first Greek web app that shows statistics of Covid. There are plenty of websites that show worldwide data, but I decided to narrow down the data and create one specifically targeting regions of Greece.
-infoDescription1: The tracker could be built only by using vanilla React, but I decided to code it with Gatsby, because it's super fast and a great exercise as well. As for the styling of it, Tailwind was my first option, but during the first build I noticed that some features would include extra styling, so eventually I picked SASS for its simplicity.
+bigDescription1: After completing the website of the Greek H.I.C.D, I had an offer to work for its branch in Nashville. I developed the project and my coworker provided the design of it. The board was very helpful providing all the necessary documents for the creation of the project as well as helping with any questions we had. I was generally quite interested in this project because I was digitally building a cultural and diplomatic bridge between two nations.
+infoDescription1: The design had a minimalistic feel with the white spaces and thick lines of it. Golden was the chosen main color and a serif typography to give a luxurious look. This kind of selection may seem simplistic or "old school" but I wanted to prevent this by using shades and gradients to make it more modern. Oxygen was my selection for the build, because it's the most lightweight page builder, resulting to very fast loading speeds that help the search engines.
+bigDescription2: Oversimplification may result in a boring and empty website. Finding the balance between minimalism and functionality was the design goal I had in mind. Due to the brand similarities between the two branches the design and development process was much simpler.
 infoTitle1: Key features
-infoDescription2: The first feature is divided in four sections displaying the overall cases, while under every block I display the daily stats. Following up with the cases per region where I filtered the query to display as first the region with most cases. Also, I included a graph where the visitor can see the case rates visually.
-infoDescription3: The most complex feature of the tracker was the map. The circles drawn on the map are based on a mathematical equation relative to the number of cases and the range and circumference of the circle. The circle coordinates had to be connected with the API and placed on the map accordingly.
-bigDescription3: Overall, the Covid-19 tracker broadened my view and skills dealing with APIs and helped me understand better when to use certain frameworks. Gave me ideas and inspiration to challenge my coding skills more.
+infoDescription2: Each member had their own profile with their bio in it. I created a single template for their profiles for dynamic previewing, and an archive page. Memberships and donations had to be constructed with conditional form fields as well as each plan had to match its e-mail and payment integration.
+infoDescription3: The events page was the most tricky of all pages because of the custom fields that had to be created. The content had to be archived, written and published dynamically based on queries like category, date, title etc. So I created personalized categories for the members of the institute so that they could publish the events easily, while the information would automatically pass to the fields.
+bigDescription3: Finally, this project is one of my favorites since it helped me with my design skills. One of the things I would never forget is the collaboration with the members of the institute's team. Of course the most interesting fact is the entire message this institute has to share across the world, now also in the internet.
 ---

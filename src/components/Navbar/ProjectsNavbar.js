@@ -81,6 +81,7 @@ export default function ProjectsNavbar() {
             >
               Projects
             </Link>
+
             <Link
               to="/about/"
               className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-white transition duration-200 ease-in-out hover:text-opacity-90"

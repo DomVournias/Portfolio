@@ -1,14 +1,13 @@
 ---
 title: H.I.C.D.
-stack1: ["html"]
+stack1: ["elementor"]
 stack2: ["css"]
 stack3: ["javascript"]
 slug: Hellenic-Institute-of-Cultural-Diplomacy
-date: 2021-07-21T03:13:00+02:00
+date: 2021-04-15T03:13:00+02:00
 company: SEO Company
 place: Drama, GR
-description: An iPhone app that makes it really easy to track and share movies.
-bestFeature: The Map
+description: Website renovation of the first hellenic institute of cultural diplomacy in Greece.
 
 thumbImg: "../images/featured/HICD1.png"
 featuredImg1: "../images/featured/HICD2.png"
@@ -19,11 +18,12 @@ featuredImg5: "../images/featured/HICD6.png"
 featuredImg6:
 featuredImg7:
 
-bigDescription1: The Covid-19 tracker is a personal project I built to track cases in real time using the Covid-19 Greece response API. I took the decision to create the tracker because of the current situation. At the same time, I thought it would be a great exercise of my API implementation skills. The project took around two weeks to be completed.
-bigDescription2: Covid-19 Tracker is the first Greek web app that shows statistics of Covid. There are plenty of websites that show worldwide data, but I decided to narrow down the data and create one specifically targeting regions of Greece.
-infoDescription1: The tracker could be built only by using vanilla React, but I decided to code it with Gatsby, because it's super fast and a great exercise as well. As for the styling of it, Tailwind was my first option, but during the first build I noticed that some features would include extra styling, so eventually I picked SASS for its simplicity.
+bigDescription1: The institute played a big role in my work ethics and skills. I took part in a 6 month volunteering program and during that period I offered my services as a web developer. I took the initiative to rebuild the website because of the conflicts and problems that the old site had. The graphic - web design as well as the project development was taken over by me.
+infoDescription1: I've created the website using Elementor page builder. I selected a page builder because the existing web site had too many pages to code from scratch, and we only had two months available. Most features required custom fields to be implemented in order to have dynamical functionality. In some cases, I had to use additional CSS styling and also JavaScript for specific form actions.
+bigDescription2: H.I.C.D's website was the biggest project I've built. It consisted of multiple landing pages in four different languages, registration portals, a journal, an online course, donations, payment gateways, automatic notifications, and custom conditional fields for members and authors.
 infoTitle1: Key features
-infoDescription2: The first feature is divided in four sections displaying the overall cases, while under every block I display the daily stats. Following up with the cases per region where I filtered the query to display as first the region with most cases. Also, I included a graph where the visitor can see the case rates visually.
-infoDescription3: The most complex feature of the tracker was the map. The circles drawn on the map are based on a mathematical equation relative to the number of cases and the range and circumference of the circle. The circle coordinates had to be connected with the API and placed on the map accordingly.
-bigDescription3: Overall, the Covid-19 tracker broadened my view and skills dealing with APIs and helped me understand better when to use certain frameworks. Gave me ideas and inspiration to challenge my coding skills more.
+infoDescription2: As I mentioned earlier, the newspaper was one of the most challenging designs I created for the website due to its conditional and dynamic logic. I coded ten forms and created their landing pages. The members' page had automated roles and fields based on their pro-created template.
+bestFeature: Registration
+infoDescription3: The enrolment process consisted of paid recurring benefit levels. The forms were complicated because of the dynamic logic behind them. An integration with Stripe and PayPal payments was possible through their hooks and states. Each form was linked to notifications and emails for both the user and the administrator.
+bigDescription3: In closing, my work as a senior developer at the Hellenic Institute for Cultural Diplomacy has been very beneficial and has had a significant impact on the skill set. The design and build had to be responsive and functional in all browsers and that's what I focused on achieving by the first day.
 ---

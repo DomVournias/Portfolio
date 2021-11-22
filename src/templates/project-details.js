@@ -8,6 +8,7 @@ import KeyFeatures from "../components/SingleProjectAssets/KeyFeatures";
 import ProjectStacks from "../components/SingleProjectAssets/ProjectStacks";
 import ProjectInfo from "../components/SingleProjectAssets/ProjectInfo";
 import ProjectHero from "../components/SingleProjectAssets/ProjectHero";
+import BackToTop from "../components/Buttons/BackToTop";
 
 export default function ProjectDetails({ data }) {
   const {
@@ -76,6 +77,7 @@ export default function ProjectDetails({ data }) {
           description={infoDescription3}
         />
         <QuoteSection quote={bigDescription3} />
+        <BackToTop showBelow={800} />
       </section>
     </>
   );

@@ -10,12 +10,13 @@ export default function FooterList() {
       <ul className="p-0 xs:pt-12 md:pt-0">
         <Link
           exact
-          to="/"
+          to="/projects/"
           className="footer-links xs:text-center md:text-right"
           activeStyle={activeStyles}
         >
           PROJECTS
         </Link>
+
         <Link
           exact
           to="/about/"

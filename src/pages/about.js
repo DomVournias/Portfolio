@@ -9,7 +9,11 @@ export default function about() {
     <main className="about-container">
       <Seo title="About" />
       <section className="xs:w-5/5 md:w-3/5 self-start">
-        <h3 className="about-headings">Hey 👋</h3>
+        <div className="flex flex-row gap-2">
+          <h3 className="about-headings">Hey </h3>
+          <h3 className="xs:text-4xl md:text-5xl">👋</h3>
+        </div>
+
         <p className="about-paragraphs">
           My name is Dom. I'm a front end developer from Greece. Film making,
           photography, juggling and traveling are the things that settle my

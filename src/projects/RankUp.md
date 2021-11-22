@@ -1,14 +1,13 @@
 ---
 title: RankUp
-stack1: ["react"]
-stack2: ["tailwind"]
-stack3: ["gatsby"]
+stack1: ["gutenberg"]
+stack2: ["css"]
+stack3: ["javascript"]
 slug: RankUp
 date: 2020-10-01T03:13:00+02:00
-company: SEO Company
+company: Webdesign / SEO Agency
 place: Drama, GR
-description: An iPhone app that makes it really easy to track and share movies.
-bestFeature: The Map
+description: An agency - blog that helps businesses and people learn SEO and web design.
 
 thumbImg: "../images/featured/RankUp1.png"
 featuredImg1: "../images/featured/RankUp2.png"
@@ -19,11 +18,12 @@ featuredImg5: "../images/featured/RankUp6.png"
 featuredImg6:
 featuredImg7:
 
-bigDescription1: The Covid-19 tracker is a personal project I built to track cases in real time using the Covid-19 Greece response API. I took the decision to create the tracker because of the current situation. At the same time, I thought it would be a great exercise of my API implementation skills. The project took around two weeks to be completed.
-bigDescription2: Covid-19 Tracker is the first Greek web app that shows statistics of Covid. There are plenty of websites that show worldwide data, but I decided to narrow down the data and create one specifically targeting regions of Greece.
-infoDescription1: The tracker could be built only by using vanilla React, but I decided to code it with Gatsby, because it's super fast and a great exercise as well. As for the styling of it, Tailwind was my first option, but during the first build I noticed that some features would include extra styling, so eventually I picked SASS for its simplicity.
+bigDescription1: RankUp is a Greek web design and SEO agency I've created. It focuses on building websites with a structured SEO content plan and overall a search engine-optimized build. Rankup's target audience is Greek and it is divided up through Google - YouTube organic traffic.
+infoDescription1: Performance is the key to content optimization and speed, which is why I selected the lightest page builder for Rankup, Gutenberg. I wanted to get that extra point in Google's page speed insights. Of course I've added an AMP version and made it responsive for all devices. I included few css lines in the build just to spice things up with an extra styling touch.
+bigDescription2: Over the past three years I've managed several websites where their SEO rank was way off their true potential. I helped them reach a 10x of their incoming monthly traffic through on-page SEO and link building.
 infoTitle1: Key features
-infoDescription2: The first feature is divided in four sections displaying the overall cases, while under every block I display the daily stats. Following up with the cases per region where I filtered the query to display as first the region with most cases. Also, I included a graph where the visitor can see the case rates visually.
-infoDescription3: The most complex feature of the tracker was the map. The circles drawn on the map are based on a mathematical equation relative to the number of cases and the range and circumference of the circle. The circle coordinates had to be connected with the API and placed on the map accordingly.
-bigDescription3: Overall, the Covid-19 tracker broadened my view and skills dealing with APIs and helped me understand better when to use certain frameworks. Gave me ideas and inspiration to challenge my coding skills more.
+infoDescription2: Most Wordpress plugins offer great design solutions, but with a cost of large files guys and that's very important because it affects loading speeds. Reducing the use of plugins can really change the SERP rank of landing pages and blog posts, and this is exactly the strategy I followed with Rankup.
+bestFeature: The Forms
+infoDescription3: The website has one CTA form where I offer a free SEO quote for potential clients and a contact form where I collect inquiries. Both of the forms are integrated with my personal email so I can receive notifications whenever someone messages Rankup, straight away in my phone.Overall the forms were not very complicated, because they haven't any multiple choice or payment gateways.
+bigDescription3: As an agency or an e-education blog Rankup broadened my SEO skills in the Greek language in terms of keyword research and serp analysis. Learning what design and coding language works best for the search engines is very beneficial for me as well as the customer.
 ---

@@ -88,7 +88,6 @@ export default function Slider() {
     threshold: 0.7,
   });
 
-  console.log(projects);
   // First Box Animation
   const animation = useAnimation();
   const [ref, inView] = useInView({
@@ -355,14 +354,14 @@ export default function Slider() {
   // Sidebar Animations
 
   const activeBtn = useAnimation();
-  const [refFirst, inViewFirst] = useInView({ threshold: 0.5 });
+  const [refFirst, inViewFirst] = useInView({ threshold: 1 });
 
   useEffect(() => {
     if (inViewFirst) {
       activeBtn.start({
         backgroundColor: "#f64d28",
         transition: {
-          duration: 0.3,
+          duration: 0.1,
         },
       });
     }
@@ -370,21 +369,21 @@ export default function Slider() {
       activeBtn.start({
         backgroundColor: "#333",
         transition: {
-          duration: 0.3,
+          duration: 0.1,
         },
       });
     }
   }, [activeBtn, inViewFirst]);
 
   const activeBtn2 = useAnimation();
-  const [refSecond, inViewSecond] = useInView({ threshold: 0.5 });
+  const [refSecond, inViewSecond] = useInView({ threshold: 1 });
 
   useEffect(() => {
     if (inViewSecond) {
       activeBtn2.start({
         backgroundColor: "#f64d28",
         transition: {
-          duration: 0.3,
+          duration: 0.1,
         },
       });
     }
@@ -392,21 +391,21 @@ export default function Slider() {
       activeBtn2.start({
         backgroundColor: "#333",
         transition: {
-          duration: 0.3,
+          duration: 0.1,
         },
       });
     }
   }, [activeBtn2, inViewSecond]);
 
   const activeBtn3 = useAnimation();
-  const [refThird, inViewThird] = useInView({ threshold: 0.5 });
+  const [refThird, inViewThird] = useInView({ threshold: 1 });
 
   useEffect(() => {
     if (inViewThird) {
       activeBtn3.start({
         backgroundColor: "#f64d28",
         transition: {
-          duration: 0.3,
+          duration: 0.1,
         },
       });
     }
@@ -414,7 +413,7 @@ export default function Slider() {
       activeBtn3.start({
         backgroundColor: "#333",
         transition: {
-          duration: 0.3,
+          duration: 0.1,
         },
       });
     }
@@ -499,6 +498,7 @@ export default function Slider() {
           id="first"
           slug={slug1}
           pic={image1}
+          alt={slug1}
         />
         <SlideImage
           animate={animation5}
@@ -507,6 +507,7 @@ export default function Slider() {
           id="second"
           slug={slug2}
           pic={image2}
+          alt={slug2}
         />
         <SlideImage
           animate={animation6}
@@ -515,6 +516,7 @@ export default function Slider() {
           id="third"
           slug={slug3}
           pic={image3}
+          alt={slug3}
         />
       </div>
 

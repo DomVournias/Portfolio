@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const activeStyles = {
   color: "white",
@@ -85,6 +86,7 @@ export default function Navbar() {
             >
               Projects
             </Link>
+
             <Link
               to="/about/"
               className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out hover:text-gray-400"
