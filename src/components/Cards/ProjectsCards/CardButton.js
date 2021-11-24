@@ -34,21 +34,6 @@ const CardButton = (props) => {
           <h3 className="bg-gray-card rounded-full px-[22px] py-2 border-b-4 border-gray-outline md:text-sm lg:text-base group-hover:border-[3px] group-hover:border-third transition-all duration-100 hover:bg-third ">
             Case Study
           </h3>
-          {/* <svg
-            className="xs:w-1/5 "
-            aria-hidden="true"
-            role="img"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-          >
-            <rect fill="current" />
-            <g transform="rotate(-90 8 8)">
-              <path
-                className="fill-current text-white text-opacity-60 group-hover:text-opacity-100 transition-all duration-300 "
-                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"
-              />
-            </g>
-          </svg> */}
         </Link>
       </div>
       <div className="flex w-[17%] transition-all duration-500 ease-in-out bg-black rounded-full p-[0.2rem] self-center">
