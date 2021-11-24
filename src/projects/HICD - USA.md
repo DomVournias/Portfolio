@@ -1,5 +1,7 @@
 ---
 title: HICD - USA
+website: "https://hicd-usa.com/"
+github:
 stack1: ["oxygen"]
 stack2: ["css"]
 stack3: ["javascript"]

@@ -1,5 +1,7 @@
 ---
 title: PCAviso
+website: "https://pcaviso.com/"
+github:
 stack1: ["elementor"]
 stack2: ["css"]
 stack3: ["javascript"]

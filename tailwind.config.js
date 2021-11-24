@@ -66,6 +66,8 @@ module.exports = {
         sixth: "#FFBD00",
         silver: "#F3F3F3",
         graph: "#161517",
+        github: "#745EC5",
+        site: "#3498DB",
 
         gray: {
           darkest: "#1f2d3d",
@@ -75,6 +77,8 @@ module.exports = {
           lightest: "#f9fafc",
           naive: "#333333",
           naiveHover: "#7F7F7F",
+          outline: "#4D4D4D",
+          card: "#161517",
         },
       },
     },

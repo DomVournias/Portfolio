@@ -21,6 +21,8 @@ export default function Projects() {
       ) {
         nodes {
           frontmatter {
+            github
+            website
             stack3
             stack2
             stack1
@@ -44,6 +46,7 @@ export default function Projects() {
       }
     }
   `);
+  console.log(data);
 
   const variants = {
     visible: (i) => ({
@@ -62,53 +65,57 @@ export default function Projects() {
   const projects = data.allMarkdownRemark.nodes;
 
   return (
-    <section className="h-[fit-content] xs:max-w-xs md:max-w-2xl lg:max-w-[60rem] xl:max-w-[68rem] m-auto pt-14 pb-32">
+    <section className="h-[fit-content] xs:max-w-xs md:max-w-2xl lg:max-w-[68rem] xl:max-w-[70rem] m-auto pt-14 pb-32">
       <Seo title="All Projects" />
       <ProjectsHero />
       <div className="grid xs:grid-col md:grid-cols-2 lg:grid-cols-3  max-w-6xl md:gap-x-10 xl:gap-x-14 gap-y-52 pt-40 justify-center ">
         {projects.map((project, i) => (
-          <Link to={project.frontmatter.slug}>
-            <motion.div
-              className="group"
-              custom={i}
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-            >
-              <div className="flex flex-col bg-graph rounded-2xl xs:px-12 md:px-6 lg:px-6 border-2 border-white border-opacity-30 group group-hover:border-third group-hover:scale-[1.02] transition-all duration-200">
-                <div className="place-self-center w-[fit-content] lg:px-6 -mt-28 ">
-                  <div className="bg-black border-2 border-white border-opacity-30 rounded-full xs:p-8 lg:p-6 group-hover:border-third transition-all duration-200">
-                    <GatsbyImage
-                      image={getImage(
-                        project.frontmatter.thumbImg.childImageSharp
-                      )}
-                      placeholder="blurred"
-                      draggable={false}
-                      alt="no"
-                      quality="100"
-                      className="xs:w-40 md:w-32 xl:w-36"
-                    />
-                  </div>
+          // <Link to={project.frontmatter.slug}>
+          <motion.div
+            className="group"
+            custom={i}
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+          >
+            <div className="flex flex-col bg-graph rounded-2xl xs:px-12 md:px-6 lg:px-6 border-2 border-white border-opacity-30 group group-hover:border-third group-hover:scale-[1.02] transition-all duration-200">
+              <div className="place-self-center w-[fit-content] lg:px-6 -mt-28 ">
+                <div className="bg-black border-2 border-white border-opacity-30 rounded-full xs:p-8 lg:p-6 group-hover:border-third transition-all duration-200">
+                  <GatsbyImage
+                    image={getImage(
+                      project.frontmatter.thumbImg.childImageSharp
+                    )}
+                    placeholder="blurred"
+                    draggable={false}
+                    alt="no"
+                    quality="100"
+                    className="xs:w-40 md:w-32 xl:w-36 group-hover:rotate-[10deg] transition-all duration-300"
+                  />
                 </div>
-                <div className="py-6 text-center">
-                  <h3 className="text-3xl pb-2">{project.frontmatter.title}</h3>
-                  <p className="text-lg pb-4 text-white text-opacity-80">
-                    {project.frontmatter.description}
-                  </p>
-                  <ProjectCardInfo
+              </div>
+              <div className="py-6 text-center">
+                <h3 className="text-3xl pb-2">{project.frontmatter.title}</h3>
+                <p className="text-lg pb-4 text-white text-opacity-80">
+                  {project.frontmatter.description}
+                </p>
+                {/* <ProjectCardInfo
                     date={project.frontmatter.date}
                     place={project.frontmatter.place}
-                  />
-                  <CardStacks
-                    stack1={project.frontmatter.stack1}
-                    stack2={project.frontmatter.stack2}
-                    stack3={project.frontmatter.stack3}
-                  />
-                </div>
-                <CardButton slug={project.frontmatter.slug} />
+                  /> */}
+                <CardStacks
+                  stack1={project.frontmatter.stack1}
+                  stack2={project.frontmatter.stack2}
+                  stack3={project.frontmatter.stack3}
+                />
               </div>
-            </motion.div>
-          </Link>
+              <CardButton
+                slug={project.frontmatter.slug}
+                github={project.frontmatter.github}
+                website={project.frontmatter.website}
+              />
+            </div>
+          </motion.div>
+          // </Link>
         ))}
       </div>
     </section>

@@ -1,5 +1,7 @@
 ---
 title: RankUp
+website: "https://rankup.gr/"
+github:
 stack1: ["gutenberg"]
 stack2: ["css"]
 stack3: ["javascript"]
