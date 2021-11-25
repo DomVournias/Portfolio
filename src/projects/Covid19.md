@@ -1,5 +1,5 @@
 ---
-title: Covid19 Tracker
+title: Covid-19 Tracker
 website: "https://covid19-tracker-f15ec.web.app/"
 github: "https://github.com/DomVournias/Covid19-Tracker"
 stack1: ["REACT"]

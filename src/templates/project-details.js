@@ -13,6 +13,8 @@ import BackToTop from "../components/Buttons/BackToTop";
 export default function ProjectDetails({ data }) {
   const {
     title,
+    website,
+    github,
     company,
     date,
     description,
@@ -46,6 +48,8 @@ export default function ProjectDetails({ data }) {
           description={description}
           pic={thumbImg}
           slug={slug}
+          github={github}
+          website={website}
         />
         <ProjectInfo
           company={company}
@@ -97,7 +101,8 @@ export const query = graphql`
         infoDescription2
         infoDescription3
         infoTitle1
-
+        github
+        website
         place
         slug
         stack1

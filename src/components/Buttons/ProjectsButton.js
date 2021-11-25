@@ -7,7 +7,7 @@ export default function ProjectsButton() {
       <div className="w-3/4 xs:text-center md:text-left">
         <h3 className="text-5xl pb-4">All Projects</h3>
         <h4 className="text-2xl">
-          Have a look at the full list of the projects I've worked.
+          Have a look at the full list of my projects.
         </h4>
       </div>
 
