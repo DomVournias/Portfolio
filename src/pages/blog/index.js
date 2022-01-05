@@ -49,9 +49,9 @@ const BlogPosts = () => {
                 <div className="flex gap-6 p-6 border-3 border-gray-naiveHover items-center self-center ">
                   <div className="w-[20%] self-center">
                     {/* {category1 == "Gatsby" ? <GatsbyIcon /> : <ReactIcon />} */}
-                    {category1 === "Gatsby" ? (
+                    {category1 == "Gatsby" ? (
                       <GatsbyIcon />
-                    ) : category1 === "React" ? (
+                    ) : category1 == "React" ? (
                       <ReactIcon />
                     ) : (
                       "Loading..."
