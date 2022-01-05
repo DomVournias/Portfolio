@@ -16,13 +16,13 @@ export default function about() {
 
         <p className="about-paragraphs">
           My name is Dom. I'm a front end developer from Greece. Film making,
-          photography, juggling and traveling are the things that settle my
-          equilibrium with my work life.
+          photography and traveling are the things that I love doing in my free
+          time.
         </p>
         <p className="about-paragraphs ">
           I've been building websites for over 3 years now. In the past, I used
           page builders like Elementor and Oxygen with Wordpress. I’m currently
-          focusing on building applications from scratch by using React.
+          focusing on building applications from scratch using React.
         </p>
         <p className="about-paragraphs ">
           I got involved in several big projects in the past, but the one that I

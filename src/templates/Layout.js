@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import FooterAbout from "../components/Footer/FooterAbout";
 import ProjectsNavbar from "../components/Navbar/ProjectsNavbar";
 import { Helmet } from "react-helmet";
+import { Provider } from "@lyket/react";
 
 const variants = {
   initial: {
@@ -72,6 +73,34 @@ export const Layout = ({ children, location, pageContext }) => {
           </motion.main>
         </AnimatePresence>
         <Footer />
+      </main>
+    );
+  }
+  if (pageContext.layout === "singlePost") {
+    return (
+      <main className="bg-black ">
+        <Provider apiKey="pt_8f466ce2accac39a48db8b8d4af414">
+          <Navbar />
+          <AnimatePresence
+            exitBeforeEnter
+            onExitComplete={() => {
+              if (typeof window !== "undefined") {
+                window.scrollTo({ top: 0 });
+              }
+            }}
+          >
+            <motion.main
+              key={location.pathname}
+              variants={variants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+            >
+              {children}
+            </motion.main>
+          </AnimatePresence>
+          <Footer />
+        </Provider>
       </main>
     );
   }

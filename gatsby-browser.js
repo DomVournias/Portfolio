@@ -14,7 +14,7 @@
 //   }
 // };
 
-require("prismjs/themes/prism-twilight.css");
+// require("prismjs/themes/prism-twilight.css");
 
 // in gastby-browser.js
 exports.shouldUpdateScroll = ({

@@ -4,6 +4,10 @@
 
 @layer base {
   @font-face {
+    font-family: Robo;
+    src: local("Robo"), url("../fonts/Robo.ttf") format("ttf");
+  }
+  @font-face {
     font-family: Proxima Nova Regural;
     src: local("Proxima Nova - Regural"),
       url("../fonts/Proxima Nova - Regural.woff") format("woff");
@@ -49,18 +53,18 @@
   text-decoration: none;
   font-family: "Segoe UI Bold";
   color: white;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+  outline: #745ec5;
+  -webkit-tap-highlight-color: #745ec5;
+  /* -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
 @layer utilities {
-  h1 {
+  /* h1 {
     @apply font-segoeBold;
   }
   h2 {
@@ -71,7 +75,7 @@
   }
   p {
     @apply font-segoeSemiBold;
-  }
+  } */
 
   .simple-link {
     @apply text-third hover:text-white underline;
@@ -99,7 +103,7 @@
   }
 
   .about-paragraphs {
-    @apply max-w-xl leading-normal xs:text-xl xs:pb-6 md:text-3xl md:pb-12;
+    @apply max-w-xl leading-normal xs:text-xl xs:pb-6 md:text-3xl md:pb-12 font-segoeSemiBold;
   }
   .footer-links {
     @apply text-2xl block mb-2 text-right hover:opacity-70 transition duration-200 ease-in-out;
@@ -112,6 +116,12 @@
   }
   .projects-paragraph {
     @apply w-full leading-normal xs:text-xl xs:pb-6 md:text-3xl md:pb-12;
+  }
+  .activeReaction {
+    @apply bg-dark-200 py-4 rounded-lg flex flex-col items-center text-4xl gap-1;
+  }
+  .inactiveReaction {
+    @apply bg-dark-100 py-4 rounded-lg flex flex-col items-center text-4xl gap-1;
   }
 }
 

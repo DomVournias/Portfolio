@@ -35,7 +35,7 @@ const NavbarNavlinksHome = () => {
     >
       <Link
         to="/projects/"
-        className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out hover:text-white"
+        className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2   text-gray transition duration-200 ease-in-out hover:text-white"
         activeStyle={activeStyles}
       >
         Projects
@@ -43,10 +43,17 @@ const NavbarNavlinksHome = () => {
 
       <Link
         to="/about/"
-        className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-gray transition duration-200 ease-in-out hover:text-white"
+        className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2   text-gray transition duration-200 ease-in-out hover:text-white"
         activeStyle={activeStyles}
       >
         About
+      </Link>
+      <Link
+        to="/blog/"
+        className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2   text-gray transition duration-200 ease-in-out hover:text-white"
+        activeStyle={activeStyles}
+      >
+        Blog
       </Link>
       <NavbarSocialsHome />
     </motion.nav>

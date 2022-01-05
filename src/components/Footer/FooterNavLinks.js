@@ -24,6 +24,14 @@ const FooterNavLinks = () => {
       >
         ABOUT
       </Link>
+      <Link
+        exact
+        to="/blog/"
+        className="footer-links xs:text-center md:text-right"
+        activeStyle={activeStyles}
+      >
+        BLOG
+      </Link>
     </>
   );
 };

@@ -15,7 +15,7 @@ const SlideCard = (props) => {
         <div className="xs:w-2/3 lg:w-full">
           <div className="pb-2">
             <h3 className="xs:text-2xl lg:text-5xl lg:pb-3 ">{props.title}</h3>
-            <h4 className="xs:text-lg md:text-xl lg:text-2xl xs:pb-1 md:pb-2 ">
+            <h4 className="xs:text-lg md:text-xl lg:text-2xl xs:pb-1 md:pb-2 font-segoe ">
               {props.description}
             </h4>
           </div>

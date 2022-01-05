@@ -10,29 +10,26 @@ module.exports = {
 
   plugins: [
     "gatsby-plugin-image",
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-background-image-es5",
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: "/:[]",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-anchor-links",
 
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-plugin-mdx",
       options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-prismjs",
-            options: {
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
-        ],
+        extensions: [`.md`, `.mdx`],
       },
     },
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-mdx-prismjs",
 
     {
       resolve: `gatsby-plugin-manifest`,
@@ -76,6 +73,14 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "blogfeatured",
+        path: "./src/images/blogimages/blogfeatured/",
+      },
+      __key: "blogfeatured",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "pages",
         path: "./src/pages/",
       },
@@ -89,13 +94,14 @@ module.exports = {
       },
       __key: "projects",
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "blog",
-        path: "./src/blog/",
+        name: "blogposts",
+        path: "./src/blogposts/",
       },
-      __key: "blog",
+      __key: "blogposts",
     },
   ],
 };

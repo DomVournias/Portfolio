@@ -12,7 +12,7 @@ import { Seo } from "../../components/Seo";
 export default function Projects() {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(
+      allMdx(
         sort: { order: DESC, fields: frontmatter___date }
         filter: {
           fileAbsolutePath: { regex: "/(projects)/" }
@@ -46,7 +46,6 @@ export default function Projects() {
       }
     }
   `);
-  console.log(data);
 
   const variants = {
     visible: (i) => ({
@@ -62,7 +61,7 @@ export default function Projects() {
     },
   };
 
-  const projects = data.allMarkdownRemark.nodes;
+  const projects = data.allMdx.nodes;
 
   return (
     <section className="h-[fit-content] xs:max-w-xs md:max-w-2xl lg:max-w-[68rem] xl:max-w-[70rem] m-auto pt-14 pb-32">
@@ -95,7 +94,7 @@ export default function Projects() {
               </div>
               <div className="py-6 text-center">
                 <h3 className="text-3xl pb-2">{project.frontmatter.title}</h3>
-                <p className="text-lg pb-4 text-white text-opacity-80">
+                <p className="text-lg pb-4 text-white text-opacity-70 font-segoe">
                   {project.frontmatter.description}
                 </p>
                 {/* <ProjectCardInfo

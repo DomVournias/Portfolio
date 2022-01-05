@@ -16,7 +16,7 @@ import SmallSidebar from "./SmallSidebar";
 export default function Slider() {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(
+      allMdx(
         sort: { order: DESC, fields: frontmatter___date }
         limit: 3
         filter: { fileAbsolutePath: { regex: "/(projects)/" } }
@@ -47,7 +47,7 @@ export default function Slider() {
     }
   `);
 
-  const projects = data.allMarkdownRemark.nodes;
+  const projects = data.allMdx.nodes;
 
   const slug1 = projects[0].frontmatter.slug;
   const slug2 = projects[1].frontmatter.slug;

@@ -37,7 +37,9 @@ export default function ProjectDetails({ data }) {
     infoDescription1,
     infoDescription2,
     infoDescription3,
-  } = data.markdownRemark.frontmatter;
+  } = data.mdx.frontmatter;
+
+  console.log(data);
 
   return (
     <>
@@ -89,79 +91,55 @@ export default function ProjectDetails({ data }) {
 
 export const query = graphql`
   query ProjectDetails($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         bigDescription1
         bigDescription2
         bigDescription3
+        bestFeature
         company
         date(formatString: "DD MMM YYYY")
         description
+        github
         infoDescription1
         infoDescription2
         infoDescription3
         infoTitle1
-        github
-        website
         place
         slug
         stack1
         stack2
         stack3
         title
-        bestFeature
+        website
         thumbImg {
           childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
           }
         }
         featuredImg1 {
           childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
           }
         }
         featuredImg2 {
           childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
           }
         }
         featuredImg3 {
           childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
           }
         }
         featuredImg4 {
           childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
           }
         }
         featuredImg5 {
           childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
+            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
           }
         }
       }

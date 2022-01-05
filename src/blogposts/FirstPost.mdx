@@ -1,0 +1,152 @@
+---
+title: "How to create code blocks in MDX & Gatsby"
+author: "Dom Vournias"
+authorImage: "../images/blogimages/blogfeatured/authorDomVournias.png"
+slug: first-blog-post
+description: "I am going to show you how to create and add code blocks in MDX, building a code block component to use in your MDX for React or Gatsby projects."
+category1: ["Gatsby"]
+category2: ["React"]
+category3: ["PrismJs"]
+stack3: ["Typescript"]
+date: 2022-01-04T03:13:00+02:00
+thumbImage: ""
+featuredImage: "../images/blogimages/blogfeatured/How to use code blocks in react.png"
+embeddedImagesLocal:
+  - "../images/blogimages/blogfeatured/Customizing the fonts of Prism block.jpg"
+  - "../images/blogimages/blogfeatured/Customizing the fonts of Prism block2.jpg"
+---
+
+import Code from "../components/CodeBlocks/Code";
+import { Break, ExLink } from "../components/CodeBlocks/PostTypography";
+import PostImage from "../components/SinglePostAssets/PostImage";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+
+## Create a code block component
+
+### Install Prism for MDX
+
+We are going to use Prism so we can then go ahead and create the component. First install Prism
+
+<Code code={`npm i prismjs`} language="javascript" />
+
+<Code
+  code={`yarn add gatsby-plugin-mdx-prismjs
+`}
+  language="javascript"
+/>
+
+<Code
+  code={`yarn add @mdx-js/mdx @mdx-js/loader loader-utils --dev`}
+  language="javascript"
+/>
+
+Include in _gatsby-config.js_
+
+<Code
+  code={`// gatsby-config.js
+---
+plugins: ['gatsby-plugin-mdx-prismjs'],`}
+  language="javascript"
+/>
+
+You can read more about Prism <ExLink goTo="https://prismjs.com/" label="here"/>.
+
+### Create the code block component
+
+Create a new component and called it however you like. In this example I will call it _Code.js_
+
+<Code
+  code={`// Code.js
+---
+import React, { useEffect } from "react";
+import Prism from "prismjs";
+import "../../styles/prism.css";
+---
+export default function Code({ code, language }) {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+  return (
+    <div className="my-10">
+      <div className="Code">
+        <pre className={/* Inside template literals -> */language- $ {language} }>
+          <code>{code}</code>
+        </pre>
+      </div>
+    </div>
+  );
+}`}
+  language="javascript"
+/>
+
+### Style the code block component
+
+Create a css file called _prism.css_ and make sure to import it in your code block component.
+
+#### Choose a Prismjs theme
+
+- Official Prism Themes <ExLink goTo="https://prismjs.com/" label="prismjs.com" />
+
+- Community Themes <ExLink goTo="https://github.com/PrismJS/prism-themes" label="Github repo library" />
+
+- Prismjs Theme Generator <ExLink goTo="http://k88hudson.github.io/syntax-highlighting-theme-generator/www/" label="Create your own theme" />
+
+<Code
+  code={`//prism.css
+--- 
+Prism Theme CSS`}
+  language="javascript"
+/>
+
+### Insert code block component in MDX
+
+To finalize we have to import the code component in our MDX file and start writing our code.
+
+<Code
+  code={`//YourPost.mdx
+---
+import Code from "./Code";
+/*Content...*/
+<Code code={/*code goes between template literals ''*/} languate="javascript"/>`}
+  language="javascript"
+/>
+
+### Customizing the fonts of Prism block
+
+If you've followed all the steps correctly then you'll have a prism code block exactly like mine except from the typography.
+
+<GatsbyImage
+  image={getImage(props.localImages[0])}
+  alt="Customizing the fonts of Prism block"
+  className="mb-8"
+/>
+<GatsbyImage
+  image={getImage(props.localImages[1])}
+  alt="Customizing the fonts of Prism block"
+  className="mb-8"
+/>
+
+To add the typography you will have to include the font-styles in the correct css class inside _prism.css_ file.
+
+<Code
+  code={`//prism.css
+---
+/*Tokens*/
+.token.string,
+.token.comment {
+  font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+    "Courier New", monospace;
+}
+`}
+  language="css"
+/>
+
+<Break />
+
+## Conclussion
+
+You can customize your prism code blocks to suit your style with the tools I mentioned above and further expand the functionality of the component.
+
+---
+
+I hope this guide helped you create beautiful code blocks to highlight your coding. Make sure to leave a 👍 and love ❤️ if you found this article helpful.

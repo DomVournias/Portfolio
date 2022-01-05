@@ -14,43 +14,79 @@ exports.onCreatePage = ({ page, actions }) => {
     createPage(page);
   }
 
+  if (page.path.match(/blog\/([^\/]+$)/)) {
+    page.context.layout = "singlePost";
+    createPage(page);
+  }
+
   if (page.path.match(/thankyou/)) {
     page.context.layout = "thankyouPage";
     createPage(page);
   }
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` });
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    });
-  }
-};
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
 
-exports.createPages = async function ({ graphql, actions }) {
-  const { data } = await graphql(`
-    query Projects {
-      allMarkdownRemark {
-        nodes {
-          frontmatter {
+  const result = await graphql(`
+    {
+      projects: allMdx(
+        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+      posts: allMdx(filter: { fileAbsolutePath: { regex: "/(blogposts)/" } }) {
+        edges {
+          node {
+            id
             slug
+            frontmatter {
+              slug
+            }
           }
         }
       }
     }
   `);
 
-  data.allMarkdownRemark.nodes.forEach((node) => {
-    const slug = node.frontmatter.slug;
-    actions.createPage({
-      path: "/projects/" + slug,
-      component: path.resolve("./src/templates/project-details.js"),
-      context: { slug: slug, layout: "projectsPage" },
+  const projectsTemplate = require.resolve(`./src/templates/project-details`);
+  const postsTemplate = require.resolve("./src/templates/SinglePost");
+
+  if (result.errors) {
+    return;
+  }
+
+  result.data.projects.edges.forEach((edge) => {
+    const id = edge.node.id;
+
+    createPage({
+      path: `/projects/${edge.node.frontmatter.slug}/`,
+      component: projectsTemplate,
+      context: {
+        id,
+        slug: edge.node.frontmatter.slug,
+        layout: "projectsPage",
+      },
+    });
+  });
+
+  result.data.posts.edges.forEach((edge) => {
+    // const postId = edge.node.id;
+    createPage({
+      component: postsTemplate,
+      path: `/blog/${edge.node.frontmatter.slug}`,
+      context: {
+        id: edge.node.id,
+        slug: edge.node.frontmatter.slug,
+        layout: "singlePost",
+      },
     });
   });
 };
