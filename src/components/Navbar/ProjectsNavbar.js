@@ -76,7 +76,7 @@ export default function ProjectsNavbar() {
           >
             <Link
               to="/projects/"
-              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-segoeSemiBold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
               activeStyle={activeStyles}
             >
               Projects
@@ -84,14 +84,14 @@ export default function ProjectsNavbar() {
 
             <Link
               to="/about/"
-              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-segoeSemiBold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
               activeStyle={activeStyles}
             >
               About
             </Link>
             <Link
               to="/blog/"
-              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-bold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
+              className="xs:text-md xs:px-3 md:text-lg md:px-6 py-2 font-segoeSemiBold  text-white transition duration-200 ease-in-out hover:text-opacity-90"
               activeStyle={activeStyles}
             >
               Blog

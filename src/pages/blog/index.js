@@ -1,7 +1,5 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import BackgroundImage from "gatsby-background-image";
 import { GatsbyIcon, ReactIcon } from "../../components/Devicon/Devicons";
 
 const BlogPosts = () => {
@@ -31,19 +29,17 @@ const BlogPosts = () => {
   console.log(data);
   const blogposts = data.allMdx.nodes;
   return (
-    <div className="block w-full">
+    <div className="block w-full ">
       <div className="flex flex-col max-w-6xl m-auto px-4 my-10 ">
-        <div className="block w-full my-10">
+        <div className="block w-full my-10 ">
           <h2 className="text-5xl font-bold">Blog</h2>
         </div>
-        <div className="flex xs:flex-col lg:flex-row flex-wrap gap-y-12 gap-x-[5%] ">
+        <div className="flex xs:flex-col lg:flex-row flex-wrap gap-y-12 gap-x-[5%] py-10 mb-40">
           {blogposts.map((blogpost) => {
             const title = blogpost.frontmatter.title;
             const slug = blogpost.frontmatter.slug;
             const description = blogpost.frontmatter.description;
             const category1 = blogpost.frontmatter.category1;
-            const category2 = blogpost.frontmatter.category2;
-            const category3 = blogpost.frontmatter.category3;
 
             return (
               <div
@@ -53,9 +49,9 @@ const BlogPosts = () => {
                 <div className="flex gap-6 p-6 border-3 border-gray-naiveHover items-center self-center ">
                   <div className="w-[20%] self-center">
                     {/* {category1 == "Gatsby" ? <GatsbyIcon /> : <ReactIcon />} */}
-                    {category1 == "Gatsby" ? (
+                    {category1 === "Gatsby" ? (
                       <GatsbyIcon />
-                    ) : category1 == "React" ? (
+                    ) : category1 === "React" ? (
                       <ReactIcon />
                     ) : (
                       "Loading..."

@@ -1,35 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-
-const variants = {
-  initial: {
-    opacity: 0,
-    y: -100,
-  },
-  enter: {
-    opacity: 1,
-    y: 0,
-
-    transition: {
-      type: "spring",
-      duration: 1,
-      delay: 1,
-      bounce: 0.5,
-      ease: "easeInOut",
-    },
-  },
-};
 
 const NavbarLogoName = () => {
   return (
-    <motion.div
-      variants={variants}
-      initial="initial"
-      animate="enter"
-      className=""
-    >
+    <div className="">
       <Link
         to="/"
         className="flex flex-row opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
@@ -45,7 +20,7 @@ const NavbarLogoName = () => {
           Dom Vournias
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
