@@ -65,7 +65,7 @@ const Hero = () => {
                 placeholder="blurred"
                 draggable={false}
                 alt="keyboard-icon"
-                quality="100"
+                quality="90"
                 className="xs:w-28 sm:w-32 md:w-36"
               />
             </motion.div>
@@ -86,7 +86,7 @@ const Hero = () => {
                 placeholder="blurred"
                 draggable={false}
                 alt="camera-icon"
-                quality="100"
+                quality="90"
                 className="xs:w-28 sm:w-32 md:w-36"
               />
             </motion.div>
@@ -101,8 +101,8 @@ const Hero = () => {
               placeholder="blurred"
               draggable={false}
               alt="avatar"
-              quality="100"
-              className=" mx-4 max-w-xl"
+              quality="90"
+              className="mx-4 max-w-xl"
               initial="hidden"
               animate="visible"
               variants={avatarVariants}

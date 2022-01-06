@@ -86,6 +86,13 @@
     @apply font-segoeSemiBold;
   } */
 
+  .logo-name-visible {
+    @apply pl-3 text-lg font-bold text-gray;
+  }
+  .logo-name-hidden {
+    @apply hidden pl-3 text-lg font-bold text-gray;
+  }
+
   .simple-link {
     @apply text-third hover:text-white underline;
   }

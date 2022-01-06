@@ -2,23 +2,21 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-const NavbarLogoName = () => {
+const NavbarLogoName = (props) => {
   return (
-    <div className="">
+    <div className={props.logoContainer}>
       <Link
         to="/"
-        className="flex flex-row opacity-100 hover:opacity-75 transition duration-200 ease-in-out"
+        className="flex flex-row opacity-100 hover:opacity-75 transition duration-200 ease-in-out shadow-lg"
       >
         <StaticImage
           src="../../images/DomFav-512x512.png"
           alt="Dom Vournias Portfolio"
           quality="90"
-          className="w-8"
+          className={props.logo}
         />
 
-        <div className="pl-3 text-lg font-bold text-gray xs:hidden sm:block">
-          Dom Vournias
-        </div>
+        <div className={props.name}>Dom Vournias</div>
       </Link>
     </div>
   );
