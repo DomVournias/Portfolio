@@ -16,6 +16,9 @@ export const Seo = ({ title, keywords, description, image, url, author }) => {
         const metaKeywords = keywords || ["gatsby blog", "gatsby portfolio"];
         return (
           <Helmet
+            htmlAttributes={{
+              lang: "en",
+            }}
             title={title}
             meta={[
               {
