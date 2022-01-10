@@ -75,7 +75,7 @@ const SinglePost = ({ data }) => {
               blockquote: (props) => (
                 <div
                   {...props}
-                  className="rounded-lg py-4 px-4 bg-dark-100 my-8"
+                  className=" border-2 border-dashed p-6 my-8 border-dark-200 w-[fit-content]"
                 />
               ),
               hr: (props) => <hr {...props} className="border-none my-4" />,

@@ -1,0 +1,182 @@
+---
+title: "How to add comments to Gatsby"
+author: "Dom Vournias"
+authorImage: "../images/blogimages/blogfeatured/authorDomVournias.png"
+slug: how-to-add-comments-to-gatsby
+description: "If you want to create a comment section and start seeing blog post comments to your Gatsby website then this tutorial is the right for you."
+category1: "Gatsby"
+category2: ["Github"]
+category3: ["Utterances"]
+stack3: [""]
+date: 2022-01-10T03:13:00+02:00
+thumbImage: ""
+featuredImage: "../images/blogimages/blogfeatured/How to use code blocks in react.png"
+embeddedImagesLocal:
+  - "../images/blogimages/blogfeatured/blog-posts-in-gatsby.jpg"
+  - "../images/blogimages/blogfeatured/create-blog-posts-in-gatsby.jpg"
+  - "../images/blogimages/blogfeatured/choosing a theme in utterance.jpg"
+  - "../images/blogimages/blogfeatured/blog post comments gatsby.jpg"
+  - "../images/blogimages/blogfeatured/gatsby comment section with Github.jpg"
+---
+
+import Code from "../components/CodeBlocks/Code";
+import { Break, ExLink } from "../components/CodeBlocks/PostTypography";
+import PostImage from "../components/SinglePostAssets/PostImage";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+
+## Create a comments section to your Gatsby blog
+
+### Link your Github account with Utterances
+
+If you want to get a beatiful comment section in your Gatsby blog then follow the steps bellow, and you will easily have it ready in under 10 minutes.
+
+---
+
+First go to utterances page: <ExLink goTo="https://github.com/apps/utterances" label="Here" />
+
+---
+
+<GatsbyImage
+  image={getImage(props.localImages[0])}
+  alt="configure utterances"
+  className="mb-8"
+/>
+
+Click configure and select one repository to be associated with your blog. Note that everytime someone posts a comment it will create a Github issue as a discussion to your selected repository.
+
+---
+
+<GatsbyImage
+  image={getImage(props.localImages[1])}
+  alt="link github with utterances"
+  className="mb-8"
+/>
+
+> ❗️ Make sure your repo is public so the app can access it.
+
+### Create a comments component in your Gatsby blog
+
+We need to add a comments component so we can add inside our post template.
+
+---
+
+```javascript
+// Commments.js
+
+import React, { useEffect } from "react";
+const Comments = ({ issueTerm }) => {
+  const commentsUUID = `comments_${issueTerm}`;
+  useEffect(() => {
+    let anchor;
+    const theme = "github-light"; // you could choose other themes too
+    const script = document.createElement("script");
+    anchor = document.getElementById(commentsUUID);
+    script.setAttribute("src", "https://utteranc.es/client.js");
+    script.setAttribute("crossorigin", "anonymous");
+    script.setAttribute("async", true);
+    script.setAttribute("repo", "YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME"); // change to your repo link
+    script.setAttribute("issue-term", issueTerm);
+    script.setAttribute("theme", theme);
+    anchor.appendChild(script);
+    return () => {
+      anchor.innerHTML = "";
+    };
+  });
+  return (
+    <>
+      <div id={commentsUUID} className="post-comments" className="relative">
+        <div className="utterances-frame"></div>
+      </div>
+    </>
+  );
+};
+
+export default Comments;
+```
+
+---
+
+You can choose a theme here: _https://utteranc.es/_
+
+---
+
+<GatsbyImage
+  image={getImage(props.localImages[2])}
+  alt="choose a theme in utterance.es"
+  className="mb-8"
+/>
+
+Now that we finished with the Comments component it's time to insert it in our Blog Post Template.
+
+---
+
+---
+
+```javascript
+// PostTemplate.js
+
+import React from "react";
+import Comments from "YOUR PATH";
+
+const PostTemplate = () => {
+  return (
+    <div>
+      <Comments issueTerm="{data.mdx.frontmatter.slug}" /> // You can assign the
+      title or the slug
+    </div>
+  );
+};
+
+export default PostTemplate;
+```
+
+---
+
+> ❕ It doesn't really matter if you assign your blog post title or slug as long as you can find it in your repository issues.
+
+---
+
+Here you can see we can have a beatiful comment section in a Gatsby blog in under 10 minutes.
+
+---
+
+<GatsbyImage
+  image={getImage(props.localImages[3])}
+  alt="configure utterances"
+  className="mb-8"
+/>
+
+Now, if you leave a comment you will spot it in your issues section in Github.
+
+---
+
+<GatsbyImage
+  image={getImage(props.localImages[4])}
+  alt="configure utterances"
+  className="mb-8"
+/>
+
+### Conclussion
+
+It's very important to mention that you not only improving your SEO by using this solution, but you also helping the community. Sometimes people looking for answers through Github so this is a plus.
+
+---
+
+Also did I mention that your visitor will be able to style their comments with Markdown?
+
+---
+
+<iframe
+  src="https://giphy.com/embed/ck5JRWob7folZ7d97I"
+  width="280"
+  height="280"
+  frameBorder="0"
+  class="giphy-embed"
+  allowFullScreen
+></iframe>
+
+---
+
+I hope this guide helped you create beautiful code blocks to highlight your coding. Make sure to leave a 👍 and love ❤️ if you found this article helpful.
+
+<Break />
