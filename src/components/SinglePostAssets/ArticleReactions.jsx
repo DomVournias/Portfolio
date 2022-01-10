@@ -3,7 +3,7 @@ import { ClapButton, LikeButton } from "@lyket/react";
 
 const ArticleReactions = () => {
   return (
-    <div className="flex flex-col xs:w-4/4 lg:w-1/4 p-4 mt-6">
+    <div>
       <h4 className="self-center mb-6">ARTICLE REACTIONS</h4>
       <div className="grid grid-cols-4 lg:grid-cols-2 gap-6 justify-between items-center">
         <LikeButton id="like" namespace="post" hideCounterIfLessThan={0}>

@@ -4,12 +4,20 @@ import { getImage } from "gatsby-plugin-image";
 import BlogPostHero from "../components/SinglePostAssets/BlogPostHero";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import ArticleReactions from "../components/SinglePostAssets/ArticleReactions";
 import { Seo } from "../components/Seo";
+import SinglePostSidebarRight from "../components/SinglePostAssets/SinglePostSidebarRight";
 
 const SinglePost = ({ data }) => {
-  const { title, description, date, author, category1, category2, category3 } =
-    data.mdx.frontmatter;
+  const {
+    title,
+    description,
+    date,
+    author,
+    category1,
+    category2,
+    category3,
+    slug,
+  } = data.mdx.frontmatter;
   const Image = data.mdx.frontmatter.featuredImage.childImageSharp.fluid;
   const AuthorPicture = getImage(data.mdx.frontmatter.authorImage);
   const LocalImages = data.mdx.frontmatter.embeddedImagesLocal;
@@ -90,7 +98,11 @@ const SinglePost = ({ data }) => {
                   {data.mdx.body}
                 </MDXRenderer>
               </div>
-              <ArticleReactions />
+              <SinglePostSidebarRight
+                site="https://domvournias.com/blog/"
+                slug={slug}
+                title={title}
+              />
             </div>
           </MDXProvider>
         </div>

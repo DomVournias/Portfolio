@@ -9,6 +9,7 @@ module.exports = {
   },
 
   plugins: [
+    "gatsby-plugin-minify",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-image",

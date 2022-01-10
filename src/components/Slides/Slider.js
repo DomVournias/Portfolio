@@ -94,6 +94,13 @@ export default function Slider() {
     threshold: 0.7,
   });
   useEffect(() => {
+    if (!inView) {
+      animation.start({
+        display: "none",
+        opacity: 0,
+        x: -30,
+      });
+    }
     if (inView) {
       animation.start({
         display: "block",
@@ -105,13 +112,6 @@ export default function Slider() {
           bounce: 0.3,
           ease: "easeInOut",
         },
-      });
-    }
-    if (!inView) {
-      animation.start({
-        display: "none",
-        opacity: 0,
-        x: -30,
       });
     }
   }, [animation, inView]);
