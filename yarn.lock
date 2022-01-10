@@ -4786,11 +4786,6 @@ devcert@^1.2.0:
     tmp "^0.0.33"
     tslib "^1.10.0"
 
-devicon@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/devicon/-/devicon-2.14.0.tgz#d54d7baad383ecd569318893b9f24081cfab5964"
-  integrity sha512-kfQtBO8kuFInbdAm4tPjrS5Jr7W1fmE1G6sUaEoftucMJYt5M0qps/wZ85GEPhh4A+UKxDUSSNmPmqvYrG0oVA==
-
 dicer@0.2.5:
   version "0.2.5"
   resolved "https://registry.npmjs.org/dicer/-/dicer-0.2.5.tgz"

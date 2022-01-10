@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { Seo } from "../components/Seo";
 import SinglePostSidebarRight from "../components/SinglePostAssets/SinglePostSidebarRight";
+import Comments from "../components/SinglePostAssets/Comments";
 
 const SinglePost = ({ data }) => {
   const {
@@ -24,7 +25,7 @@ const SinglePost = ({ data }) => {
 
   return (
     <>
-      <Seo title={title} description={description} />
+      <Seo title={title} description={description} image={Image} />
       <div className="block w-full xs:px-4">
         <div className="flex flex-col max-w-6xl m-auto my-10">
           <MDXProvider
@@ -104,6 +105,7 @@ const SinglePost = ({ data }) => {
                 title={title}
               />
             </div>
+            <Comments issueTerm={title} />
           </MDXProvider>
         </div>
       </div>
