@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import React from "react";
+import React, { useEffect } from "react";
 import { getImage } from "gatsby-plugin-image";
 import BlogPostHero from "../components/SinglePostAssets/BlogPostHero";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -7,6 +7,8 @@ import { MDXProvider } from "@mdx-js/react";
 import { Seo } from "../components/Seo";
 import SinglePostSidebarRight from "../components/SinglePostAssets/SinglePostSidebarRight";
 import Comments from "../components/SinglePostAssets/Comments";
+import Prism from "prismjs";
+import "../styles/prism.css";
 
 const SinglePost = ({ data }) => {
   const {
@@ -22,6 +24,10 @@ const SinglePost = ({ data }) => {
   const Image = data.mdx.frontmatter.featuredImage.childImageSharp.fluid;
   const AuthorPicture = getImage(data.mdx.frontmatter.authorImage);
   const LocalImages = data.mdx.frontmatter.embeddedImagesLocal;
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <>
