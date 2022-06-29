@@ -1,0 +1,161 @@
+---
+title: "How to add breakpoints with Styled Components"
+author: "Dom Vournias"
+authorImage: "../images/blogimages/blogfeatured/authorDomVournias.png"
+slug: how-to-add-breakpoints-with-styled-components
+description: "Learn how to add breakpoints with styled components and adding the media queries correctly to styled components."
+category1: "Styled-Components"
+category2: ["Responsive"]
+category3: ["CSS"]
+stack3: [""]
+date: 2022-06-29T03:13:00+02:00
+thumbImage: ""
+featuredImage: "../images/blogimages/blogfeatured/How to use code blocks in react.png"
+embeddedImagesLocal:
+---
+
+import Code from "../components/CodeBlocks/Code";
+import { Break, ExLink } from "../components/CodeBlocks/PostTypography";
+import PostImage from "../components/SinglePostAssets/PostImage";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+
+## How to use media queries with Styled Components
+
+### Styled Components breakpoints
+
+If you want to apply responsiveness to your app, you will have to use media queries. If you're using <ExLink goTo="https://styled-components.com/" label="Styled Components" /> and you don't know how to add the breakpoints correctly, I will show you how to do it.
+
+---
+
+☹️ From this
+
+---
+
+<figure>
+  <img src="https://gifyu.com/image/SKMkJ" class="gifImage" />
+</figure>
+
+---
+
+🤩 To that
+
+---
+
+<figure>
+  <img src="https://gifyu.com/image/SKMvd" class="gifImage" />
+</figure>
+
+---
+
+### Create the media queries
+
+Create a file in this case we will name it Breakpoints.styled.js and create an object with the breakpoint names you want to use and assign for each of the names a value that represents the screen size you want to use.
+
+---
+
+Then we create an object called device and we assign again the values for each breakpoint name, but this time with the media querie parameter _max-width_ or _min-width_ dependand on how you will style your application.
+
+> From mobile to desktop use max-width
+
+---
+
+```javascript
+// Breakpoints.styled.js
+
+// Thsese are the sizes
+export const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+// These are the queries
+export const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+};
+```
+
+---
+
+### Edit the styled element for the preferred breakpoint
+
+Now that we have all the breakpoints and device sizes we can import it into our styled element.
+
+---
+
+---
+
+- Classic CSS Media Queries
+
+```css
+@media (max-width: 1024px) {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+```
+
+---
+
+> Make sure to import the `device` from where you set the media queries.
+
+- Styled Components Media Queries
+
+```css
+  import { device } from "./Breakpoints.styled";
+
+  @media ${device.laptop} {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+```
+
+As you can see we add `device.` and then the preferred screen size, for example `laptop`.
+
+---
+
+There you have it, that simple we can have globally in our project whatever screen sizes we want our app to be responsive to.
+
+---
+
+Make sure to check the <ExLink goTo="https://codesandbox.io/s/breakpoints-styled-components-qpvntg" label="PROJECT" /> I used in this article in codesandbox.
+
+---
+
+<iframe
+  src="https://codesandbox.io/embed/breakpoints-styled-components-qpvntg?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="breakpoints-styled-components"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+---
+
+<iframe
+  src="https://giphy.com/embed/MQ4bWOjn8C9tT2dzIb"
+  width="380"
+  height="300"
+  frameBorder="0"
+  class="giphy-embed"
+  allowFullScreen
+></iframe>
+
+---
+
+😁 Make sure to like and share if you found this guide helpful.
+
+---
+
+<Break />

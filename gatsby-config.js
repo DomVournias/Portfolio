@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-minify",
     "gatsby-plugin-sitemap",
+    `gatsby-plugin-styled-components`,
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-image",
     {
