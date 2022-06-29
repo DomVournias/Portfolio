@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { GatsbyIcon, ReactIcon } from "../../components/Devicon/Devicons";
+import { GatsbyIcon, ReactIcon, StyledComponentsIcon } from "../../components/Devicon/Devicons";
 
 const BlogPosts = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,7 @@ const BlogPosts = () => {
       }
     }
   `);
-  console.log(data);
+  // console.log(data);
   const blogposts = data.allMdx.nodes;
   return (
     <div className="block w-full ">
@@ -48,8 +48,7 @@ const BlogPosts = () => {
               >
                 <div className="flex gap-6 p-6 border-3 border-gray-naiveHover items-center self-center ">
                   <div className="w-[20%] self-center">
-                    {/* {category1 == "Gatsby" ? <GatsbyIcon /> : <ReactIcon />} */}
-                    {category1 == "Gatsby" ? (
+                    {category1 == "Styled-Components" ? <StyledComponentsIcon/> : category1 == "Gatsby" ? (
                       <GatsbyIcon />
                     ) : category1 == "React" ? (
                       <ReactIcon />
