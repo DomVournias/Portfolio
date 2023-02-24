@@ -1,5 +1,4 @@
 import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import { Seo } from "../components/Seo";
 import QuoteSection from "../components/SingleProjectAssets/QuoteSection";
@@ -12,6 +11,7 @@ import BackToTop from "../components/Buttons/BackToTop";
 
 export default function ProjectDetails({ data }) {
   const {
+    hasmoreinfo,
     title,
     website,
     github,
@@ -23,23 +23,20 @@ export default function ProjectDetails({ data }) {
     stack1,
     stack2,
     stack3,
-    bestFeature,
-    thumbImg,
-    featuredImg1,
-    featuredImg2,
-    featuredImg3,
-    featuredImg4,
-    featuredImg5,
-    bigDescription1,
-    bigDescription2,
-    bigDescription3,
-    infoTitle1,
-    infoDescription1,
-    infoDescription2,
-    infoDescription3,
-  } = data.mdx.frontmatter;
-
-  console.log(data);
+    bestfeature,
+    thumbimg,
+    featuredimg1,
+    featuredimg2,
+    featuredimg3,
+    featuredimg4,
+    featuredimg5,
+    bigdescription1,
+    bigdescription2,
+    bigdescription3,
+    infodescription1,
+    infodescription2,
+    infodescription3,
+  } = data.wpProject.project;
 
   return (
     <>
@@ -48,7 +45,7 @@ export default function ProjectDetails({ data }) {
         <ProjectHero
           title={title}
           description={description}
-          pic={thumbImg}
+          pic={thumbimg.localFile}
           slug={slug}
           github={github}
           website={website}
@@ -57,32 +54,36 @@ export default function ProjectDetails({ data }) {
           company={company}
           place={place}
           date={date}
-          description={bigDescription1}
+          description={bigdescription1}
         />
-        <ProjectStacks
-          pic={featuredImg1}
-          slug={slug}
-          stackA={stack1}
-          stackB={stack2}
-          stackC={stack3}
-          description={infoDescription1}
-        />
-        <QuoteSection quote={bigDescription2} />
-        <KeyFeatures
-          title={infoTitle1}
-          description={infoDescription2}
-          phoneA={featuredImg2}
-          phoneB={featuredImg3}
-          phoneC={featuredImg4}
-          slug={slug}
-        />
-        <BestFeature
-          pic={featuredImg5}
-          slug={slug}
-          feature={bestFeature}
-          description={infoDescription3}
-        />
-        <QuoteSection quote={bigDescription3} />
+        {hasmoreinfo && (
+          <>
+            <ProjectStacks
+              pic={featuredimg1.localFile}
+              slug={slug}
+              stackA={stack1}
+              stackB={stack2}
+              stackC={stack3}
+              description={infodescription1}
+            />
+            <QuoteSection quote={bigdescription2} />
+            <KeyFeatures
+              description={infodescription2}
+              phoneA={featuredimg2.localFile}
+              phoneB={featuredimg3.localFile}
+              phoneC={featuredimg4.localFile}
+              slug={slug}
+            />
+            <BestFeature
+              pic={featuredimg5.localFile}
+              slug={slug}
+              feature={bestfeature}
+              description={infodescription3}
+            />
+            <QuoteSection quote={bigdescription3} />
+          </>
+        )}
+
         <BackToTop showBelow={800} />
       </section>
     </>
@@ -90,56 +91,74 @@ export default function ProjectDetails({ data }) {
 }
 
 export const query = graphql`
-  query ProjectDetails($slug: String) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        bigDescription1
-        bigDescription2
-        bigDescription3
-        bestFeature
-        company
-        date(formatString: "DD MMM YYYY")
-        description
+  query Project_Details($slug: String) {
+    wpProject(project: { slug: { eq: $slug } }) {
+      project {
+        title
+        website
         github
-        infoDescription1
-        infoDescription2
-        infoDescription3
-        infoTitle1
-        place
-        slug
         stack1
         stack2
         stack3
-        title
-        website
-        thumbImg {
-          childImageSharp {
-            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+        slug
+        date
+        company
+        place
+        description
+        bestfeature
+        hasmoreinfo
+        bigdescription1
+        bigdescription2
+        bigdescription3
+        infodescription1
+        infodescription2
+        infodescription3
+        thumbimg {
+          sourceUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+            }
           }
         }
-        featuredImg1 {
-          childImageSharp {
-            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+        featuredimg1 {
+          sourceUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+            }
           }
         }
-        featuredImg2 {
-          childImageSharp {
-            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+        featuredimg2 {
+          sourceUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+            }
           }
         }
-        featuredImg3 {
-          childImageSharp {
-            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+        featuredimg3 {
+          sourceUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+            }
           }
         }
-        featuredImg4 {
-          childImageSharp {
-            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+        featuredimg4 {
+          sourceUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+            }
           }
         }
-        featuredImg5 {
-          childImageSharp {
-            gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+        featuredimg5 {
+          sourceUrl
+          localFile {
+            childImageSharp {
+              gatsbyImageData(quality: 100, placeholder: BLURRED, formats: WEBP)
+            }
           }
         }
       }

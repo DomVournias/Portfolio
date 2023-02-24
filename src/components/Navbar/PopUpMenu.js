@@ -3,28 +3,6 @@ import PopUpMenuNavigation from "./PopUpMenuNavigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 const PopUpMenu = (props) => {
-  const itemVariants = {
-    closed: {
-      opacity: 0,
-    },
-    open: { opacity: 1 },
-  };
-
-  const sideVariants = {
-    closed: {
-      transition: {
-        staggerChildren: 0.2,
-        staggerDirection: -1,
-      },
-    },
-    open: {
-      transition: {
-        staggerChildren: 0.2,
-        staggerDirection: 1,
-      },
-    },
-  };
-
   return (
     <AnimatePresence>
       <motion.div
@@ -50,11 +28,11 @@ const PopUpMenu = (props) => {
           >
             <g fill="currentColor">
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0z"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0z"
               />
             </g>

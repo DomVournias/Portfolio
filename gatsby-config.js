@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://domvournias.com",
+    siteUrl: "https://domvournias.dev",
     title: "Dom Vournias",
     description: "Dom's Portfolio",
     image: "/src/images/DomFav-512x512.png",
     author: "Dom Vournias",
-    url: "https://domvournias.com",
+    url: "https://domvournias.dev",
   },
 
   plugins: [
@@ -46,6 +46,13 @@ module.exports = {
       resolve: "gatsby-plugin-layout",
       options: {
         component: require.resolve("./src/templates/Layout.js"),
+      },
+    },
+
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: `https://portal.domvournias.dev/graphql`,
       },
     },
 

@@ -24,9 +24,11 @@ const ProjectStacks = (props) => {
               <span className="py-2 px-4 rounded-lg bg-white bg-opacity-10">
                 {props.stackA}
               </span>
+
               <span className="py-2 px-4 rounded-lg bg-white bg-opacity-10">
                 {props.stackB}
               </span>
+
               <span className="py-2 px-4 rounded-lg bg-white bg-opacity-10">
                 {props.stackC}
               </span>

@@ -17,7 +17,7 @@ const BestFeature = (props) => {
         </div>
         <div className="xs:w-full md:w-1/2 xs:pt-20 md:pt-0">
           <div className="flex xs:flex-row items-center gap-4 pb-8 w-full">
-            <h3 className="text-xl text-graph text-left ">Complexity of</h3>
+            <h3 className="text-xl text-graph text-left ">The complexity of</h3>
             <div className="flex flex-row gap-2 ">
               <span className="py-2 px-4 rounded-lg bg-graph bg-opacity-100">
                 {props.feature}

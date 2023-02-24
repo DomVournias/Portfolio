@@ -30,13 +30,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      projects: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
-      ) {
+      projects: allWpProject {
         edges {
           node {
             id
-            frontmatter {
+            project {
               slug
             }
           }
@@ -67,11 +65,11 @@ exports.createPages = async ({ graphql, actions }) => {
     const id = edge.node.id;
 
     createPage({
-      path: `/projects/${edge.node.frontmatter.slug}/`,
+      path: `/projects/${edge.node.project.slug}/`,
       component: projectsTemplate,
       context: {
         id,
-        slug: edge.node.frontmatter.slug,
+        slug: edge.node.project.slug,
         layout: "projectsPage",
       },
     });

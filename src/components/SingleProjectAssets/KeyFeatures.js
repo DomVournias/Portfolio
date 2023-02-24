@@ -5,7 +5,7 @@ const KeyFeatures = (props) => {
   return (
     <div className="flex flex-col place-content-center items-center h-full bg-silver xs:py-32 gap-28">
       <div className="xs:px-[8vw] sm:px-[10vw] md:px-[8vw] lg:px-[15vw] lap:px-[22vw] desk:px-[24vw] ">
-        <h3 className="text-2xl  text-graph pb-4">{props.title}</h3>
+        <h3 className="text-2xl  text-graph pb-4">Key features</h3>
         <p className="font-nova xs:text-[18px] lg:text-xl xs:leading-[33px] lap:leading-[40px] text-graph">
           {props.description}
         </p>
