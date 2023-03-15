@@ -91,7 +91,7 @@ const ContactForm = () => {
                   htmlFor="message"
                   className="block uppercase tracking-wide text-white text-xs font-bold mb-2 ml-2 text-left "
                 >
-                  Company Name
+                  Message
                 </label>
                 <textarea
                   name="message"
