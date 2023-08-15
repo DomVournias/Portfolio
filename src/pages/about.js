@@ -13,35 +13,32 @@ export default function about() {
           <h3 className="about-headings">Hey </h3>
           <h3 className="xs:text-4xl md:text-5xl">👋</h3>
         </div>
-
         <p className="about-paragraphs">
-         I'm Dom, and my story is a mashup of art and coding. 
-          Back when I was 16, I got into making Tumblr themes using HTML and CSS, just for kicks. 
-          I'd mess around with the code, throw in some JavaScript here and there to jazz things up. It was all part of the fun!
+          I'm Dom – a blend of artistry and coding. 
+          Let me take you through my journey.
         </p>
-        <p className="about-paragraphs ">
-          
+        
+        <p className="about-paragraphs">
+         Back when I was 15, I jumped into creating Tumblr themes with HTML and CSS, just for kicks. 
+          And sometimes, I'd toss in some JavaScript here and there to spice things up.
         </p>
-        <p className="about-paragraphs ">
-          I got involved in several big projects in the past, but the one that I
-          am most proud of is H.I.C.D. It's a non-profit institute which I was
-          fortunate enough to be the lead developer of two of its departments,
-          in{" "}
-          <SimpleLink
-            url={"https://heniculturaldiplomacy.com/"}
-            text={"Greece"}
-          />{" "}
-          and <SimpleLink url={"https://www.hicd-usa.com/"} text={"USA"} />.
+        
+        <p className="about-paragraphs">
+          As time rolled on, my path led me to study Fine Arts
+          and later on Film Production. But here's the kicker: the coding bug
+          never really left me.
         </p>
-        <p className="about-paragraphs ">
-          I've studied Fine Arts and later on I moved to England to study Film
-          Production. From a very young age I was very passionate about painting
-          and arts in general.
+        
+        <p className="about-paragraphs">
+          Life had other plans for me, and in 2017, I found myself
+          circling back to coding, this time taking it professionally.
+          It's been quite the journey, and I'm excited to keep painting this canvas with code.
         </p>
-        <p className="about-paragraphs ">
-          Having an artistic background helps me everyday in my work. It boosts
-          and speeds up my designs, because I trained and developed an artistic
-          perspective over the years.
+        
+        <p className="about-paragraphs">
+          So here I am, a creative coder on a quest to blend
+          art and technology in captivating ways.
+          Thanks for joining me on this ride!
         </p>
       </section>
       <section className="xs:w-5/5 md:w-2/5 self-start">
