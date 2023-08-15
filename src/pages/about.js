@@ -15,14 +15,12 @@ export default function about() {
         </div>
 
         <p className="about-paragraphs">
-          My name is Dom. I'm a front end developer from Greece. Film making,
-          photography and traveling are the things that I love doing in my free
-          time.
+         I'm Dom, and my story is a mashup of art and coding. 
+          Back when I was 16, I got into making Tumblr themes using HTML and CSS, just for kicks. 
+          I'd mess around with the code, throw in some JavaScript here and there to jazz things up. It was all part of the fun!
         </p>
         <p className="about-paragraphs ">
-          I've been building websites for over 3 years now. In the past, I used
-          page builders like Elementor and Oxygen with Wordpress. I’m currently
-          focusing on building applications from scratch using React.
+          
         </p>
         <p className="about-paragraphs ">
           I got involved in several big projects in the past, but the one that I
