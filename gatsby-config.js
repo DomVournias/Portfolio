@@ -9,6 +9,24 @@ module.exports = {
   },
 
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-F4VFZ8S0V2",
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // defaults to false
+        enableWebVitalsTracking: true,
+      },
+    },
     "gatsby-plugin-minify",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-styled-components`,
