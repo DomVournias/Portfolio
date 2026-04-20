@@ -1,5 +1,14 @@
 import { error } from '@sveltejs/kit';
 
+export const prerender = true;
+
+export async function entries() {
+	const paths = import.meta.glob('/src/content/*.md');
+	return Object.keys(paths).map((path) => ({
+		slug: path.split('/').at(-1)?.replace('.md', '') ?? ''
+	}));
+}
+
 export async function load({ params }) {
 	console.log(params, 'Params');
 	try {
