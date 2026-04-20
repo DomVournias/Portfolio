@@ -1,6 +1,6 @@
 <script>
   import { fade } from 'svelte/transition'
-  import { DATA } from '$lib/data/data'
+  import { DATA } from '$lib/data/resume'
 
   const { summary } = DATA
 </script>

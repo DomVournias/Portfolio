@@ -1,25 +1,26 @@
 <script>
   import { fade } from 'svelte/transition'
-  import { DATA } from '$lib/data/data'
+  import { DATA } from '$lib/data/resume'
+  import ResumeCard from '$lib/components/portfolio/ResumeCard.svelte'
 
   const { work } = DATA
 </script>
 
 <section class="pb-20">
-  <div class="flex min-h-0 flex-col gap-y-6">
-    <h2
-      transition:fade
-      class="text-xl font-bold"
-    >
-      Work
-    </h2>
+  <div class="flex min-h-0 flex-col gap-y-3">
+    <h2 transition:fade class="text-xl font-bold">Work Experience</h2>
     {#each work as item}
-      <div
-        transition:fade
-        class="border bg-background border-border ring-2 ring-border/20 rounded-xl p-6 max-w-4xl"
-      >
-        <h3 class="font-semibold leading-none">{item.title}</h3>
-        <p class="text-muted-foreground">{item.description}</p>
+      <div transition:fade>
+        <ResumeCard
+          logoUrl={item.logoUrl}
+          company={item.company}
+          title={item.title}
+          href={item.href}
+          badges={item.badges}
+          description={item.description}
+          start={item.start}
+          end={item.end}
+        />
       </div>
     {/each}
   </div>
