@@ -6,11 +6,11 @@ WORKDIR /app
 ARG GITHUB_TOKEN
 ENV GITHUB_TOKEN=$GITHUB_TOKEN
 
-COPY package-lock.json package.json ./
-RUN npm ci
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 
 COPY . .
-RUN npm run build
+RUN yarn build
 
 # Stage 2: Serve with nginx
 FROM nginx:alpine
