@@ -1,0 +1,25 @@
+# Dom Vournias — Full-Stack Developer
+
+> Portfolio and blog of Dom Vournias, a full-stack developer specialising in React, Next.js, SvelteKit, TypeScript, Supabase, and GraphQL. Based in Greece.
+
+## About
+
+Dom Vournias is a full-stack developer with 7+ years of experience building production web applications. He has worked on large-scale freelancer marketplaces, e-commerce platforms, and open-source tools. He studied Fine Arts and Film Production before transitioning into software development in 2017.
+
+## Blog
+
+Articles covering web development, SvelteKit, React, Next.js, and software engineering practices.
+
+- https://domvournias.dev/blog/from-gatsby-to-sveltekit
+- https://domvournias.dev/blog/how-to-add-blog-comments-to-gatsby
+- https://domvournias.dev/blog/how-to-add-breakpoints-with-styled-components
+
+## Contact
+
+- Email: domvournias@gmail.com
+- GitHub: https://github.com/DomVournias
+- LinkedIn: https://gr.linkedin.com/in/domvournias
+
+## Sitemap
+
+https://domvournias.dev/sitemap.xml

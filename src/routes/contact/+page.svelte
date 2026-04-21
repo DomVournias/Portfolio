@@ -6,6 +6,15 @@
   const socials = Object.values(contact.social)
 </script>
 
+<svelte:head>
+  <title>Contact — {DATA.name}</title>
+  <meta name="description" content="Get in touch with {DATA.name} — full-stack developer. Reach out via email or social media." />
+  <meta property="og:title" content="Contact — {DATA.name}" />
+  <meta property="og:url" content="{DATA.url}/contact" />
+  <meta property="og:image" content="{DATA.url}{DATA.img}" />
+  <meta property="og:type" content="profile" />
+</svelte:head>
+
 <section class="pb-20">
   <div class="flex min-h-0 flex-col gap-y-4">
     <h2 transition:fade class="text-xl font-bold">Contact</h2>

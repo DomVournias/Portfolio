@@ -6,6 +6,15 @@
   const { projects } = DATA
 </script>
 
+<svelte:head>
+  <title>Projects — {DATA.name}</title>
+  <meta name="description" content="Portfolio projects by {DATA.name} — full-stack developer. Marketplaces, web apps, and open-source tools." />
+  <meta property="og:title" content="Projects — {DATA.name}" />
+  <meta property="og:url" content="{DATA.url}/projects" />
+  <meta property="og:image" content="{DATA.url}{DATA.img}" />
+  <meta property="og:type" content="profile" />
+</svelte:head>
+
 <section class="pb-20">
   <div class="flex min-h-0 flex-col gap-y-4">
     <h2 transition:fade class="text-xl font-bold">Projects</h2>
