@@ -16,10 +16,10 @@ export let DATA = {
   location: "Greece",
   locationLink: "https://www.google.com/maps/place/Greece",
   description:
-    "Full-stack developer and indie hacker. Studied Fine Arts, ended up building for the web.",
+    "Next.js / React / TypeScript developer in Greece. Built the DOULITSA marketplace as sole developer. Available for remote part-time work.",
   img: "/images/avatar.png",
   summary:
-    "At 15, I was building Tumblr themes in HTML and CSS just for fun, sneaking in JavaScript here and there. I went on to study Fine Arts and Film Production, but code kept pulling me back. In 2017 I made it official.",
+    "At 15, I was building Tumblr themes in HTML and CSS just for fun, sneaking in JavaScript here and there. I went on to study Fine Arts and Film Production, but code kept pulling me back. In 2019 I made it official, and today I build with Next.js, React and TypeScript.",
   avatarUrl: "/images/avatar.png",
   skills: [
     "Next.js",
@@ -30,7 +30,8 @@ export let DATA = {
     "JavaScript",
     "Node.js",
     "PostgreSQL",
-    "Supabase",
+    "GraphQL",
+    "Strapi",
     "Prisma",
     "Hono",
     "Stripe",
@@ -57,7 +58,7 @@ export let DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://gr.linkedin.com/in/domvournias",
+        url: "https://www.linkedin.com/in/domvournias",
         icon: LinkedinSvg,
         navbar: true,
         dark_icon: LinkedinDarkSvg,
@@ -91,12 +92,12 @@ export let DATA = {
       href: "https://doulitsa.gr",
       badges: ["Freelance"],
       location: "Remote",
-      title: "Full-time - Full-stack Developer",
+      title: "Freelance - Full-stack Developer (sole developer)",
       logoUrl: "/images/doulitsa_logo.jpg",
       start: "January 2024",
-      end: "March 2026",
+      end: "April 2026",
       description:
-        "Greek freelancer marketplace platform. Built with Next.js and Strapi CMS.",
+        "Sole developer of a live Greek freelancer marketplace: escrow payments, real-time chat, OAuth, an admin panel and a backend migration from Strapi to Prisma and PostgreSQL (2,500+ commits).",
     },
     {
       company: "Upwork",
@@ -105,8 +106,8 @@ export let DATA = {
       location: "Remote",
       title: "Part-time - Freelancer",
       logoUrl: "/images/upwork_logo.png",
-      start: "September 2018",
-      end: "January 2024",
+      start: "October 2020",
+      end: "",
       description:
         "Full-stack development for various clients. Technologies include React.js, Next.js, and modern web technologies.",
     },
@@ -158,18 +159,6 @@ export let DATA = {
       description:
         "Web development focusing on CSS, HTML, and front-end technologies.",
     },
-    {
-      company: "Hellasfon Networks SA",
-      href: "https://hellasfon.com/",
-      badges: ["Full-time"],
-      location: "Remote",
-      title: "Full-time - Frontend Developer",
-      logoUrl: "/images/hellasfon_logo.jpg",
-      start: "October 2018",
-      end: "October 2019",
-      description:
-        "Frontend development using CSS, HTML, and related web technologies.",
-    },
   ],
   education: [
     {
@@ -183,26 +172,25 @@ export let DATA = {
     {
       school: "University of Central Lancashire",
       href: "https://www.uclan.ac.uk/",
-      degree: "Bachelor's degree, Cinematography and Film/Video Production",
+      degree: "Film Production (2 years of study, not completed)",
       logoUrl: "/images/university_of_central_lancashire_logo.jpg",
-      start: "Sep 2014",
-      end: "Jun 2015",
+      start: "",
+      end: "",
     },
     {
-      school: "Fine Arts",
+      school: "University of Western Macedonia",
       href: "",
-      degree:
-        "Bachelor of Fine Arts – BFA, Digital Communication and Media/Multimedia",
+      degree: "Fine Arts (about 3 years of study, not completed)",
       logoUrl: "/images/eetf_logo.png",
-      start: "Sep 2011",
-      end: "Jun 2013",
+      start: "",
+      end: "",
     },
   ],
   projects: [
     {
       title: "VidRepair",
       href: "https://vidrepair.com",
-      dates: "March 2026 - April 2026",
+      dates: "March 2026 - Present",
       active: true,
       description:
         "Desktop and web application for repairing corrupted video files (MP4, MOV, MKV, AVI). Privacy-first approach - all processing happens locally on the user's machine using FFmpeg. No uploads, no account, no internet required. Features both desktop (Tauri + Rust) and web (Next.js) versions.",
@@ -232,21 +220,38 @@ export let DATA = {
       video: "",
     },
     {
-      title: "Doulitsa",
-      href: "https://doulitsa.gr",
-      dates: "January 2024 - March 2026",
+      title: "GoalBranch",
+      href: "https://goalbranch.com",
+      dates: "February 2026 - Present",
       active: true,
       description:
-        "Greek freelancer marketplace platform connecting professionals, companies, and service consumers. Features job postings, in-platform messaging, payment processing, and rating systems.",
+        "AI-powered backward goal-planning app. A goal becomes a visual tree of smaller and smaller steps, down to one that takes 20 minutes, which you can pan, zoom, edit and check off. Own SaaS product built with Claude Code.",
+      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Better Auth", "Zustand"],
+      links: [
+        {
+          type: "Website",
+          href: "https://goalbranch.com",
+          icon: Globe,
+        },
+      ],
+      image: "/images/goalbranch_landing.png",
+      video: "",
+    },
+    {
+      title: "DOULITSA",
+      href: "https://doulitsa.gr",
+      dates: "January 2024 - April 2026",
+      active: false,
+      description:
+        "Greek freelancer marketplace connecting professionals, companies and clients. Sole developer, frontend and backend: listings and profiles, escrow payments, real-time chat, Google OAuth, notifications, verification flows and an admin panel. Launched on Next.js, Strapi and PostgreSQL, then migrated the backend to Prisma.",
       technologies: [
         "Next.js",
         "TypeScript",
-        "Supabase",
-        "PostgreSQL",
+        "Strapi",
+        "GraphQL",
         "Prisma",
-        "Stripe",
-        "Tailwind CSS",
-        "Cloudinary",
+        "PostgreSQL",
+        "Better Auth",
       ],
       links: [
         {

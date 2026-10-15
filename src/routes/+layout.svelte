@@ -4,11 +4,12 @@
 	import '../app.css';
 	import { ModeWatcher, setMode } from 'mode-watcher';
 	import { page } from '$app/stores';
+	import { DATA } from '$lib/data/resume';
 	setMode('dark');
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={$page.url.href} />
+	<link rel="canonical" href={DATA.url + $page.url.pathname} />
 </svelte:head>
 
 <ModeWatcher />

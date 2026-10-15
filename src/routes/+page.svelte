@@ -17,9 +17,9 @@
 </script>
 
 <svelte:head>
-	<title>{DATA.name}</title>
+	<title>{DATA.name} | Next.js / React / TypeScript Developer</title>
 	<meta name="description" content={DATA.description} />
-	<meta property="og:title" content={DATA.name} />
+	<meta property="og:title" content="{DATA.name} | Next.js / React / TypeScript Developer" />
 	<meta property="og:description" content={DATA.description} />
 	<meta property="og:url" content={DATA.url} />
 	<meta property="og:site_name" content={DATA.name} />
@@ -33,7 +33,7 @@
 		name="googlebot"
 		content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
 	/>
-	<meta name="twitter:title" content={DATA.name} />
+	<meta name="twitter:title" content="{DATA.name} | Next.js / React / TypeScript Developer" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content="{DATA.url}{DATA.img}" />
 	<meta name="twitter:description" content={DATA.description} />
@@ -46,11 +46,13 @@
 			"name": DATA.name,
 			"url": DATA.url,
 			"image": DATA.url + DATA.img,
-			"jobTitle": "Full-Stack Developer",
+			"jobTitle": "Next.js / React / TypeScript Developer",
+			"knowsAbout": ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Node.js", "GraphQL"],
 			"description": DATA.description,
 			"sameAs": [
 				"https://github.com/DomVournias",
-				"https://gr.linkedin.com/in/domvournias",
+				"https://www.linkedin.com/in/domvournias",
+				"https://www.upwork.com/freelancers/~01f64995dbf453a3c6",
 				"https://twitter.com/domvournias"
 			]
 		}

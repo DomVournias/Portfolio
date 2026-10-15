@@ -46,7 +46,7 @@
 						/>
 					</h3>
 					<div class="text-right text-xs tabular-nums text-muted-foreground sm:text-sm">
-						{start} - {end || 'Present'}
+						{#if start}{start} - {end || 'Present'}{/if}
 					</div>
 				</div>
 				{#if title}
